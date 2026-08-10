@@ -1,0 +1,18 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Nodes;
+
+namespace Server.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+
+    public class SystemController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievSystemInfo([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
+            return Ok();
+        }
+    }
+}
