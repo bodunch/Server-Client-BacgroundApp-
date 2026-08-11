@@ -75,3 +75,4 @@ D:\C#\dotnet\ExserverAndClient\Client\Client\obj\Debug\net9.0\refint\Client.dll
 D:\C#\dotnet\ExserverAndClient\Client\Client\obj\Debug\net9.0\Client.pdb
 D:\C#\dotnet\ExserverAndClient\Client\Client\obj\Debug\net9.0\Client.genruntimeconfig.cache
 D:\C#\dotnet\ExserverAndClient\Client\Client\obj\Debug\net9.0\ref\Client.dll
+D:\C#\dotnet\ExserverAndClient\Client\Client\obj\Debug\net9.0\Client.sourcelink.json

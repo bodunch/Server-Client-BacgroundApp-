@@ -21,8 +21,13 @@ namespace Client
         [SupportedOSPlatform("windows")]
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            using var client = _httpClientFactory.CreateClient();
+
             SendSystemInfoToServer sendSysInfo = new SendSystemInfoToServer();
-            await sendSysInfo.SendStaticDataToServerAsync(_httpClientFactory, stoppingToken);
+            await sendSysInfo.SendStaticDataToServerAsync(client, stoppingToken);
+
+            SendComputerInfoToServer sendCompInfo = new SendComputerInfoToServer();
+            await sendCompInfo.SendStaticDataToServerAsync(client, stoppingToken);
 
             while (!stoppingToken.IsCancellationRequested)
             {

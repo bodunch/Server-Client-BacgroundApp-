@@ -1,5 +1,4 @@
 ﻿using Client.Modules.PCInfo;
-using Client.Modules.PCInfo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Client.Modules.ServerSend.StaticData
 {
-    public class SendSystemInfoToServer
+    public class SendComputerInfoToServer
     {
         public async Task SendStaticDataToServerAsync(HttpClient client, CancellationToken stoppingToken)
         {
-            var systemInfoModule = new SystemInfo();
-            var data = systemInfoModule.GetSystemInfo();
+            var computerInfoModule = new ComputerInfo();
+            var data = computerInfoModule.GetComputerInfo();
 
-            await client.PostAsJsonAsync("http://localhost:5000/api/system", data, stoppingToken);
+            await client.PostAsJsonAsync("http://localhost:5000/api/computer", data, stoppingToken);
         }
     }
 }

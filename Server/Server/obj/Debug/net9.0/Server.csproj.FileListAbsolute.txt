@@ -26,3 +26,4 @@ D:\C#\dotnet\ExserverAndClient\Server\Server\obj\Debug\net9.0\refint\Server.dll
 D:\C#\dotnet\ExserverAndClient\Server\Server\obj\Debug\net9.0\Server.pdb
 D:\C#\dotnet\ExserverAndClient\Server\Server\obj\Debug\net9.0\Server.genruntimeconfig.cache
 D:\C#\dotnet\ExserverAndClient\Server\Server\obj\Debug\net9.0\ref\Server.dll
+D:\C#\dotnet\ExserverAndClient\Server\Server\obj\Debug\net9.0\Server.sourcelink.json
