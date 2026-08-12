@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Server.Controllers.CpuController",
+    "Method": "RevievCPUInfo",
+    "RelativePath": "api/Cpu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.SystemController",
     "Method": "RevievSystemInfo",
     "RelativePath": "api/System",

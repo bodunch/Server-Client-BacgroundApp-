@@ -26,4 +26,16 @@ namespace Server.Controllers
             return Ok();
         }
     }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CpuController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievCPUInfo([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
+            return Ok();
+        }
+    }
 }

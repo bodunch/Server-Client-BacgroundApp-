@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\staticdata\\sendcomputerinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\staticdata\\sendcomputerinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\staticdata\\sendcpuinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\staticdata\\sendcpuinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\staticdata\\sendsysteminfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\staticdata\\sendsysteminfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\staticdata\\sendcomputerinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\staticdata\\sendcomputerinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\systeminfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\models\\systeminfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\computerinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\models\\computerinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\computerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\computerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\systeminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\systeminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SendCPUInfoToServer.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
+              "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
+              "RelativeToolTip": "Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T04:48:24.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SendComputerInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendComputerInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendComputerInfoToServer.cs",
@@ -63,91 +60,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SendSystemInfoToServer.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "RelativeToolTip": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T18:47:15.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ComputerInfo.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ComputerInfo.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\ComputerInfo.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ComputerInfo.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\ComputerInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T04:58:23.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SystemInfo.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\SystemInfo.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\SystemInfo.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\SystemInfo.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\SystemInfo.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T17:51:50.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ComputerInfoModel.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\ComputerInfoModel.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\ComputerInfoModel.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\ComputerInfoModel.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ComputerInfoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T04:54:26.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SystemInfoModel.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\SystemInfoModel.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\SystemInfoModel.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\SystemInfoModel.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\SystemInfoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T18:16:10.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Worker.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Worker.cs",
               "RelativeDocumentMoniker": "Client\\Worker.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Worker.cs",
               "RelativeToolTip": "Client\\Worker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T17:39:02.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Program.cs",
               "RelativeDocumentMoniker": "Client\\Program.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Program.cs",
               "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T17:39:04.228Z",
               "EditorCaption": ""

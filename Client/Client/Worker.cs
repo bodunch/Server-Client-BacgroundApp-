@@ -29,6 +29,9 @@ namespace Client
             SendComputerInfoToServer sendCompInfo = new SendComputerInfoToServer();
             await sendCompInfo.SendStaticDataToServerAsync(client, stoppingToken);
 
+            SendCPUInfoToServer sendCPUInfo = new SendCPUInfoToServer();
+            await sendCPUInfo.SendStaticDataToServerAsync(client, stoppingToken);
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 await Task.Delay(1000, stoppingToken);
