@@ -38,4 +38,16 @@ namespace Server.Controllers
             return Ok();
         }
     }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class RamController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievRAMInfo([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
+            return Ok();
+        }
+    }
 }

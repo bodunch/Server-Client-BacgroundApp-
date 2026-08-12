@@ -32,6 +32,9 @@ namespace Client
             SendCPUInfoToServer sendCPUInfo = new SendCPUInfoToServer();
             await sendCPUInfo.SendStaticDataToServerAsync(client, stoppingToken);
 
+            SendRAMInfoToServer sendRAMInfo = new SendRAMInfoToServer();
+            await sendRAMInfo.SendStaticDataToServerAsync(client, stoppingToken);
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 await Task.Delay(1000, stoppingToken);
