@@ -50,4 +50,16 @@ namespace Server.Controllers
             return Ok();
         }
     }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CurrcpuController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievRAMInfo([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
+            return Ok();
+        }
+    }
 }

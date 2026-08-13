@@ -4,6 +4,7 @@ using System.Net.Http.Json;
 using Client.Modules.PCInfo;
 using System.Net.Http;
 using Client.Modules.ServerSend.StaticData;
+using Client.Modules.ServerSend.DynamicData;
 
 namespace Client
 {
@@ -35,8 +36,13 @@ namespace Client
             SendRAMInfoToServer sendRAMInfo = new SendRAMInfoToServer();
             await sendRAMInfo.SendStaticDataToServerAsync(client, stoppingToken);
 
+            SendCurrentCPUInfoToServer sendCurrCPUInfo = new SendCurrentCPUInfoToServer();
+            
+
             while (!stoppingToken.IsCancellationRequested)
             {
+                await sendCurrCPUInfo.SendStaticDataToServerAsync(client, stoppingToken);
+
                 await Task.Delay(1000, stoppingToken);
             }
         }
