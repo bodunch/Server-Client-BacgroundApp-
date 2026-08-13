@@ -37,11 +37,15 @@ namespace Client
             await sendRAMInfo.SendStaticDataToServerAsync(client, stoppingToken);
 
             SendCurrentCPUInfoToServer sendCurrCPUInfo = new SendCurrentCPUInfoToServer();
+
+            SendCurrentRAMInfoToServer sendCurrRAMInfo = new SendCurrentRAMInfoToServer();
             
 
             while (!stoppingToken.IsCancellationRequested)
             {
                 await sendCurrCPUInfo.SendStaticDataToServerAsync(client, stoppingToken);
+
+                await sendCurrRAMInfo.SendStaticDataToServerAsync(client, stoppingToken);
 
                 await Task.Delay(1000, stoppingToken);
             }

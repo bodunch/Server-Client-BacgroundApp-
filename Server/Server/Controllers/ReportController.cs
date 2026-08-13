@@ -56,7 +56,19 @@ namespace Server.Controllers
     public class CurrcpuController : ControllerBase
     {
         [HttpPost]
-        public IActionResult RevievRAMInfo([FromBody] JsonObject info)
+        public IActionResult RevievCurrCPUInfo([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
+            return Ok();
+        }
+    }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CurrramController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievCurrRAMInfo([FromBody] JsonObject info)
         {
             Console.WriteLine(info);
             return Ok();

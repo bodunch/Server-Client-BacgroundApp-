@@ -33,8 +33,24 @@
   },
   {
     "ContainingType": "Server.Controllers.CurrcpuController",
-    "Method": "RevievRAMInfo",
+    "Method": "RevievCurrCPUInfo",
     "RelativePath": "api/Currcpu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CurrramController",
+    "Method": "RevievCurrRAMInfo",
+    "RelativePath": "api/Currram",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
