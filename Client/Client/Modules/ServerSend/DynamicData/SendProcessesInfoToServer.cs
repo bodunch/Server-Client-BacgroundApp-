@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Client.Modules.ServerSend.DynamicData
 {
-    public class SendCurrentRAMInfoToServer
+    public class SendProcessesInfoToServer
     {
         public async Task SendDynamicDataToServerAsync(HttpClient client, CancellationToken stoppingToken)
         {
-            var CurrentRAMInfoModule = new CurrentRAMInfo();
-            var data = CurrentRAMInfoModule.GetCurrentRAMInfo();
+            var ProcessInfoModule = new ProcessesInfo();
+            var data = ProcessInfoModule.GetProcessesInfo();
 
-            await client.PostAsJsonAsync("http://localhost:5000/api/currram", data, stoppingToken);
+            await client.PostAsJsonAsync("http://localhost:5000/api/processes", data, stoppingToken);
         }
     }
 }

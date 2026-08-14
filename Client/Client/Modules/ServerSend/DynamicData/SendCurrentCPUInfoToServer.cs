@@ -10,7 +10,7 @@ namespace Client.Modules.ServerSend.DynamicData
 {
     public class SendCurrentCPUInfoToServer
     {
-        public async Task SendStaticDataToServerAsync(HttpClient client, CancellationToken stoppingToken)
+        public async Task SendDynamicDataToServerAsync(HttpClient client, CancellationToken stoppingToken)
         {
             var CurrentCPUInfoModule = new CurrentCPUInfo();
             var data = CurrentCPUInfoModule.GetCurrentCPUInfo();

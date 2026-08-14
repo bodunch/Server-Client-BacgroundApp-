@@ -74,4 +74,16 @@ namespace Server.Controllers
             return Ok();
         }
     }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProcessesController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievProcesses([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
+            return Ok();
+        }
+    }
 }

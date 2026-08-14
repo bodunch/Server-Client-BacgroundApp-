@@ -40,12 +40,15 @@ namespace Client
 
             SendCurrentRAMInfoToServer sendCurrRAMInfo = new SendCurrentRAMInfoToServer();
             
+            SendProcessesInfoToServer sendProcessInfo = new SendProcessesInfoToServer();
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                await sendCurrCPUInfo.SendStaticDataToServerAsync(client, stoppingToken);
+                await sendCurrCPUInfo.SendDynamicDataToServerAsync(client, stoppingToken);
 
-                await sendCurrRAMInfo.SendStaticDataToServerAsync(client, stoppingToken);
+                await sendCurrRAMInfo.SendDynamicDataToServerAsync(client, stoppingToken);
+
+                await sendProcessInfo.SendDynamicDataToServerAsync(client, stoppingToken);
 
                 await Task.Delay(1000, stoppingToken);
             }

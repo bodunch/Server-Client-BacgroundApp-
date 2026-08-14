@@ -11,6 +11,7 @@ namespace Client.Modules.PCInfo
 {
     public class CurrentRAMInfo
     {
+        [SupportedOSPlatform("windows")]
         public CurrentRAMInfoModel GetCurrentRAMInfo()
         {
             var model = new CurrentRAMInfoModel();
