@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Encodings.Web;
+using System.Text.Json;
 using System.Text.Json.Nodes;
 
 namespace Server.Controllers
@@ -83,6 +85,25 @@ namespace Server.Controllers
         public IActionResult RevievProcesses([FromBody] JsonObject info)
         {
             Console.WriteLine(info);
+            return Ok();
+        }
+    }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AdaptersController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievProcesses([FromBody] JsonObject info)
+        {
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                WriteIndented = true 
+            };
+
+            string readableJson = info.ToJsonString(options);
+            Console.WriteLine(readableJson);
             return Ok();
         }
     }
