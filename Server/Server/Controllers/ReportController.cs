@@ -99,11 +99,23 @@ namespace Server.Controllers
             var options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-                WriteIndented = true 
+                WriteIndented = true
             };
 
             string readableJson = info.ToJsonString(options);
             Console.WriteLine(readableJson);
+            return Ok();
+        }
+    }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ConnectionsController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievProcesses([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
             return Ok();
         }
     }

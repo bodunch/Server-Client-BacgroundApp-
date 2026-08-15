@@ -44,6 +44,8 @@ namespace Client
 
             SendAdaptersInfoToServer sendApaptersInfo = new SendAdaptersInfoToServer();
 
+            SendConnectionInfoToServer sendConnectionsInfo = new SendConnectionInfoToServer();
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 await sendCurrCPUInfo.SendDynamicDataToServerAsync(client, stoppingToken);
@@ -53,6 +55,8 @@ namespace Client
                 await sendProcessInfo.SendDynamicDataToServerAsync(client, stoppingToken);
 
                 await sendApaptersInfo.SendDynamicDataToServerAsync(client, stoppingToken);
+
+                await sendConnectionsInfo.SendDynamicDataToServerAsync(client, stoppingToken);
 
                 await Task.Delay(1000, stoppingToken);
             }
