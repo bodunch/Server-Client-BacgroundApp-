@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Server.Controllers.ConnectionsController",
-    "Method": "RevievProcesses",
-    "RelativePath": "api/Connections",
+    "ContainingType": "Server.Controllers.PortsController",
+    "Method": "RevievPorts",
+    "RelativePath": "api/Ports",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

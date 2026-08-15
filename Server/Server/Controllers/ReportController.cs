@@ -94,7 +94,7 @@ namespace Server.Controllers
     public class AdaptersController : ControllerBase
     {
         [HttpPost]
-        public IActionResult RevievProcesses([FromBody] JsonObject info)
+        public IActionResult RevievAdapters([FromBody] JsonObject info)
         {
             var options = new JsonSerializerOptions
             {
@@ -113,7 +113,19 @@ namespace Server.Controllers
     public class ConnectionsController : ControllerBase
     {
         [HttpPost]
-        public IActionResult RevievProcesses([FromBody] JsonObject info)
+        public IActionResult RevievConnections([FromBody] JsonObject info)
+        {
+            Console.WriteLine(info);
+            return Ok();
+        }
+    }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PortsController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievPorts([FromBody] JsonObject info)
         {
             Console.WriteLine(info);
             return Ok();
