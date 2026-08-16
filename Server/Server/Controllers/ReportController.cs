@@ -3,6 +3,7 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
+
 namespace Server.Controllers
 {
     [Route("api/[controller]")]
@@ -128,6 +129,25 @@ namespace Server.Controllers
         public IActionResult RevievPorts([FromBody] JsonObject info)
         {
             Console.WriteLine(info);
+            return Ok();
+        }
+    }
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AppController : ControllerBase
+    {
+        [HttpPost]
+        public IActionResult RevievApplications([FromBody] JsonObject info)
+        {
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                WriteIndented = true
+            };
+
+            string readableJson = info.ToJsonString(options);
+            Console.WriteLine(readableJson);
             return Ok();
         }
     }

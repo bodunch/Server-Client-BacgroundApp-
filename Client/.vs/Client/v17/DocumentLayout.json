@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\dynamicdata\\sendportinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\dynamicdata\\sendportinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\dynamicdata\\sendapplicationsinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\dynamicdata\\sendapplicationsinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\dynamicdata\\sendconnectioninfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\dynamicdata\\sendconnectioninfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\portinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\portinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\dynamicdata\\sendportinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\dynamicdata\\sendportinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\connectionsinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\connectionsinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\applicationinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\models\\applicationinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\portinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\models\\portinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\applicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\applicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,6 +47,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SendApplicationsInfoToServer.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendApplicationsInfoToServer.cs",
+              "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\DynamicData\\SendApplicationsInfoToServer.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendApplicationsInfoToServer.cs",
+              "RelativeToolTip": "Client\\Modules\\ServerSend\\DynamicData\\SendApplicationsInfoToServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T13:22:30.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationInfo.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ApplicationInfo.cs",
+              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\ApplicationInfo.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ApplicationInfo.cs",
+              "RelativeToolTip": "Client\\Modules\\PCInfo\\ApplicationInfo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T13:10:11.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationInfoModel.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
+              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
+              "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T13:08:45.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SendPortInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendPortInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\DynamicData\\SendPortInfoToServer.cs",
@@ -59,54 +98,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PortInfo.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\PortInfo.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\PortInfo.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\PortInfo.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\PortInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T11:11:02.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PortInfoModel.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\PortInfoModel.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\PortInfoModel.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\PortInfoModel.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\PortInfoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T11:09:11.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "SendConnectionInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendConnectionInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\DynamicData\\SendConnectionInfoToServer.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendConnectionInfoToServer.cs",
               "RelativeToolTip": "Client\\Modules\\ServerSend\\DynamicData\\SendConnectionInfoToServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-15T10:53:16.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConnectionsInfo.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ConnectionsInfo.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\ConnectionsInfo.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ConnectionsInfo.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\ConnectionsInfo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T10:41:36.142Z",
               "EditorCaption": ""
             },
             {
@@ -117,7 +117,7 @@
               "RelativeDocumentMoniker": "Client\\Worker.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Worker.cs",
               "RelativeToolTip": "Client\\Worker.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADQAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAADwv0IAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T17:39:02.471Z",
               "EditorCaption": ""

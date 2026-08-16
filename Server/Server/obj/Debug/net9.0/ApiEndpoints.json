@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Server.Controllers.PortsController",
-    "Method": "RevievPorts",
-    "RelativePath": "api/Ports",
+    "ContainingType": "Server.Controllers.AppController",
+    "Method": "RevievApplications",
+    "RelativePath": "api/App",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

@@ -20,15 +20,15 @@ namespace Client.Modules.PCInfo
 
             foreach (var net in NetworkInterface.GetAllNetworkInterfaces())
             {
-                string name = net.Name;
+                string name = net.Name ?? "Unknown";
                 string? stat;
                 if (net.OperationalStatus == OperationalStatus.Up)
                     stat = Convert.ToString(net.OperationalStatus);
                 else 
                     stat = "No connection";
-                string speed = (net.Speed / 1_000_000).ToString() + "MB/s";
-                string received = (Math.Round(net.GetIPStatistics().BytesReceived / 1024.0 / 1024.0, 2)).ToString() + "MB";
-                string sent = (Math.Round(net.GetIPStatistics().BytesSent / 1024.0 / 1024.0, 2)).ToString() + "MB";
+                string speed = (net.Speed / 1_000_000).ToString() + "MB/s" ?? "Unknown";
+                string received = (Math.Round(net.GetIPStatistics().BytesReceived / 1024.0 / 1024.0, 2)).ToString() + "MB" ?? "Unknown";
+                string sent = (Math.Round(net.GetIPStatistics().BytesSent / 1024.0 / 1024.0, 2)).ToString() + "MB" ?? "Unknown";
 
                 var adaptersProperty = new AdapterProperty()
                 {

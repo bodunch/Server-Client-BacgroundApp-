@@ -21,8 +21,8 @@ namespace Client.Modules.PCInfo
             {
                 if(net.State == TcpState.Established)
                 {
-                    string localConnection = net.LocalEndPoint.ToString();
-                    string remoteConnection = net.RemoteEndPoint.ToString();
+                    string localConnection = net.LocalEndPoint.ToString() ?? "Unknown";
+                    string remoteConnection = net.RemoteEndPoint.ToString() ?? "Unknown";
 
                     var connectionPropery = new ConnectionProperty()
                     {

@@ -19,8 +19,8 @@ namespace Client.Modules.PCInfo
 
             foreach (var net in IPGlobalProperties.GetIPGlobalProperties().GetActiveTcpListeners())
             {
-                string adress = net.Address.ToString();
-                string port = net.Port.ToString();
+                string adress = net.Address.ToString() ?? "Unknown";
+                string port = net.Port.ToString() ?? "Unknown";
 
                 var portProperty = new PortProperty()
                 {

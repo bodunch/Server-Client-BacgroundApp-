@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Client.Modules.ServerSend.DynamicData
 {
-    public class SendConnectionInfoToServer
+    public class SendApplicationsInfoToServer
     {
         public async Task SendDynamicDataToServerAsync(HttpClient client, CancellationToken stoppingToken)
         {
-            var ConnectionsInfoModeule = new ConnectionsInfo();
-            var data = ConnectionsInfoModeule.GetConnectionsInfo();
+            var ApplicationInfoModeule = new ApplicationInfo();
+            var data = ApplicationInfoModeule.GetApplicationInfo();
 
-            await client.PostAsJsonAsync("http://localhost:5000/api/connections", data, stoppingToken);
+            await client.PostAsJsonAsync("http://localhost:5000/api/app", data, stoppingToken);
         }
     }
 }

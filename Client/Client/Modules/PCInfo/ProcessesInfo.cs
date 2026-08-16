@@ -20,9 +20,9 @@ namespace Client.Modules.PCInfo
 
             foreach(var proc in Process.GetProcesses())
             {
-                string name = proc.ProcessName;
-                string id = proc.Id.ToString();
-                string ram = Math.Round(proc.WorkingSet64 / 1048576.0, 2).ToString();
+                string name = proc.ProcessName ?? "Unknown";
+                string id = proc.Id.ToString() ?? "Unknown";
+                string ram = Math.Round(proc.WorkingSet64 / 1048576.0, 2).ToString() ?? "Unknown";
                 string startTime = "Unknown Time";
                 try
                 {
