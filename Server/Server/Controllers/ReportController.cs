@@ -2,7 +2,10 @@
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Nodes;
+using Server.Data;
+using Server.Data.Entities;
 
 namespace Server.Controllers
 {
@@ -10,10 +13,38 @@ namespace Server.Controllers
     [ApiController]
     public class SystemController : ControllerBase
     {
+        private readonly AppDbContext _context;
+
+        public SystemController(AppDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpPost]
         public IActionResult RevievSystemInfo([FromBody] JsonObject info)
         {
-            Console.WriteLine(info);
+            if (info == null)
+                return BadRequest();
+
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString(); 
+            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+
+
+            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+
+            var computerInfo = new SystemInfoEntity
+            {
+                ClientId = clientId,
+                OperatingSystem = info["OperatingSystem"]?.ToString() ?? "",
+                Version = info["Version"]?.ToString() ?? "",
+                ComputerName = info["ComputerName"]?.ToString() ?? "",
+                RegisteredUser = info["RegisteredUser"]?.ToString() ?? "",
+                LastBootTime = info["LastBootTime"]?.ToString() ?? ""
+            };
+
+            _context.SystemInfo.Add(computerInfo);
+            _context.SaveChanges();
+
             return Ok();
         }
     }

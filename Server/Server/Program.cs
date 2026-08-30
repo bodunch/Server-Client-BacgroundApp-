@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Server.Data;
+
 namespace Server
 {
     public class Program
@@ -6,10 +9,13 @@ namespace Server
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddControllers();
 
             var app = builder.Build();
 
+            //using controllers and their paths 
             app.MapControllers();
 
             app.Run("http://localhost:5000");

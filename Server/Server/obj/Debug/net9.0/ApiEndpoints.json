@@ -1,8 +1,168 @@
 [
   {
+    "ContainingType": "Server.Controllers.AdaptersController",
+    "Method": "RevievAdapters",
+    "RelativePath": "api/Adapters",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.AppController",
     "Method": "RevievApplications",
     "RelativePath": "api/App",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ComputerController",
+    "Method": "RevievComputerInfo",
+    "RelativePath": "api/Computer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ConnectionsController",
+    "Method": "RevievConnections",
+    "RelativePath": "api/Connections",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CpuController",
+    "Method": "RevievCPUInfo",
+    "RelativePath": "api/Cpu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CurrcpuController",
+    "Method": "RevievCurrCPUInfo",
+    "RelativePath": "api/Currcpu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CurrramController",
+    "Method": "RevievCurrRAMInfo",
+    "RelativePath": "api/Currram",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.PortsController",
+    "Method": "RevievPorts",
+    "RelativePath": "api/Ports",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ProcessesController",
+    "Method": "RevievProcesses",
+    "RelativePath": "api/Processes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.RamController",
+    "Method": "RevievRAMInfo",
+    "RelativePath": "api/Ram",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.SystemController",
+    "Method": "RevievSystemInfo",
+    "RelativePath": "api/System",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

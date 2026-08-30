@@ -10,12 +10,10 @@ namespace Client
 {
     public class Worker : BackgroundService
     {
-        private readonly ILogger<Worker> _logger;
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public Worker(ILogger<Worker> logger, IHttpClientFactory httpClientFactory)
+        public Worker(IHttpClientFactory httpClientFactory)
         {
-            _logger = logger;
             _httpClientFactory = httpClientFactory;
         }
 
