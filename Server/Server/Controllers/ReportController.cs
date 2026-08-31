@@ -92,10 +92,36 @@ namespace Server.Controllers
     [ApiController]
     public class CpuController : ControllerBase
     {
+        private readonly AppDbContext _context;
+
+        public CpuController(AppDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpPost]
         public IActionResult RevievCPUInfo([FromBody] JsonObject info)
         {
-            Console.WriteLine(info);
+            if (info == null)
+                return BadRequest();
+
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
+            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+
+            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+
+            var cpuInfo = new CpuInfoEntity
+            {
+                ClientId = clientId,
+                CPUName = info["CPUName"]?.ToString() ?? "",
+                Manufacturer = info["Manufacturer"]?.ToString() ?? "",
+                NumOfCores = info["NumOfCores"]?.ToString() ?? "",
+                NumOfStreams = info["NumOfCores"]?.ToString() ?? "",
+            };
+
+            _context.CpuInfo.Add(cpuInfo);
+            _context.SaveChanges();
+
             return Ok();
         }
     }
