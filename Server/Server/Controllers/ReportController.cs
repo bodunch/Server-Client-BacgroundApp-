@@ -130,10 +130,36 @@ namespace Server.Controllers
     [ApiController]
     public class RamController : ControllerBase
     {
+        private readonly AppDbContext _context;
+
+        public RamController(AppDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpPost]
         public IActionResult RevievRAMInfo([FromBody] JsonObject info)
         {
-            Console.WriteLine(info);
+            if (info == null)
+                return BadRequest();
+
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
+            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+
+            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+
+            var ramInfo = new RamInfoEntity
+            {
+                ClientId = clientId,
+                Type = info["Type"]?.ToString() ?? "",
+                PartNumber = info["PartNumber"]?.ToString() ?? "",
+                Frequency = info["Frequency"]?.ToString() ?? "",
+                MemoryCount = info["MemoryCount"]?.ToString() ?? "",
+            };
+
+            _context.RamInfo.Add(ramInfo);
+            _context.SaveChanges();
+
             return Ok();
         }
     }
