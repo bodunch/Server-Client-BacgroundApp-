@@ -7,6 +7,7 @@ namespace Server.Data
     {
         public DbSet<ClientsEntity> Clients { get; set; }
         public DbSet<SystemInfoEntity> SystemInfo { get; set; }
+        public DbSet<ComputerInfoEntity> ComputerInfo { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

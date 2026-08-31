@@ -29,10 +29,9 @@ namespace Server.Controllers
             string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString(); 
             string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
 
-
             int clientId = ClientHelper.GetOrAddClient(_context, machineName);
 
-            var computerInfo = new SystemInfoEntity
+            var systemInfo = new SystemInfoEntity
             {
                 ClientId = clientId,
                 OperatingSystem = info["OperatingSystem"]?.ToString() ?? "",
@@ -42,7 +41,7 @@ namespace Server.Controllers
                 LastBootTime = info["LastBootTime"]?.ToString() ?? ""
             };
 
-            _context.SystemInfo.Add(computerInfo);
+            _context.SystemInfo.Add(systemInfo);
             _context.SaveChanges();
 
             return Ok();
@@ -53,10 +52,38 @@ namespace Server.Controllers
     [ApiController]
     public class ComputerController : ControllerBase
     {
+        private readonly AppDbContext _context;
+
+        public ComputerController(AppDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpPost]
         public IActionResult RevievComputerInfo([FromBody] JsonObject info)
         {
-            Console.WriteLine(info);
+            if (info == null)
+                return BadRequest();
+
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
+            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+
+            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+
+            var computerInfo = new ComputerInfoEntity
+            {
+                ClientId = clientId,
+                Manufacturer = info["Manufacturer"]?.ToString() ?? "",
+                PCModel = info["PCModel"]?.ToString() ?? "",
+                SystemType = info["SystemType"]?.ToString() ?? "",
+                CountOfCpu = info["CountOfCPU"]?.ToString() ?? "",
+                SystemStart = info["SystemStart"]?.ToString() ?? "",
+                StatusOfStart = info["StatusOfStart"]?.ToString() ?? "",
+            };
+
+            _context.ComputerInfo.Add(computerInfo);
+            _context.SaveChanges();
+
             return Ok();
         }
     }
