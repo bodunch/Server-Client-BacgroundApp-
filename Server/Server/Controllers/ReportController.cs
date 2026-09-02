@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Server.Data;
+using Server.Data.DbQueue;
+using Server.Data.Entities;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Nodes;
-using Server.Data;
-using Server.Data.Entities;
 
 namespace Server.Controllers
 {
@@ -13,11 +15,11 @@ namespace Server.Controllers
     [ApiController]
     public class SystemController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly DatabaseQueueService _dbQueue;
 
-        public SystemController(AppDbContext context)
+        public SystemController(DatabaseQueueService dbQueue)
         {
-            _context = context;
+            _dbQueue = dbQueue;
         }
 
         [HttpPost]
@@ -29,20 +31,29 @@ namespace Server.Controllers
             string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString(); 
             string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
 
-            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+            string operatingSystem = info["OperatingSystem"]?.ToString() ?? "";
+            string version = info["Version"]?.ToString() ?? "";
+            string computerName = info["ComputerName"]?.ToString() ?? "";
+            string registeredUser = info["RegisteredUser"]?.ToString() ?? "";
+            string lastBootTime = info["LastBootTime"]?.ToString() ?? "";
 
-            var systemInfo = new SystemInfoEntity
+            _dbQueue.QueueWorkItem(async db =>
             {
-                ClientId = clientId,
-                OperatingSystem = info["OperatingSystem"]?.ToString() ?? "",
-                Version = info["Version"]?.ToString() ?? "",
-                ComputerName = info["ComputerName"]?.ToString() ?? "",
-                RegisteredUser = info["RegisteredUser"]?.ToString() ?? "",
-                LastBootTime = info["LastBootTime"]?.ToString() ?? ""
-            };
+                int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-            _context.SystemInfo.Add(systemInfo);
-            _context.SaveChanges();
+                var systemInfo = new SystemInfoEntity
+                {
+                    ClientId = clientId,
+                    OperatingSystem = operatingSystem,
+                    Version = version,
+                    ComputerName = computerName,
+                    RegisteredUser = registeredUser,
+                    LastBootTime = lastBootTime
+                };
+
+                db.SystemInfo.Add(systemInfo);
+                await db.SaveChangesAsync();
+            });
 
             return Ok();
         }
@@ -52,11 +63,11 @@ namespace Server.Controllers
     [ApiController]
     public class ComputerController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly DatabaseQueueService _dbQueue;
 
-        public ComputerController(AppDbContext context)
+        public ComputerController(DatabaseQueueService dbQueue)
         {
-            _context = context;
+            _dbQueue = dbQueue;
         }
 
         [HttpPost]
@@ -68,21 +79,31 @@ namespace Server.Controllers
             string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
             string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
 
-            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+            string manufacturer = info["Manufacturer"]?.ToString() ?? "";
+            string pcModel = info["PCModel"]?.ToString() ?? "";
+            string systemType = info["SystemType"]?.ToString() ?? "";
+            string countOfCpu = info["CountOfCPU"]?.ToString() ?? "";
+            string systemStart = info["SystemStart"]?.ToString() ?? "";
+            string statusOfStart = info["StatusOfStart"]?.ToString() ?? "";
 
-            var computerInfo = new ComputerInfoEntity
+            _dbQueue.QueueWorkItem(async db =>
             {
-                ClientId = clientId,
-                Manufacturer = info["Manufacturer"]?.ToString() ?? "",
-                PCModel = info["PCModel"]?.ToString() ?? "",
-                SystemType = info["SystemType"]?.ToString() ?? "",
-                CountOfCpu = info["CountOfCPU"]?.ToString() ?? "",
-                SystemStart = info["SystemStart"]?.ToString() ?? "",
-                StatusOfStart = info["StatusOfStart"]?.ToString() ?? "",
-            };
+                int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-            _context.ComputerInfo.Add(computerInfo);
-            _context.SaveChanges();
+                var copmuterInfo = new ComputerInfoEntity
+                {
+                    ClientId = clientId,
+                    Manufacturer = manufacturer,  
+                    PCModel = pcModel,
+                    SystemType = systemType,
+                    CountOfCpu = countOfCpu,
+                    SystemStart = systemStart,
+                    StatusOfStart = statusOfStart
+                };
+
+                db.ComputerInfo.Add(copmuterInfo);
+                await db.SaveChangesAsync();
+            });
 
             return Ok();
         }
@@ -92,11 +113,11 @@ namespace Server.Controllers
     [ApiController]
     public class CpuController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly DatabaseQueueService _dbQueue;
 
-        public CpuController(AppDbContext context)
+        public CpuController(DatabaseQueueService dbQueue)
         {
-            _context = context;
+            _dbQueue = dbQueue;
         }
 
         [HttpPost]
@@ -108,19 +129,27 @@ namespace Server.Controllers
             string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
             string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
 
-            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+            string cpuName = info["CPUName"]?.ToString() ?? "";
+            string manufacturer = info["Manufacturer"]?.ToString() ?? "";
+            string munOfCores = info["NumOfCores"]?.ToString() ?? "";
+            string numOfStreams = info["NumOfStreams"]?.ToString() ?? "";
 
-            var cpuInfo = new CpuInfoEntity
+            _dbQueue.QueueWorkItem(async db =>
             {
-                ClientId = clientId,
-                CPUName = info["CPUName"]?.ToString() ?? "",
-                Manufacturer = info["Manufacturer"]?.ToString() ?? "",
-                NumOfCores = info["NumOfCores"]?.ToString() ?? "",
-                NumOfStreams = info["NumOfCores"]?.ToString() ?? "",
-            };
+                int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-            _context.CpuInfo.Add(cpuInfo);
-            _context.SaveChanges();
+                var cpuInfo = new CpuInfoEntity
+                {
+                    ClientId = clientId,
+                    CPUName = cpuName,
+                    Manufacturer = manufacturer,
+                    NumOfCores = munOfCores,
+                    NumOfStreams = numOfStreams,
+                };
+
+                db.CpuInfo.Add(cpuInfo);
+                await db.SaveChangesAsync();
+            });
 
             return Ok();
         }
@@ -130,11 +159,11 @@ namespace Server.Controllers
     [ApiController]
     public class RamController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly DatabaseQueueService _dbQueue;
 
-        public RamController(AppDbContext context)
+        public RamController(DatabaseQueueService dbQueue)
         {
-            _context = context;
+            _dbQueue = dbQueue;
         }
 
         [HttpPost]
@@ -146,19 +175,27 @@ namespace Server.Controllers
             string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
             string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
 
-            int clientId = ClientHelper.GetOrAddClient(_context, machineName);
+            string type = info["Type"]?.ToString() ?? "";
+            string partNumber = info["PartNumber"]?.ToString() ?? "";
+            string frequency = info["Frequency"]?.ToString() ?? "";
+            string memoryCount = info["MemoryCount"]?.ToString() ?? "";
 
-            var ramInfo = new RamInfoEntity
+            _dbQueue.QueueWorkItem(async db =>
             {
-                ClientId = clientId,
-                Type = info["Type"]?.ToString() ?? "",
-                PartNumber = info["PartNumber"]?.ToString() ?? "",
-                Frequency = info["Frequency"]?.ToString() ?? "",
-                MemoryCount = info["MemoryCount"]?.ToString() ?? "",
-            };
+                int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-            _context.RamInfo.Add(ramInfo);
-            _context.SaveChanges();
+                var ramInfo = new RamInfoEntity
+                {
+                    ClientId = clientId,
+                    Type = type,
+                    PartNumber = partNumber,
+                    Frequency = frequency,
+                    MemoryCount = memoryCount
+                };
+
+                db.RamInfo.Add(ramInfo);
+                await db.SaveChangesAsync();
+            });
 
             return Ok();
         }
