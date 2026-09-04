@@ -28,7 +28,7 @@ namespace Server.Data.DbQueue
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Помилка при фоновому збереженні в БД: {ex.Message}");
+                    Console.WriteLine(ex.Message);
                 }
             }
         }

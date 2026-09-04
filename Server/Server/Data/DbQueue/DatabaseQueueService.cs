@@ -13,7 +13,8 @@ namespace Server.Data.DbQueue
 
         public void QueueWorkItem(Func<AppDbContext, Task> workItem)
         {
-            if (workItem == null) throw new ArgumentNullException(nameof(workItem));
+            if (workItem == null) 
+                throw new ArgumentNullException(nameof(workItem));
             _channel.Writer.TryWrite(workItem);
         }
 
