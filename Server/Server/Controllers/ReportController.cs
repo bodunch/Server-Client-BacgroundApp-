@@ -493,17 +493,46 @@ namespace Server.Controllers
     [ApiController]
     public class AppController : ControllerBase
     {
+        private readonly DatabaseQueueService _dbQueue;
+
+        public AppController(DatabaseQueueService dbQueue)
+        {
+            _dbQueue = dbQueue;
+        }
+
         [HttpPost]
         public IActionResult RevievApplications([FromBody] JsonObject info)
         {
+            if (info == null)
+                return BadRequest();
+
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
+            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+
             var options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-                WriteIndented = true
+                WriteIndented = false
             };
 
-            string readableJson = info.ToJsonString(options);
-            Console.WriteLine(readableJson);
+            string jsonPayload = info.ToJsonString(options);
+            string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            _dbQueue.QueueWorkItem(async db =>
+            {
+                int clientId = ClientHelper.GetOrAddClient(db, machineName);
+
+                var CurrAppInfo = new DynamicApplicationsInfoEntity
+                {
+                    ClientId = clientId,
+                    JsonPayload = jsonPayload,
+                    TimeStamp = currentTime
+                };
+
+                db.DnmAppInfo.Add(CurrAppInfo);
+                await db.SaveChangesAsync();
+            });
+
             return Ok();
         }
     }

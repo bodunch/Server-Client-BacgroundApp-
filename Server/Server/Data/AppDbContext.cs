@@ -16,6 +16,7 @@ namespace Server.Data
         public DbSet<DynamicAdaptersInfoEntity> DnmAdaptersInfo { get; set; }
         public DbSet<DynamicConnectionsInfoEntity> DnmConnectionsInfo { get; set; }
         public DbSet<DynamicPortsInfoEntity> DnmPortsInfo { get; set; }
+        public DbSet<DynamicApplicationsInfoEntity> DnmAppInfo { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
