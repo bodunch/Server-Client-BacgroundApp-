@@ -397,10 +397,46 @@ namespace Server.Controllers
     [ApiController]
     public class ConnectionsController : ControllerBase
     {
+        private readonly DatabaseQueueService _dbQueue;
+
+        public ConnectionsController(DatabaseQueueService dbQueue)
+        {
+            _dbQueue = dbQueue;
+        }
+
         [HttpPost]
         public IActionResult RevievConnections([FromBody] JsonObject info)
         {
-            Console.WriteLine(info);
+            if (info == null)
+                return BadRequest();
+
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
+            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                WriteIndented = false
+            };
+
+            string jsonPayload = info.ToJsonString(options);
+            string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            _dbQueue.QueueWorkItem(async db =>
+            {
+                int clientId = ClientHelper.GetOrAddClient(db, machineName);
+
+                var CurrConnectionsInfo = new DynamicConnectionsInfoEntity
+                {
+                    ClientId = clientId,
+                    JsonPayload = jsonPayload,
+                    TimeStamp = currentTime
+                };
+
+                db.DnmConnectionsInfo.Add(CurrConnectionsInfo);
+                await db.SaveChangesAsync();
+            });
+
             return Ok();
         }
     }
