@@ -253,10 +253,46 @@ namespace Server.Controllers
     [ApiController]
     public class CurrramController : ControllerBase
     {
+        private readonly DatabaseQueueService _dbQueue;
+
+        public CurrramController(DatabaseQueueService dbQueue)
+        {
+            _dbQueue = dbQueue;
+        }
+
         [HttpPost]
         public IActionResult RevievCurrRAMInfo([FromBody] JsonObject info)
         {
-            Console.WriteLine(info);
+            if (info == null)
+                return BadRequest();
+
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
+            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+
+            var options = new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                WriteIndented = false
+            };
+
+            string jsonPayload = info.ToJsonString(options);
+            string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            _dbQueue.QueueWorkItem(async db =>
+            {
+                int clientId = ClientHelper.GetOrAddClient(db, machineName);
+
+                var CurrRamInfo = new DynamicRamInfoEntity
+                {
+                    ClientId = clientId,
+                    JsonPayload = jsonPayload,
+                    TimeStamp = currentTime
+                };
+
+                db.DnmRamInfo.Add(CurrRamInfo);
+                await db.SaveChangesAsync();
+            });
+
             return Ok();
         }
     }
