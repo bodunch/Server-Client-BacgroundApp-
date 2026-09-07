@@ -12,6 +12,7 @@ namespace Server.Data
         public DbSet<RamInfoEntity> RamInfo { get; set; }
         public DbSet<DynamicCpuInfoEntity> DnmCpuInfo { get; set; }
         public DbSet<DynamicRamInfoEntity> DnmRamInfo { get; set; }
+        public DbSet<DynamicProcessesInfoEntity> DnmProcessesInfo { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
