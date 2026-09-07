@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Server.Data.Entities
 {
-    [Table("CurrentProcessesInfo")]
-    public class DynamicProcessesInfoEntity
+    [Table("CurrentAdaptersInfo")]
+    public class DynamicAdaptersInfoEntity
     {
         [Key]
         public int Id { get; set; }
