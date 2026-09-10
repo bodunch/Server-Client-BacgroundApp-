@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Server.Data.Entities
 {
-    [Table("CurrentProcessesInfo")]
+    [Table("CurrentRAMInfo")]
     public class DynamicRamInfoEntity
     {
         [Key]
