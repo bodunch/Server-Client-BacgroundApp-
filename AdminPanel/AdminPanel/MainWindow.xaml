@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="takeClients_button" Content="Take clients" HorizontalAlignment="Left" Height="53" Margin="75,341,0,0" VerticalAlignment="Top" Width="194"/>
+        <TextBox x:Name="clientsList_TextBox" HorizontalAlignment="Left" Height="215" Margin="75,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325"/>
+        <Label x:Name="clientsList_Label" Content="List of clients" HorizontalAlignment="Left" Height="28" Margin="75,58,0,0" VerticalAlignment="Top" Width="132"/>
 
     </Grid>
 </Window>
