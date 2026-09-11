@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\entities\\dynamicraminfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\data\\entities\\dynamicraminfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\entities\\dynamicprocessesinfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\data\\entities\\dynamicprocessesinfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\entities\\dynamicraminfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\data\\entities\\dynamicraminfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\entities\\dynamicprocessesinfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\data\\entities\\dynamicprocessesinfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\entities\\dynamicapplicationsinfoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\dbqueue\\databasequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\data\\dbqueue\\databasequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "DynamicRamInfoEntity.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\Entities\\DynamicRamInfoEntity.cs",
               "RelativeDocumentMoniker": "Server\\Data\\Entities\\DynamicRamInfoEntity.cs",
@@ -67,20 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DynamicProcessesInfoEntity.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
-              "RelativeDocumentMoniker": "Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
-              "RelativeToolTip": "Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T05:04:15.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DynamicApplicationsInfoEntity.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\Entities\\DynamicApplicationsInfoEntity.cs",
               "RelativeDocumentMoniker": "Server\\Data\\Entities\\DynamicApplicationsInfoEntity.cs",
@@ -92,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DynamicPortsInfoEntity.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\Entities\\DynamicPortsInfoEntity.cs",
               "RelativeDocumentMoniker": "Server\\Data\\Entities\\DynamicPortsInfoEntity.cs",
@@ -104,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "DatabaseQueueService.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\DbQueue\\DatabaseQueueService.cs",
               "RelativeDocumentMoniker": "Server\\Data\\DbQueue\\DatabaseQueueService.cs",
@@ -116,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "DatabaseQueueWorker.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\DbQueue\\DatabaseQueueWorker.cs",
               "RelativeDocumentMoniker": "Server\\Data\\DbQueue\\DatabaseQueueWorker.cs",
@@ -134,26 +121,27 @@
               "RelativeDocumentMoniker": "Server\\Controllers\\ReportController.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Controllers\\ReportController.cs",
               "RelativeToolTip": "Server\\Controllers\\ReportController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAAAkCAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-08T14:59:00.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Server\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-29T12:16:49.975Z"
+              "WhenOpened": "2026-08-29T12:16:49.975Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
@@ -161,7 +149,20 @@
               "RelativeToolTip": "Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T17:38:34.313Z"
+              "WhenOpened": "2026-08-05T17:38:34.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DynamicProcessesInfoEntity.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
+              "RelativeDocumentMoniker": "Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
+              "RelativeToolTip": "Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:04:15.844Z"
             }
           ]
         },

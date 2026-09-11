@@ -161,6 +161,16 @@
   },
   {
     "ContainingType": "Server.Controllers.SystemController",
+    "Method": "GetSystemInfo",
+    "RelativePath": "api/System",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.SystemController",
     "Method": "RevievSystemInfo",
     "RelativePath": "api/System",
     "HttpMethod": "POST",

@@ -5,11 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdminPanel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        Width="800">
     <Grid>
-        <Button x:Name="takeClients_button" Content="Take clients" HorizontalAlignment="Left" Height="53" Margin="75,341,0,0" VerticalAlignment="Top" Width="194"/>
-        <TextBox x:Name="clientsList_TextBox" HorizontalAlignment="Left" Height="215" Margin="75,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="clientsList_Label" Content="List of clients" HorizontalAlignment="Left" Height="28" Margin="75,58,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Clients"
+               HorizontalAlignment="Left"
+               Height="33"
+               Margin="37,34,0,0"
+               VerticalAlignment="Top"
+               Width="159"
+               FontSize="20"
+               FontWeight="Bold" />
+        <TextBox x:Name="textBox"
+                 HorizontalAlignment="Left"
+                 Height="248"
+                 Margin="37,82,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="393" />
+        <Button Content="Get clients"
+                HorizontalAlignment="Left"
+                Height="43"
+                Margin="37,351,0,0"
+                VerticalAlignment="Top"
+                Width="160"
+                Click="Button_Click" />
 
     </Grid>
 </Window>

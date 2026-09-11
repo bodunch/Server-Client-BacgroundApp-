@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\staticdata\\sendcpuinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\staticdata\\sendcpuinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\dynamicdata\\sendcurrentraminfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\dynamicdata\\sendcurrentraminfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\raminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\staticdata\\sendcpuinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\staticdata\\sendcpuinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\cpuinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\cpuinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\dynamicdata\\sendportinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\dynamicdata\\sendportinfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\serversend\\dynamicdata\\sendcurrentraminfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\serversend\\dynamicdata\\sendcurrentraminfotoserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\computerinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,17 +106,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Worker.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Worker.cs",
               "RelativeDocumentMoniker": "Client\\Worker.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Worker.cs",
               "RelativeToolTip": "Client\\Worker.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwCYAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T17:39:02.471Z",
               "IsPinned": true,
@@ -128,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "RAMInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\RAMInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\RAMInfo.cs",
@@ -140,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CPUInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\CPUInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\CPUInfo.cs",
@@ -152,19 +152,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "SendCPUInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
               "RelativeToolTip": "Client\\Modules\\ServerSend\\StaticData\\SendCPUInfoToServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T17:32:44.203Z"
+              "WhenOpened": "2026-08-31T17:32:44.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SendCurrentCPUInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendCurrentCPUInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\DynamicData\\SendCurrentCPUInfoToServer.cs",
@@ -176,19 +177,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "SendCurrentRAMInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendCurrentRAMInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\DynamicData\\SendCurrentRAMInfoToServer.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendCurrentRAMInfoToServer.cs",
               "RelativeToolTip": "Client\\Modules\\ServerSend\\DynamicData\\SendCurrentRAMInfoToServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T17:32:05.82Z"
+              "WhenOpened": "2026-08-31T17:32:05.82Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SendSystemInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
@@ -212,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CPUInfoModel.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\CPUInfoModel.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\CPUInfoModel.cs",
@@ -260,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SendPortInfoToServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\DynamicData\\SendPortInfoToServer.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\DynamicData\\SendPortInfoToServer.cs",

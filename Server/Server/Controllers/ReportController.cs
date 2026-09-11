@@ -7,7 +7,7 @@ using Server.Data.Entities;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using System.Text.Json.Nodes;
+using Microsoft.EntityFrameworkCore;
 
 namespace Server.Controllers
 {
@@ -16,10 +16,21 @@ namespace Server.Controllers
     public class SystemController : ControllerBase
     {
         private readonly DatabaseQueueService _dbQueue;
+        private readonly AppDbContext _context;
 
-        public SystemController(DatabaseQueueService dbQueue)
+        public SystemController(DatabaseQueueService dbQueue, AppDbContext context)
         {
             _dbQueue = dbQueue;
+            _context = context;
+        }
+
+        //зробити нормальні запити, а не цю хуєту
+        [HttpGet]
+        public async Task<IActionResult> GetSystemInfo()
+        {
+            var system = _context.SystemInfo.ToListAsync();
+
+            return Ok(system);
         }
 
         [HttpPost]
