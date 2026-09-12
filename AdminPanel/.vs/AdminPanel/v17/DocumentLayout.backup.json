@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\model\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\model\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\getclientsfromserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\getclientsfromserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\model\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\model\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml",
@@ -51,33 +51,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GetClientsFromServer.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\GetClientsFromServer.cs",
               "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\GetClientsFromServer.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\GetClientsFromServer.cs",
               "RelativeToolTip": "AdminPanel\\ViewModel\\GetClientsFromServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-11T19:15:05.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Clients.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Model\\Clients.cs",
               "RelativeDocumentMoniker": "AdminPanel\\Model\\Clients.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Model\\Clients.cs",
               "RelativeToolTip": "AdminPanel\\Model\\Clients.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-11T18:59:55.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml.cs",
@@ -98,8 +98,7 @@
               "RelativeToolTip": "AdminPanel\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T18:41:25.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T18:41:25.117Z"
             }
           ]
         },

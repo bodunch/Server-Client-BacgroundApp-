@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminPanel.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -6,6 +7,8 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace AdminPanel.ViewModel
 {
@@ -15,11 +18,35 @@ namespace AdminPanel.ViewModel
         {
             HttpClient client = new HttpClient();
 
-            HttpResponseMessage response = await client.GetAsync("http://localhost:5000/api/system");
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync("http://localhost:5000/api/clients");
 
-            string result = await response.Content.ReadAsStringAsync();
+                if (!response.IsSuccessStatusCode)
+                {
+                    mainWindow.textBox.Text = "Error with server";
+                    return;
+                }
 
-            mainWindow.textBox.Text = result;
+                List<Clients>? clientsList = await response.Content.ReadFromJsonAsync<List<Clients>>();
+
+                if (clientsList == null || clientsList.Count == 0)
+                {
+                    mainWindow.textBox.Text = "0 clients";
+                    return;
+                }
+
+                string showText = "";
+                foreach (var c in clientsList)
+                {
+                    showText += $"Client Id : {c.Id} | Machine Name : {c.MachineName} | First connected : {c.FirstConnected} | Last seen : {c.LastSeen}";
+                }
+                mainWindow.textBox.Text = showText;
+            }
+            catch (Exception ex)
+            {
+                mainWindow.textBox.Text = ex.Message;
+            }
         }
     }
 }

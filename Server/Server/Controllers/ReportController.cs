@@ -13,6 +13,26 @@ namespace Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    public class ClientsController : ControllerBase
+    {
+        private readonly AppDbContext _context;
+
+        public ClientsController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetClientsInfo()
+        {
+            var system = await _context.Clients.ToListAsync();
+
+            return Ok(system);
+        }
+    }
+
+    [Route("api/[controller]")]
+    [ApiController]
     public class SystemController : ControllerBase
     {
         private readonly DatabaseQueueService _dbQueue;

@@ -32,6 +32,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetClientsInfo",
+    "RelativePath": "api/Clients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.ComputerController",
     "Method": "RevievComputerInfo",
     "RelativePath": "api/Computer",

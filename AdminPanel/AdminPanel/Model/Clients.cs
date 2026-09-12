@@ -9,6 +9,9 @@ namespace AdminPanel.Model
 {
     public class Clients
     {
-        public string Name { get; } = string.Empty;
+        public int Id { get; set; }
+        public string MachineName { get; set; } = string.Empty;
+        public string FirstConnected { get; set; } = string.Empty;
+        public string LastSeen { get; set; } = string.Empty;
     }
 }
