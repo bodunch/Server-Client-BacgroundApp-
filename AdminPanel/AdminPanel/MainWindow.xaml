@@ -23,14 +23,13 @@
                  Margin="37,82,0,0"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
-                 Width="393" />
+                 Width="692" />
         <Button Content="Get clients"
                 HorizontalAlignment="Left"
                 Height="43"
                 Margin="37,351,0,0"
                 VerticalAlignment="Top"
-                Width="160"
-                Click="Button_Click" />
+                Width="160"/>
 
     </Grid>
 </Window>

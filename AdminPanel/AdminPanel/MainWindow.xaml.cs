@@ -22,11 +22,22 @@ namespace AdminPanel
             InitializeComponent();
 
             _getClientsFromServer = new GetClientsFromServer();
+
+            GetClients();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        //private async void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    await _getClientsFromServer.GetClients(this);
+        //}
+
+        private async void GetClients()
         {
-            await _getClientsFromServer.GetClients(this);
+            while (true)
+            {
+                await _getClientsFromServer.GetClients(this);
+                await Task.Delay(2000);
+            }
         }
     }
 }

@@ -39,7 +39,7 @@ namespace AdminPanel.ViewModel
                 string showText = "";
                 foreach (var c in clientsList)
                 {
-                    showText += $"Client Id : {c.Id} | Machine Name : {c.MachineName} | First connected : {c.FirstConnected} | Last seen : {c.LastSeen}";
+                    showText += $"Client Id : {c.Id} | Machine Name : {c.MachineName} | First connected : {c.FirstConnected} | Last seen : {c.LastSeen}" + Environment.NewLine;
                 }
                 mainWindow.textBox.Text = showText;
             }
