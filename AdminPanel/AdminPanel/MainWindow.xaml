@@ -4,32 +4,55 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdminPanel"
+        xmlns:vm="clr-namespace:AdminPanel.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="450"
-        Width="800">
-    <Grid>
-        <Label Content="Clients"
-               HorizontalAlignment="Left"
-               Height="33"
-               Margin="37,34,0,0"
-               VerticalAlignment="Top"
-               Width="159"
-               FontSize="20"
-               FontWeight="Bold" />
-        <TextBox x:Name="textBox"
-                 HorizontalAlignment="Left"
-                 Height="248"
-                 Margin="37,82,0,0"
-                 TextWrapping="Wrap"
-                 VerticalAlignment="Top"
-                 Width="692" />
-        <Button Content="Get clients"
-                HorizontalAlignment="Left"
-                Height="43"
-                Margin="37,351,0,0"
-                VerticalAlignment="Top"
-                Width="160"/>
+        Width="1920"
+        Height="1080"
+        WindowState="Maximized">
 
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0"
+              Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Content="All PC`s in LAN:"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Margin="0,10,0,10" />
+
+            <ScrollViewer Grid.Row="1"
+                          VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding ClientNames}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding}"
+                                    Margin="0,3,0,3"
+                                    Padding="10,5" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>

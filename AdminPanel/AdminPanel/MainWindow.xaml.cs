@@ -15,29 +15,9 @@ namespace AdminPanel
 {
     public partial class MainWindow : Window
     {
-        private readonly GetClientsFromServer _getClientsFromServer;
-
         public MainWindow()
         {
             InitializeComponent();
-
-            _getClientsFromServer = new GetClientsFromServer();
-
-            GetClients();
-        }
-
-        //private async void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    await _getClientsFromServer.GetClients(this);
-        //}
-
-        private async void GetClients()
-        {
-            while (true)
-            {
-                await _getClientsFromServer.GetClients(this);
-                await Task.Delay(2000);
-            }
         }
     }
 }
