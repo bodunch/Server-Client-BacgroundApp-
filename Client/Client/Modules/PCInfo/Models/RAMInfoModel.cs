@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class RAMInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public string Type { get; set; } = string.Empty;
         public string PartNumber { get; set; } = string.Empty;
         public string Frequency { get; set; } = string.Empty;

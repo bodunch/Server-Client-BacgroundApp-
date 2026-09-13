@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.Data;
 using Server.Data.DbQueue;
@@ -7,7 +6,6 @@ using Server.Data.Entities;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using Microsoft.EntityFrameworkCore;
 
 namespace Server.Controllers
 {
@@ -36,21 +34,10 @@ namespace Server.Controllers
     public class SystemController : ControllerBase
     {
         private readonly DatabaseQueueService _dbQueue;
-        private readonly AppDbContext _context;
 
         public SystemController(DatabaseQueueService dbQueue, AppDbContext context)
         {
             _dbQueue = dbQueue;
-            _context = context;
-        }
-
-        //зробити нормальні запити, а не цю хуєту
-        [HttpGet]
-        public async Task<IActionResult> GetSystemInfo()
-        {
-            var system = _context.SystemInfo.ToListAsync();
-
-            return Ok(system);
         }
 
         [HttpPost]
@@ -59,7 +46,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString(); 
+            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
             string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
 
             string operatingSystem = info["OperatingSystem"]?.ToString() ?? "";
@@ -72,17 +59,32 @@ namespace Server.Controllers
             {
                 int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-                var systemInfo = new SystemInfoEntity
-                {
-                    ClientId = clientId,
-                    OperatingSystem = operatingSystem,
-                    Version = version,
-                    ComputerName = computerName,
-                    RegisteredUser = registeredUser,
-                    LastBootTime = lastBootTime
-                };
+                var staticInfoLine = db.SystemInfo.FirstOrDefault(s => s.ClientId == clientId);
 
-                db.SystemInfo.Add(systemInfo);
+                if (staticInfoLine == null)
+                {
+                    var systemInfo = new SystemInfoEntity
+                    {
+                        ClientId = clientId,
+                        OperatingSystem = operatingSystem,
+                        Version = version,
+                        ComputerName = computerName,
+                        RegisteredUser = registeredUser,
+                        LastBootTime = lastBootTime
+                    };
+
+                    db.SystemInfo.Add(systemInfo);
+
+                }
+                else
+                {
+                    staticInfoLine.OperatingSystem = operatingSystem;
+                    staticInfoLine.Version = version;
+                    staticInfoLine.ComputerName = computerName;
+                    staticInfoLine.RegisteredUser = registeredUser;
+                    staticInfoLine.LastBootTime = lastBootTime;
+                }
+
                 await db.SaveChangesAsync();
             });
 
@@ -107,8 +109,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             string manufacturer = info["Manufacturer"]?.ToString() ?? "";
             string pcModel = info["PCModel"]?.ToString() ?? "";
@@ -121,18 +122,33 @@ namespace Server.Controllers
             {
                 int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-                var copmuterInfo = new ComputerInfoEntity
-                {
-                    ClientId = clientId,
-                    Manufacturer = manufacturer,  
-                    PCModel = pcModel,
-                    SystemType = systemType,
-                    CountOfCpu = countOfCpu,
-                    SystemStart = systemStart,
-                    StatusOfStart = statusOfStart
-                };
+                var staticInfoLine = db.ComputerInfo.FirstOrDefault(s => s.ClientId == clientId);
 
-                db.ComputerInfo.Add(copmuterInfo);
+                if (staticInfoLine == null)
+                {
+                    var copmuterInfo = new ComputerInfoEntity
+                    {
+                        ClientId = clientId,
+                        Manufacturer = manufacturer,
+                        PCModel = pcModel,
+                        SystemType = systemType,
+                        CountOfCpu = countOfCpu,
+                        SystemStart = systemStart,
+                        StatusOfStart = statusOfStart
+                    };
+
+                    db.ComputerInfo.Add(copmuterInfo);
+                }
+                else
+                {
+                    staticInfoLine.Manufacturer = manufacturer;
+                    staticInfoLine.PCModel = pcModel;
+                    staticInfoLine.SystemType = systemType;
+                    staticInfoLine.CountOfCpu = countOfCpu;
+                    staticInfoLine.SystemStart = systemStart;
+                    staticInfoLine.StatusOfStart = statusOfStart;
+                }
+
                 await db.SaveChangesAsync();
             });
 
@@ -157,8 +173,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             string cpuName = info["CPUName"]?.ToString() ?? "";
             string manufacturer = info["Manufacturer"]?.ToString() ?? "";
@@ -169,16 +184,29 @@ namespace Server.Controllers
             {
                 int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-                var cpuInfo = new CpuInfoEntity
-                {
-                    ClientId = clientId,
-                    CPUName = cpuName,
-                    Manufacturer = manufacturer,
-                    NumOfCores = munOfCores,
-                    NumOfStreams = numOfStreams,
-                };
+                var staticInfoLine = db.CpuInfo.FirstOrDefault(s => s.ClientId == clientId);
 
-                db.CpuInfo.Add(cpuInfo);
+                if (staticInfoLine == null)
+                {
+                    var cpuInfo = new CpuInfoEntity
+                    {
+                        ClientId = clientId,
+                        CPUName = cpuName,
+                        Manufacturer = manufacturer,
+                        NumOfCores = munOfCores,
+                        NumOfStreams = numOfStreams,
+                    };
+
+                    db.CpuInfo.Add(cpuInfo);
+                }
+                else
+                {
+                    staticInfoLine.CPUName = cpuName;
+                    staticInfoLine.Manufacturer = manufacturer;
+                    staticInfoLine.NumOfCores = munOfCores;
+                    staticInfoLine.NumOfStreams = numOfStreams;
+                }
+
                 await db.SaveChangesAsync();
             });
 
@@ -203,8 +231,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             string type = info["Type"]?.ToString() ?? "";
             string partNumber = info["PartNumber"]?.ToString() ?? "";
@@ -215,16 +242,29 @@ namespace Server.Controllers
             {
                 int clientId = ClientHelper.GetOrAddClient(db, machineName);
 
-                var ramInfo = new RamInfoEntity
-                {
-                    ClientId = clientId,
-                    Type = type,
-                    PartNumber = partNumber,
-                    Frequency = frequency,
-                    MemoryCount = memoryCount
-                };
+                var staticInfoLine = db.RamInfo.FirstOrDefault(s => s.ClientId == clientId);
 
-                db.RamInfo.Add(ramInfo);
+                if (staticInfoLine == null)
+                {
+                    var ramInfo = new RamInfoEntity
+                    {
+                        ClientId = clientId,
+                        Type = type,
+                        PartNumber = partNumber,
+                        Frequency = frequency,
+                        MemoryCount = memoryCount
+                    };
+
+                    db.RamInfo.Add(ramInfo);
+                    
+                }
+                else
+                {
+                    staticInfoLine.Type = type;
+                    staticInfoLine.PartNumber = partNumber;
+                    staticInfoLine.Frequency = frequency;
+                    staticInfoLine.MemoryCount = memoryCount;
+                }
                 await db.SaveChangesAsync();
             });
 
@@ -249,8 +289,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             var options = new JsonSerializerOptions
             {
@@ -297,8 +336,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             var options = new JsonSerializerOptions
             {
@@ -345,8 +383,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             var options = new JsonSerializerOptions
             {
@@ -393,8 +430,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             var options = new JsonSerializerOptions
             {
@@ -441,8 +477,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             var options = new JsonSerializerOptions
             {
@@ -489,8 +524,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             var options = new JsonSerializerOptions
             {
@@ -537,8 +571,7 @@ namespace Server.Controllers
             if (info == null)
                 return BadRequest();
 
-            string rawMachineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString();
-            string machineName = string.IsNullOrWhiteSpace(rawMachineName) ? "Office-PC" : rawMachineName;
+            string machineName = info["machineName"]?.ToString() ?? info["MachineName"]?.ToString() ?? info["ComputerName"]?.ToString() ?? info["pcName"]?.ToString();
 
             var options = new JsonSerializerOptions
             {

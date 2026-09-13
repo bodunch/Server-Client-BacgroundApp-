@@ -46,8 +46,7 @@
               "RelativeToolTip": "AdminPanel\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-09-11T18:41:27.904Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "AdminPanel\\MainWindow.xaml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-09-11T18:41:35.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T18:41:35.832Z"
             },
             {
               "$type": "Document",
@@ -74,7 +72,7 @@
               "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\MainViewModel.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "AdminPanel\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-13T10:46:58.744Z",
               "EditorCaption": ""
@@ -88,8 +86,7 @@
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\App.xaml",
               "RelativeToolTip": "AdminPanel\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-09-12T11:37:53.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T11:37:53.415Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "AdminPanel\\Model\\Clients.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T18:59:55.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T18:59:55.6Z"
             },
             {
               "$type": "Document",
@@ -114,8 +110,7 @@
               "RelativeToolTip": "AdminPanel\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T18:41:25.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T18:41:25.117Z"
             }
           ]
         },

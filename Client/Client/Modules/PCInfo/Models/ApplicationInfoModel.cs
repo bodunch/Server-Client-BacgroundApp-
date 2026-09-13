@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class ApplicationInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public IList<ApplicationProperty>? Application { get; set; }
     }
 

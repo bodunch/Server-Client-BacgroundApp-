@@ -1,11 +1,12 @@
 ﻿using Client.Modules.PCInfo.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Management;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics;
 
 namespace Client.Modules.PCInfo
 {
@@ -18,6 +19,8 @@ namespace Client.Modules.PCInfo
                 Application = new List<ApplicationProperty>()
             };
 
+            model.ComputerName = Environment.MachineName;
+
             foreach (var app in Process.GetProcesses())
             {
                 if (app.MainWindowHandle != IntPtr.Zero && !string.IsNullOrWhiteSpace(app.MainWindowTitle))
@@ -29,6 +32,7 @@ namespace Client.Modules.PCInfo
 
                     var appPropery = new ApplicationProperty()
                     {
+                       
                         AppName = appName,
                         WindowTitle = windowTitle,
                         Id = id,

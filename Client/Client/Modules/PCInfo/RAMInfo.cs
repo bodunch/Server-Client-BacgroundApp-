@@ -20,6 +20,7 @@ namespace Client.Modules.PCInfo
 
             foreach (ManagementObject obj in searcherRAM.Get())
             {
+                model.ComputerName = Environment.MachineName;
                 model.Type = Convert.ToString(obj["Caption"]) ?? "Unknown";
                 model.PartNumber = Convert.ToString(obj["PartNumber"]) ?? "Unknown";
                 model.Frequency = Convert.ToString(obj["ConfiguredClockSpeed"]) ?? "Unknown";

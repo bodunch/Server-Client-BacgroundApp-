@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Client.Modules.PCInfo.Models;
+using Remotion.Linq.Clauses.ResultOperators;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics;
-using Remotion.Linq.Clauses.ResultOperators;
-using Client.Modules.PCInfo.Models;
 
 namespace Client.Modules.PCInfo
 {
@@ -18,7 +19,9 @@ namespace Client.Modules.PCInfo
                 Process = new List<ProcessProperty>()
             };
 
-            foreach(var proc in Process.GetProcesses())
+            model.ComputerName = Environment.MachineName;
+
+            foreach (var proc in Process.GetProcesses())
             {
                 string name = proc.ProcessName ?? "Unknown";
                 string id = proc.Id.ToString() ?? "Unknown";

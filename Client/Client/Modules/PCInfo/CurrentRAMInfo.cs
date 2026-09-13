@@ -20,6 +20,7 @@ namespace Client.Modules.PCInfo
 
             foreach(ManagementObject obj in searcherRAM.Get())
             {
+                model.ComputerName = Environment.MachineName;
                 model.TotalMem = Convert.ToString(Math.Round((Convert.ToDouble(obj["TotalVisibleMemorySize"])) / 1048576.0, 2)) ?? "Unknown";
                 model.FreeMem = Convert.ToString(Math.Round((Convert.ToDouble(obj["FreePhysicalMemory"])) / 1048576.0, 2)) ?? "Unknown";
             }

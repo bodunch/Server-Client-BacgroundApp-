@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class ConnectionsInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public IList<ConnectionProperty>? Connection { get; set; }
     }
 

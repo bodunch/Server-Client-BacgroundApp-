@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class ProcessesInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public IList<ProcessProperty>? Process { get; set; }
     }
 

@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class ComputerInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public string Manufacturer { get; set; } = string.Empty;
         public string PCModel { get; set; } = string.Empty;
         public string SystemType { get; set; } = string.Empty;

@@ -20,6 +20,7 @@ namespace Client.Modules.PCInfo
 
             foreach(ManagementObject obj in searcherSystem.Get())
             {
+                model.ComputerName = Environment.MachineName;
                 model.Manufacturer = Convert.ToString(obj["Manufacturer"]) ?? "Unknow";
                 model.PCModel = Convert.ToString(obj["Model"]) ?? "Unknow";
                 model.SystemType = Convert.ToString(obj["SystemType"]) ?? "Unknow";
@@ -27,6 +28,7 @@ namespace Client.Modules.PCInfo
                 model.SystemStart = Convert.ToString(obj["BootupState"]) ?? "Unknow";
                 model.StatusOfStart = Convert.ToString(obj["Status"]) ?? "Unknow";
             }
+
             return model;
         }
     }

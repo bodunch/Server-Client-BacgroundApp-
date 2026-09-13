@@ -20,6 +20,7 @@ namespace Client.Modules.PCInfo
 
             foreach(ManagementObject obj in searcherCPU.Get())
             {
+                model.ComputerName = Environment.MachineName;
                 model.CPUName = Convert.ToString(obj["Name"]) ?? "Unknown";
                 model.Manufacturer = Convert.ToString(obj["Manufacturer"]) ?? "Unknown";
                 model.NumOfCores = Convert.ToString(obj["NumberOfCores"]) ?? "Unknown";

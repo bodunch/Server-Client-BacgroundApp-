@@ -21,6 +21,7 @@ namespace Client.Modules.PCInfo
 
             foreach (ManagementObject obj in searcherSystem.Get())
             {
+                model.ComputerName = Environment.MachineName;
                 model.OperatingSystem = Convert.ToString(obj["Caption"]) ?? "Unknown";
                 model.Version = Convert.ToString(obj["Version"]) ?? "Unknown";
                 model.ComputerName = Convert.ToString(obj["CSName"]) ?? "Unknown";

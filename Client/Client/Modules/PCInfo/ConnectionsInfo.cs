@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace Client.Modules.PCInfo
             {
                 Connection = new List<ConnectionProperty>()
             };
+
+            model.ComputerName = Environment.MachineName;
 
             foreach (var net in IPGlobalProperties.GetIPGlobalProperties().GetActiveTcpConnections())
             {

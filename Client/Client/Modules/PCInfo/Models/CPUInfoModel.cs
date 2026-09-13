@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class CPUInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public string CPUName { get; set; } = string.Empty;
         public string Manufacturer { get; set; } = string.Empty;
         public string NumOfCores { get; set; } = string.Empty;

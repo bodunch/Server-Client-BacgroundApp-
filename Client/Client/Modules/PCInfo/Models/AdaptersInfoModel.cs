@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class AdaptersInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public IList<AdapterProperty>? Adapter { get; set; }
     }
 

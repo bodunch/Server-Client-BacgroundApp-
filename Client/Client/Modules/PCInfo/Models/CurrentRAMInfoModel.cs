@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class CurrentRAMInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public string TotalMem { get; set; } = string.Empty;
         public string FreeMem { get; set;} = string.Empty;
     }

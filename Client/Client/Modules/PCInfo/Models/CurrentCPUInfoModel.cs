@@ -8,6 +8,7 @@ namespace Client.Modules.PCInfo.Models
 {
     public class CurrentCPUInfoModel
     {
+        public string ComputerName { get; set; } = string.Empty;
         public string LoadCPU { get; set; } = string.Empty;
         public string ErrorCode { get; set; } = string.Empty;
         public string Status { get; set; } = string.Empty;

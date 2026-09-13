@@ -20,6 +20,7 @@ namespace Client.Modules.PCInfo
 
             foreach (ManagementObject obj in searcherCPU.Get())
             {
+                model.ComputerName = Environment.MachineName;
                 model.LoadCPU = Convert.ToString(obj["LoadPercentage"]) + "%" ?? "Unknown";
                 string errorCode = Convert.ToString(obj["LastErrorCode"]);
                 model.ErrorCode = (errorCode == "" || errorCode == null) ? "No errors" : errorCode;

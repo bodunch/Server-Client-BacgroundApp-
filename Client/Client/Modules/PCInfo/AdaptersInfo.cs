@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Management;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,8 @@ namespace Client.Modules.PCInfo
                 Adapter = new List<AdapterProperty>()
             };
 
+            model.ComputerName = Environment.MachineName;
+
             foreach (var net in NetworkInterface.GetAllNetworkInterfaces())
             {
                 string name = net.Name ?? "Unknown";
@@ -32,6 +35,7 @@ namespace Client.Modules.PCInfo
 
                 var adaptersProperty = new AdapterProperty()
                 {
+                    
                     Name = name,
                     Status = stat!,
                     Speed = speed,

@@ -9,7 +9,7 @@
             lock (_lockObj)
             {
                 if (string.IsNullOrEmpty(machineName))
-                    machineName = "Unknown-PC";
+                    throw new ArgumentException("Machine name cannot be null or empty.", nameof(machineName));
 
                 string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
