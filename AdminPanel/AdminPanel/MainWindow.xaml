@@ -37,7 +37,7 @@
 
             <ScrollViewer Grid.Row="1"
                           VerticalScrollBarVisibility="Auto">
-                <ItemsControl ItemsSource="{Binding ClientNames}">
+                <ItemsControl ItemsSource="{Binding ClientsItem}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Vertical" />
@@ -46,7 +46,8 @@
 
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Button Content="{Binding}"
+                            <Button Content="{Binding MachineName}"
+                                    Tag="{Binding Id}"
                                     Margin="0,3,0,3"
                                     Padding="10,5" />
                         </DataTemplate>

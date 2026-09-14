@@ -27,6 +27,15 @@ namespace Server.Controllers
 
             return Ok(system);
         }
+
+        //[HttpGet("{id}")]
+        //public IActionResult GetSystemInfoByClientId(int id)
+        //{
+        //    var sysInfo = _context.SystemInfo.FirstOrDefault(s => s.ClientId == id);
+        //    if (sysInfo == null) return NotFound();
+
+        //    return Ok(sysInfo);
+        //}
     }
 
     [Route("api/[controller]")]

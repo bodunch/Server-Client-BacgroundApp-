@@ -12,7 +12,7 @@ namespace AdminPanel.ViewModel
 {
     public class MainViewModel
     {
-        public ObservableCollection<string> ClientNames { get; set; } = new();
+        public ObservableCollection<Clients> ClientsItem { get; set; } = new();
 
         public MainViewModel()
         {
@@ -34,13 +34,13 @@ namespace AdminPanel.ViewModel
 
                         if (clientsList != null)
                         {
-                            ClientNames.Clear();
+                            ClientsItem.Clear();
 
                             foreach (var c in clientsList)
                             {
-                                if (!ClientNames.Contains(c.MachineName))
+                                if (!ClientsItem.Any(existing => existing.Id == c.Id))
                                 {
-                                    ClientNames.Add(c.MachineName);
+                                    ClientsItem.Add(new Clients { Id = c.Id, MachineName = c.MachineName });
                                 }
                             }
                         }
