@@ -167,8 +167,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\ComputerInfo.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwBYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:01:17.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:01:17.215Z"
             },
             {
               "$type": "Document",
@@ -180,8 +179,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\ConnectionsInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:04:30.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:04:30.515Z"
             },
             {
               "$type": "Document",
@@ -193,8 +191,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\CPUInfo.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T17:32:51.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T17:32:51.544Z"
             },
             {
               "$type": "Document",
@@ -206,8 +203,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\CurrentCPUInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:06:03.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:06:03.232Z"
             },
             {
               "$type": "Document",
@@ -219,8 +215,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\CurrentRAMInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:06:16.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:06:16.734Z"
             },
             {
               "$type": "Document",
@@ -232,8 +227,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\PortInfo.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:06:20.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:06:20.926Z"
             },
             {
               "$type": "Document",
@@ -245,8 +239,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\ProcessesInfo.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAABUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:06:33.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:06:33.996Z"
             },
             {
               "$type": "Document",
@@ -258,8 +251,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\RAMInfo.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T17:58:07.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T17:58:07.416Z"
             },
             {
               "$type": "Document",
@@ -271,8 +263,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\SystemInfo.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAUwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-29T12:14:15.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-29T12:14:15.784Z"
             },
             {
               "$type": "Document",
@@ -297,8 +288,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\ApplicationInfo.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAABUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T13:10:11.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-16T13:10:11.806Z"
             },
             {
               "$type": "Document",
@@ -310,8 +300,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\AdaptersInfo.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAACYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:38:48.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:38:48.889Z"
             },
             {
               "$type": "Document",
@@ -323,8 +312,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:38:53.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:38:53.208Z"
             },
             {
               "$type": "Document",
@@ -336,8 +324,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\RAMInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:50:00.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:50:00.838Z"
             },
             {
               "$type": "Document",
@@ -349,8 +336,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ProcessesInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:40:40.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:40:40.549Z"
             },
             {
               "$type": "Document",
@@ -362,8 +348,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\PortInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:40:43.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:40:43.701Z"
             },
             {
               "$type": "Document",
@@ -375,8 +360,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\CurrentRAMInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T13:58:36.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T13:58:36.318Z"
             },
             {
               "$type": "Document",
@@ -388,8 +372,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\CurrentCPUInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:05:18.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:05:18.605Z"
             },
             {
               "$type": "Document",
@@ -401,8 +384,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\SystemInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:39:52.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:39:52.878Z"
             },
             {
               "$type": "Document",
@@ -414,8 +396,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ConnectionsInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:40:46.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:40:46.614Z"
             },
             {
               "$type": "Document",
@@ -427,8 +408,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ComputerInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:39:00.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:39:00.107Z"
             },
             {
               "$type": "Document",
@@ -440,8 +420,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T13:08:45.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-16T13:08:45.835Z"
             },
             {
               "$type": "Document",
@@ -453,8 +432,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\CPUInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:48:36.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:48:36.226Z"
             },
             {
               "$type": "Document",
@@ -466,8 +444,7 @@
               "RelativeToolTip": "Client\\Modules\\ServerSend\\DynamicData\\SendCurrentRAMInfoToServer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T17:32:05.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T17:32:05.82Z"
             },
             {
               "$type": "Document",

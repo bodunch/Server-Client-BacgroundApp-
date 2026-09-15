@@ -23,19 +23,28 @@ namespace Server.Controllers
         [HttpGet]
         public async Task<IActionResult> GetClientsInfo()
         {
-            var system = await _context.Clients.ToListAsync();
+            var clients = await _context.Clients.ToListAsync();
 
-            return Ok(system);
+            return Ok(clients);
         }
 
-        //[HttpGet("{id}")]
-        //public IActionResult GetSystemInfoByClientId(int id)
-        //{
-        //    var sysInfo = _context.SystemInfo.FirstOrDefault(s => s.ClientId == id);
-        //    if (sysInfo == null) return NotFound();
+        [HttpGet("staticinfo/system")]
+        public async Task<IActionResult> GetStaticSystemInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
 
-        //    return Ok(sysInfo);
-        //}
+            var systemInfo = _context.SystemInfo.FirstOrDefault(s => s.ClientId == clientId);
+
+            if (systemInfo == null)
+            {
+                return NotFound("System info for this client was not found.");
+            }
+
+            return Ok(systemInfo);
+        }
     }
 
     [Route("api/[controller]")]

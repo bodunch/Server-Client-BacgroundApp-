@@ -10,9 +10,20 @@ using System.Threading.Tasks;
 
 namespace AdminPanel.ViewModel
 {
-    public class MainViewModel
+    public class MainViewModel : System.ComponentModel.INotifyPropertyChanged
     {
         public ObservableCollection<Clients> ClientsItem { get; set; } = new();
+
+        private string _systemInfoText = "Виберіть ПК";
+        public string SystemInfoText
+        {
+            get => _systemInfoText;
+            set
+            {
+                _systemInfoText = value;
+                OnPropertyChanged(nameof(SystemInfoText));
+            }
+        }
 
         public MainViewModel()
         {
@@ -54,5 +65,39 @@ namespace AdminPanel.ViewModel
                 await Task.Delay(5000);
             }
         }
+
+        public async Task ClientInfo(string Id)
+        {
+            using HttpClient client = new HttpClient();
+
+            try
+            {
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5000/api/clients/staticinfo/system");
+                request.Headers.Add("ClientId", Id);
+
+                HttpResponseMessage response = await client.SendAsync(request);
+
+                var systemInfo = await response.Content.ReadFromJsonAsync<SystemInfo>();
+
+                if (systemInfo != null)
+                {
+                    SystemInfoText = $"ОС: {systemInfo.OperatingSystem}\n" +
+                                 $"Версія: {systemInfo.Version}\n" +
+                                 $"Ім'я ПК: {systemInfo.ComputerName}\n" +
+                                 $"Користувач: {systemInfo.RegisteredUser}\n" +
+                                 $"Остання завантаження: {systemInfo.LastBootTime}";
+                }
+                else
+                {
+                    SystemInfoText = "Дані не знайдені.";
+                }
+            }
+            catch
+            {
+
+            }
+        }
+        public event System.ComponentModel.PropertyChangedEventHandler? PropertyChanged;
+        protected void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
     }
 }

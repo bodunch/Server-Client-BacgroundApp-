@@ -19,5 +19,19 @@ namespace AdminPanel
         {
             InitializeComponent();
         }
+
+        private async void OpenClientInfo(object sender, RoutedEventArgs e)
+        {
+            if(sender is Button button && button.Tag != null)
+            {
+                string tag = button.Tag.ToString()!;
+
+                if (DataContext is MainViewModel mvm)
+                {
+                    await mvm.ClientInfo(tag);
+                }
+            }
+            
+        }
     }
 }

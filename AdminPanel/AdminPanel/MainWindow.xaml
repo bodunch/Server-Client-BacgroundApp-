@@ -48,6 +48,7 @@
                         <DataTemplate>
                             <Button Content="{Binding MachineName}"
                                     Tag="{Binding Id}"
+                                    Click="OpenClientInfo"
                                     Margin="0,3,0,3"
                                     Padding="10,5" />
                         </DataTemplate>
@@ -55,5 +56,14 @@
                 </ItemsControl>
             </ScrollViewer>
         </Grid>
+        <TextBlock x:Name="TextBox"
+                   Grid.Column="1"
+                   HorizontalAlignment="Left"
+                   Height="263"
+                   Margin="247,160,0,0"
+                   TextWrapping="Wrap"
+                   Text="{Binding SystemInfoText}"
+                   VerticalAlignment="Top"
+                   Width="473" />
     </Grid>
 </Window>
