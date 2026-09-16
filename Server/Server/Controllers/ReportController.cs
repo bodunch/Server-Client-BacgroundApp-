@@ -45,6 +45,60 @@ namespace Server.Controllers
 
             return Ok(systemInfo);
         }
+
+        [HttpGet("staticinfo/computer")]
+        public async Task<IActionResult> GetStaticComputerInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
+
+            var computerInfo = _context.ComputerInfo.FirstOrDefault(s => s.ClientId == clientId);
+
+            if (computerInfo == null)
+            {
+                return NotFound("Computer info for this client was not found.");
+            }
+
+            return Ok(computerInfo);
+        }
+
+        [HttpGet("staticinfo/cpu")]
+        public async Task<IActionResult> GetStaticCpuInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
+
+            var cpuInfo = _context.CpuInfo.FirstOrDefault(s => s.ClientId == clientId);
+
+            if (cpuInfo == null)
+            {
+                return NotFound("Cpu info for this client was not found.");
+            }
+
+            return Ok(cpuInfo);
+        }
+
+        [HttpGet("staticinfo/ram")]
+        public async Task<IActionResult> GetStaticRamInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
+
+            var ramInfo = _context.RamInfo.FirstOrDefault(s => s.ClientId == clientId);
+
+            if (ramInfo == null)
+            {
+                return NotFound("Ram info for this client was not found.");
+            }
+
+            return Ok(ramInfo);
+        }
     }
 
     [Route("api/[controller]")]

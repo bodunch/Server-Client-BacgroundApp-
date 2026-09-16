@@ -56,13 +56,40 @@
                 </ItemsControl>
             </ScrollViewer>
         </Grid>
+        <TextBlock x:Name="TextBox_Copy"
+                   Grid.Column="1"
+                   HorizontalAlignment="Left"
+                   Height="263"
+                   Margin="755,52,0,0"
+                   TextWrapping="Wrap"
+                   Text="{Binding staticInfoTextBox.SystemInfoText}"
+                   VerticalAlignment="Top"
+                   Width="473" />
+        <TextBlock x:Name="TextBox_Copy1"
+                   Grid.Column="1"
+                   HorizontalAlignment="Left"
+                   Height="264"
+                   Margin="79,386,0,0"
+                   TextWrapping="Wrap"
+                   Text="{Binding staticInfoTextBox.ComputerInfoText}"
+                   VerticalAlignment="Top"
+                   Width="473" />
         <TextBlock x:Name="TextBox"
                    Grid.Column="1"
                    HorizontalAlignment="Left"
                    Height="263"
-                   Margin="247,160,0,0"
+                   Margin="79,52,0,0"
                    TextWrapping="Wrap"
-                   Text="{Binding SystemInfoText}"
+                   Text="{Binding staticInfoTextBox.CpuInfoText}"
+                   VerticalAlignment="Top"
+                   Width="473" />
+        <TextBlock x:Name="TextBox_Copy2"
+                   Grid.Column="1"
+                   HorizontalAlignment="Left"
+                   Height="263"
+                   Margin="755,373,0,0"
+                   TextWrapping="Wrap"
+                   Text="{Binding staticInfoTextBox.RamInfoText}"
                    VerticalAlignment="Top"
                    Width="473" />
     </Grid>

@@ -43,6 +43,36 @@
   },
   {
     "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetStaticComputerInfo",
+    "RelativePath": "api/Clients/staticinfo/computer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetStaticCpuInfo",
+    "RelativePath": "api/Clients/staticinfo/cpu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetStaticRamInfo",
+    "RelativePath": "api/Clients/staticinfo/ram",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
     "Method": "GetStaticSystemInfo",
     "RelativePath": "api/Clients/staticinfo/system",
     "HttpMethod": "GET",
