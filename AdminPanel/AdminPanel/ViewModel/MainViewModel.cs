@@ -12,22 +12,11 @@ using AdminPanel.ViewModel;
 
 namespace AdminPanel.ViewModel
 {
-    public class MainViewModel /*: System.ComponentModel.INotifyPropertyChanged*/
+    public class MainViewModel 
     {
         public ObservableCollection<Clients> ClientsItem { get; set; } = new();
 
         public StaticInfoTextBox staticInfoTextBox { get; set; } = new();
-
-        //private string _systemInfoText = "System Info";
-        //public string SystemInfoText
-        //{
-        //    get => _systemInfoText;
-        //    set
-        //    {
-        //        _systemInfoText = value;
-        //        OnPropertyChanged(nameof(SystemInfoText));
-        //    }
-        //}
 
         public MainViewModel()
         {

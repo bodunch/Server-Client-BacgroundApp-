@@ -8,7 +8,7 @@ namespace AdminPanel.ViewModel
 {
     public class StaticInfoTextBox : System.ComponentModel.INotifyPropertyChanged
     {
-        private string _systemInfoText = "System Info";
+        private string _systemInfoText = "";
         public string SystemInfoText
         {
             get => _systemInfoText;
@@ -19,7 +19,7 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        private string _cpuInfoText = "Cpu Info";
+        private string _cpuInfoText = "";
         public string CpuInfoText
         {
             get => _cpuInfoText;
@@ -30,7 +30,7 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        private string _computerInfoText = "Computer Info";
+        private string _computerInfoText = "";
         public string ComputerInfoText
         {
             get => _computerInfoText;
@@ -41,7 +41,7 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        private string _ramInfoText = "Ram Info";
+        private string _ramInfoText = "";
         public string RamInfoText
         {
             get => _ramInfoText;

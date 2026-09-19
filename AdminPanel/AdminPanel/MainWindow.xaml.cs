@@ -24,6 +24,8 @@ namespace AdminPanel
         {
             if(sender is Button button && button.Tag != null)
             {
+                DynamicButtonsPanel.Visibility = Visibility.Visible;
+
                 string tag = button.Tag.ToString()!;
 
                 if (DataContext is MainViewModel mvm)
