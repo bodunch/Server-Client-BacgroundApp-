@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using AdminPanel.ViewModel;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,7 +11,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AdminPanel.ViewModel;
 
 namespace AdminPanel
 {
@@ -32,8 +33,23 @@ namespace AdminPanel
                 {
                     await mvm.ClientInfo(tag);
                 }
+            }  
+        }
+        
+        private async void OpenDynamicClientInfo(object sender, RoutedEventArgs e)
+        {
+            if(sender is Button button && button.Tag != null)
+            {
+
+                string data = button.Tag.ToString()!;  
+
+                if(DataContext is MainViewModel mvm)
+                {
+                    string infoResult = await mvm.ShowDynamicInfo(mvm.SelectedClientId, data);
+
+                    dynamicInfoTextBox.Text = infoResult;
+                }
             }
-            
         }
     }
 }

@@ -18,6 +18,8 @@ namespace AdminPanel.ViewModel
 
         public StaticInfoTextBox staticInfoTextBox { get; set; } = new();
 
+        public string SelectedClientId { get; private set; }
+
         public MainViewModel()
         {
             _ = StartPollingAsync();
@@ -61,6 +63,8 @@ namespace AdminPanel.ViewModel
 
         public async Task ClientInfo(string Id)
         {
+            SelectedClientId = Id;
+
             using HttpClient client = new HttpClient();
 
             try
@@ -170,7 +174,32 @@ namespace AdminPanel.ViewModel
 
             }
         }
-        //public event System.ComponentModel.PropertyChangedEventHandler? PropertyChanged;
-        //protected void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+
+        public async Task<string> ShowDynamicInfo(string Id, string DataType)
+        {
+            using HttpClient client = new HttpClient();
+            while(true)
+            {
+                try
+                {
+                    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"http://localhost:5000/api/clients/dynamicinfo/{DataType.ToLower()}");
+                    request.Headers.Add("ClientId", Id);
+
+                    HttpResponseMessage response = await client.SendAsync(request);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsStringAsync();
+                    }
+                }
+                catch
+                {
+
+                }
+
+                await Task.Delay(5000);
+            }
+            
+        }
     }
 }

@@ -43,6 +43,16 @@
   },
   {
     "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetDynamicCpuInfo",
+    "RelativePath": "api/Clients/dynamicinfo/cpuinfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
     "Method": "GetStaticComputerInfo",
     "RelativePath": "api/Clients/staticinfo/computer",
     "HttpMethod": "GET",

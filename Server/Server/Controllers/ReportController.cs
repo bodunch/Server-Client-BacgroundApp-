@@ -99,6 +99,24 @@ namespace Server.Controllers
 
             return Ok(ramInfo);
         }
+
+        [HttpGet("dynamicinfo/cpuinfo")]
+        public async Task<IActionResult> GetDynamicCpuInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
+
+            var cpuInfo = _context.DnmCpuInfo.FirstOrDefault(s => s.ClientId == clientId);
+
+            if(cpuInfo == null)
+            {
+                return NotFound("Cpu Infop not found");
+            }
+
+            return Ok(cpuInfo);
+        }
     }
 
     [Route("api/[controller]")]
