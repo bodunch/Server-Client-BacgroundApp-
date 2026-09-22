@@ -40,14 +40,11 @@ namespace AdminPanel
         {
             if(sender is Button button && button.Tag != null)
             {
-
-                string data = button.Tag.ToString()!;  
+                string dataType = button.Tag.ToString()!;  
 
                 if(DataContext is MainViewModel mvm)
                 {
-                    string infoResult = await mvm.ShowDynamicInfo(mvm.SelectedClientId, data);
-
-                    dynamicInfoTextBox.Text = infoResult;
+                     await mvm.DetermineDataType(mvm.SelectedClientId, dataType);
                 }
             }
         }

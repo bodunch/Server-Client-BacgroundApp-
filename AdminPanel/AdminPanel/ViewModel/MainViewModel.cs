@@ -1,4 +1,5 @@
 ﻿using AdminPanel.Model;
+using AdminPanel.ViewModel.DnmDataFromServer;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Animation;
 using AdminPanel.ViewModel;
+using System.Net.Http.Headers;
+using System.Diagnostics.Contracts;
 
 namespace AdminPanel.ViewModel
 {
@@ -175,31 +178,29 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        public async Task<string> ShowDynamicInfo(string Id, string DataType)
+        public async Task DetermineDataType(string Id, string DataType)
         {
-            using HttpClient client = new HttpClient();
-            while(true)
+            switch(DataType)
             {
-                try
-                {
-                    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"http://localhost:5000/api/clients/dynamicinfo/{DataType.ToLower()}");
-                    request.Headers.Add("ClientId", Id);
-
-                    HttpResponseMessage response = await client.SendAsync(request);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        return await response.Content.ReadAsStringAsync();
-                    }
-                }
-                catch
-                {
-
-                }
-
-                await Task.Delay(5000);
+                case "CpuInfo":
+                    DnmCpuInfoResp dnm = new DnmCpuInfoResp(staticInfoTextBox);
+                    _ = dnm.TakeData(Id);
+                    break;
+                case "RamInfo":
+                    break;
+                case "ProcessInfo":
+                    break;
+                case "PortsInfo":
+                    break;
+                case "ConnectionsInfo":
+                    break;
+                case "ApplicationsInfo":
+                    break;
+                case "AdaptersInfo":
+                    break;
+                default:
+                    break;
             }
-            
         }
     }
 }

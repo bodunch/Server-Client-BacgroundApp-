@@ -52,6 +52,17 @@ namespace AdminPanel.ViewModel
             }
         }
 
+        private string _dnmCpuInfoText = "";
+        public string DnmCpuInfoText
+        {
+            get => _dnmCpuInfoText;
+            set
+            {
+                _dnmCpuInfoText = value;
+                OnPropertyChanged(nameof(DnmCpuInfoText));
+            }
+        }
+
         public event System.ComponentModel.PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
     }

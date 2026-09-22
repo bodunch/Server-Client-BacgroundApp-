@@ -108,9 +108,12 @@ namespace Server.Controllers
                 return BadRequest("ClientId header is missing or invalid.");
             }
 
-            var cpuInfo = _context.DnmCpuInfo.FirstOrDefault(s => s.ClientId == clientId);
+            var cpuInfo = await _context.DnmCpuInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderByDescending(s => s.Id)
+                .FirstOrDefaultAsync();
 
-            if(cpuInfo == null)
+            if (cpuInfo == null)
             {
                 return NotFound("Cpu Infop not found");
             }

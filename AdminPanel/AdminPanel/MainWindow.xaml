@@ -144,7 +144,8 @@
                       VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Auto">
 
-            <TextBox x:Name="dynamicInfoTextBox" />
+            <TextBox x:Name="dynamicInfoTextBox"
+                     Text="{Binding staticInfoTextBox.DnmCpuInfoText}" />
         </ScrollViewer>
     </Grid>
 </Window>
