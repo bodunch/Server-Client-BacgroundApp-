@@ -198,6 +198,8 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "PortsInfo":
+                    DnmPortsInfoResp dnmPorts = new DnmPortsInfoResp(staticInfoTextBox);
+                    _ = dnmPorts.TakeData(Id);
                     break;
 
                 case "ConnectionsInfo":

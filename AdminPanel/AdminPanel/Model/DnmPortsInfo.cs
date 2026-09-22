@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AdminPanel.Model
+{
+    public class DnmPortsInfo
+    {
+        public string ComputerName { get; set; } = string.Empty;
+        public IList<PortProperty>? Port { get; set; }
+    }
+
+    public class PortProperty
+    {
+        public string Adress { get; set; } = string.Empty;
+        public string Port { get; set; } = string.Empty;
+    }
+}
