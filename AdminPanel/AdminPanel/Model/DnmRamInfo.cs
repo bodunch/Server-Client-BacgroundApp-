@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace AdminPanel.Model
 {
-    public class DnmCpuInfo
+    public class DnmRamInfo
     {
         public string ComputerName { get; set; } = string.Empty;
-        public string LoadCPU { get; set; } = string.Empty;
-        public string ErrorCode { get; set; } = string.Empty;
-        public string Status { get; set; } = string.Empty;
+        public string TotalMem { get; set; } = string.Empty;
+        public string FreeMem { get; set; } = string.Empty;
     }
 }

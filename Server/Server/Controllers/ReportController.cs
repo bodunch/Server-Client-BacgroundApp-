@@ -115,10 +115,31 @@ namespace Server.Controllers
 
             if (cpuInfo == null)
             {
-                return NotFound("Cpu Infop not found");
+                return NotFound("Cpu Info not found");
             }
 
             return Ok(cpuInfo);
+        }
+
+        [HttpGet("dynamicinfo/raminfo")]
+        public async Task<IActionResult> GetDynamicRamInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
+
+            var ramInfo = await _context.DnmRamInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderByDescending(s => s.Id)
+                .FirstOrDefaultAsync();
+
+            if (ramInfo == null)
+            {
+                return NotFound("Ram Info not found");
+            }
+
+            return Ok(ramInfo);
         }
     }
 

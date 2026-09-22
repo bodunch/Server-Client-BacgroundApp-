@@ -53,6 +53,16 @@
   },
   {
     "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetDynamicRamInfo",
+    "RelativePath": "api/Clients/dynamicinfo/raminfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
     "Method": "GetStaticComputerInfo",
     "RelativePath": "api/Clients/staticinfo/computer",
     "HttpMethod": "GET",

@@ -111,22 +111,27 @@
             <Button Grid.Row="3"
                     Grid.Column="1"
                     Tag="CpuInfo"
+                    Content="CPU info"
                     Click="OpenDynamicClientInfo" />
             <Button Grid.Row="3"
                     Grid.Column="2"
                     Tag="RamInfo"
+                    Content="RAM info"
                     Click="OpenDynamicClientInfo" />
             <Button Grid.Row="3"
                     Grid.Column="3"
                     Tag="ProcessInfo"
+                    Content="Processes info"
                     Click="OpenDynamicClientInfo" />
             <Button Grid.Row="3"
                     Grid.Column="4"
                     Tag="PortsInfo"
+                    Content="Ports info"
                     Click="OpenDynamicClientInfo" />
             <Button Grid.Row="3"
                     Grid.Column="5"
                     Tag="ConnectionsInfo"
+                    Content="Connections info"
                     Click="OpenDynamicClientInfo" />
             <Button Grid.Row="3"
                     Grid.Column="6"
@@ -135,6 +140,7 @@
             <Button Grid.Row="3"
                     Grid.Column="7"
                     Tag="AdaptersInfo"
+                    Content="Adapters info"
                     Click="OpenDynamicClientInfo" />
         </UniformGrid>
 
@@ -145,7 +151,7 @@
                       HorizontalScrollBarVisibility="Auto">
 
             <TextBox x:Name="dynamicInfoTextBox"
-                     Text="{Binding staticInfoTextBox.DnmCpuInfoText}" />
+                     Text="{Binding staticInfoTextBox.DnmInfoText}" />
         </ScrollViewer>
     </Grid>
 </Window>

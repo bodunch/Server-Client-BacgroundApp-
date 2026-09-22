@@ -52,16 +52,27 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        private string _dnmCpuInfoText = "";
-        public string DnmCpuInfoText
+        private string _dnmInfoText = "";
+        public string DnmInfoText
         {
-            get => _dnmCpuInfoText;
+            get => _dnmInfoText;
             set
             {
-                _dnmCpuInfoText = value;
-                OnPropertyChanged(nameof(DnmCpuInfoText));
+                _dnmInfoText = value;
+                OnPropertyChanged(nameof(DnmInfoText));
             }
         }
+
+        //private string _dnmRamInfoText = "";
+        //public string DnmRamInfoText
+        //{
+        //    get => _dnmRamInfoText;
+        //    set
+        //    {
+        //        _dnmRamInfoText = value;
+        //        OnPropertyChanged(nameof(DnmRamInfoText));
+        //    }
+        //}
 
         public event System.ComponentModel.PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));

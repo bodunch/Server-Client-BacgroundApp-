@@ -54,8 +54,7 @@
               "RelativeToolTip": "Server\\Data\\Entities\\DynamicRamInfoEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:08:59.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:08:59.943Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Server\\Data\\Entities\\DynamicProcessesInfoEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:08:57.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:08:57.953Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "Server\\Data\\Entities\\DynamicPortsInfoEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:08:56.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:08:56.162Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "Server\\Data\\Entities\\DynamicCpuInfoEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T17:51:47.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T17:51:47.008Z"
             },
             {
               "$type": "Document",
@@ -116,7 +112,7 @@
               "RelativeDocumentMoniker": "Server\\Controllers\\ReportController.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Controllers\\ReportController.cs",
               "RelativeToolTip": "Server\\Controllers\\ReportController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwv28AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-08T14:59:00.188Z",
               "EditorCaption": ""

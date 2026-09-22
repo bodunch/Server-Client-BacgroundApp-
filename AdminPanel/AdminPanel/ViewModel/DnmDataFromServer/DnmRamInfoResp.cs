@@ -1,17 +1,22 @@
 ﻿using AdminPanel.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace AdminPanel.ViewModel.DnmDataFromServer
 {
-    public class DnmCpuInfoResp
+    public class DnmRamInfoResp
     {
         private readonly StaticInfoTextBox _staticInfoTextBox;
 
         private string currentTimeStamp;
 
-        public DnmCpuInfoResp(StaticInfoTextBox staticInfoTextBox)
+        public DnmRamInfoResp(StaticInfoTextBox staticInfoTextBox)
         {
             _staticInfoTextBox = staticInfoTextBox;
         }
@@ -29,7 +34,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
             {
                 try
                 {
-                    string url = "http://localhost:5000/api/clients/dynamicinfo/cpuinfo";
+                    string url = "http://localhost:5000/api/clients/dynamicinfo/raminfo";
 
                     using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, url);
 
@@ -39,22 +44,19 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                     if (response.IsSuccessStatusCode)
                     {
-                        var dnmCpuInfo = await response.Content.ReadFromJsonAsync<DynamicDataFromServer>();
+                        var dnmRamInfo = await response.Content.ReadFromJsonAsync<DynamicDataFromServer>();
 
-                        if (dnmCpuInfo != null)
+                        if (dnmRamInfo != null)
                         {
-                            
-                            var cpuData = JsonSerializer.Deserialize<DnmCpuInfo>(dnmCpuInfo.JsonPayload, jsonOptions);
+                            var ramData = JsonSerializer.Deserialize<DnmRamInfo>(dnmRamInfo.JsonPayload, jsonOptions);
 
-                            if(cpuData != null && dnmCpuInfo.TimeStamp != currentTimeStamp)
+                            if (ramData != null && dnmRamInfo.TimeStamp != currentTimeStamp)
                             {
-                                _staticInfoTextBox.DnmInfoText += $"Computer name: {cpuData.ComputerName} | " +
-                                    $"Load CPU: {cpuData.LoadCPU} | " +
-                                    $"Error code: {cpuData.ErrorCode} | " +
-                                    $"Status: {cpuData.Status} | " +
-                                    $"Time stamp: {dnmCpuInfo.TimeStamp} | " +
+                                _staticInfoTextBox.DnmInfoText += $"Computer name: {ramData.ComputerName} | " +
+                                    $"Total memory: {ramData.TotalMem} | " +
+                                    $"Free memory: {ramData.FreeMem} | " +
                                     Environment.NewLine;
-                                currentTimeStamp = dnmCpuInfo.TimeStamp;
+                                    currentTimeStamp = dnmRamInfo.TimeStamp;
                             }
                         }
                         else
@@ -67,7 +69,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                         _staticInfoTextBox.DnmInfoText = $"HTTP Error: {(int)response.StatusCode}";
                     }
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     _staticInfoTextBox.DnmInfoText = $"ERROR: {ex.Message}";
                 }
@@ -76,5 +78,4 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
             }
         }
     }
-    
 }

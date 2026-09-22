@@ -183,21 +183,30 @@ namespace AdminPanel.ViewModel
             switch(DataType)
             {
                 case "CpuInfo":
-                    DnmCpuInfoResp dnm = new DnmCpuInfoResp(staticInfoTextBox);
-                    _ = dnm.TakeData(Id);
+                    DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(staticInfoTextBox);
+                    _ = dnmCpu.TakeData(Id);
                     break;
+
                 case "RamInfo":
+                    DnmRamInfoResp dnmRam = new DnmRamInfoResp(staticInfoTextBox);
+                    _ = dnmRam.TakeData(Id);
                     break;
+
                 case "ProcessInfo":
                     break;
+
                 case "PortsInfo":
                     break;
+
                 case "ConnectionsInfo":
                     break;
+
                 case "ApplicationsInfo":
                     break;
+
                 case "AdaptersInfo":
                     break;
+
                 default:
                     break;
             }
