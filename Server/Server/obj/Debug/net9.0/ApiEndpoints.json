@@ -53,6 +53,16 @@
   },
   {
     "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetDynamicProcessInfo",
+    "RelativePath": "api/Clients/dynamicinfo/procinfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
     "Method": "GetDynamicRamInfo",
     "RelativePath": "api/Clients/dynamicinfo/raminfo",
     "HttpMethod": "GET",

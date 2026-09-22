@@ -141,6 +141,27 @@ namespace Server.Controllers
 
             return Ok(ramInfo);
         }
+
+        [HttpGet("dynamicinfo/procinfo")]
+        public async Task<IActionResult> GetDynamicProcessInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
+
+            var procInfo = await _context.DnmProcessesInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderByDescending(s => s.Id)
+                .FirstOrDefaultAsync();
+
+            if (procInfo == null)
+            {
+                return NotFound("Pocesses Info not found");
+            }
+
+            return Ok(procInfo);
+        }
     }
 
     [Route("api/[controller]")]

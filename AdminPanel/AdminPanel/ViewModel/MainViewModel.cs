@@ -193,6 +193,8 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "ProcessInfo":
+                    DnmProcInfoResp dnmProc = new DnmProcInfoResp(staticInfoTextBox);
+                    _ = dnmProc.TakeData(Id);
                     break;
 
                 case "PortsInfo":

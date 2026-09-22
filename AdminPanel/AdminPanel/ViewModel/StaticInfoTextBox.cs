@@ -63,17 +63,6 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        //private string _dnmRamInfoText = "";
-        //public string DnmRamInfoText
-        //{
-        //    get => _dnmRamInfoText;
-        //    set
-        //    {
-        //        _dnmRamInfoText = value;
-        //        OnPropertyChanged(nameof(DnmRamInfoText));
-        //    }
-        //}
-
         public event System.ComponentModel.PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
     }
