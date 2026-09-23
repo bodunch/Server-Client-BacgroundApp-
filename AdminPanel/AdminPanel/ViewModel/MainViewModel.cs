@@ -208,6 +208,8 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "ApplicationsInfo":
+                    DnmAppInfoResp dnmApp = new DnmAppInfoResp(staticInfoTextBox);
+                    _ = dnmApp.TakeData(Id);
                     break;
 
                 case "AdaptersInfo":

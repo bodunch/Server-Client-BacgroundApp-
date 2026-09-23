@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\dnmdatafromserver\\dnmprocinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\dnmdatafromserver\\dnmprocinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\dnmdatafromserver\\dnmconnectinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\dnmdatafromserver\\dnmconnectinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\model\\dnmconnectinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\model\\dnmconnectinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\model\\dnmportsinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\model\\dnmportsinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\dnmdatafromserver\\dnmportsinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\dnmdatafromserver\\dnmportsinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -76,7 +76,8 @@
               "ViewState": "AgIAABgAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-11T18:41:25.117Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -86,10 +87,23 @@
               "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\MainViewModel.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "AdminPanel\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAM8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-13T10:46:58.744Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DnmConnectInfoResp.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmConnectInfoResp.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmConnectInfoResp.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmConnectInfoResp.cs",
+              "RelativeToolTip": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmConnectInfoResp.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T04:45:15.061Z",
               "EditorCaption": ""
             },
             {
@@ -98,19 +112,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DnmPortsInfoResp.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmPortsInfoResp.cs",
-              "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmPortsInfoResp.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmPortsInfoResp.cs",
-              "RelativeToolTip": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmPortsInfoResp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DnmConnectInfo.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Model\\DnmConnectInfo.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\Model\\DnmConnectInfo.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Model\\DnmConnectInfo.cs",
+              "RelativeToolTip": "AdminPanel\\Model\\DnmConnectInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T11:20:44.945Z"
+              "WhenOpened": "2026-09-23T04:43:57.173Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DnmPortsInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Model\\DnmPortsInfo.cs",
               "RelativeDocumentMoniker": "AdminPanel\\Model\\DnmPortsInfo.cs",
@@ -118,19 +133,8 @@
               "RelativeToolTip": "AdminPanel\\Model\\DnmPortsInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T11:18:14.716Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DnmProcInfoResp.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmProcInfoResp.cs",
-              "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmProcInfoResp.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmProcInfoResp.cs",
-              "RelativeToolTip": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmProcInfoResp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T10:56:17.975Z"
+              "WhenOpened": "2026-09-22T11:18:14.716Z",
+              "EditorCaption": ""
             }
           ]
         },
