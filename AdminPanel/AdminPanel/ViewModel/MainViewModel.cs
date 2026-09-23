@@ -203,6 +203,8 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "ConnectionsInfo":
+                    DnmConnectInfoResp dnmConnect = new DnmConnectInfoResp(staticInfoTextBox);
+                    _ = dnmConnect.TakeData(Id);
                     break;
 
                 case "ApplicationsInfo":
