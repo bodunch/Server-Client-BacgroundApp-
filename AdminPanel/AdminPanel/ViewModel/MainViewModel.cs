@@ -213,6 +213,8 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "AdaptersInfo":
+                    DnmAdaptersInfoResp dnmAdapter = new DnmAdaptersInfoResp(staticInfoTextBox);
+                    _ = dnmAdapter.TakeData(Id);
                     break;
 
                 default:

@@ -225,6 +225,27 @@ namespace Server.Controllers
 
             return Ok(procInfo);
         }
+
+        [HttpGet("dynamicinfo/adaptersinfo")]
+        public async Task<IActionResult> GetDynamicAdaptersInfo()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest("ClientId header is missing or invalid.");
+            }
+
+            var procInfo = await _context.DnmAdaptersInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderByDescending(s => s.Id)
+                .FirstOrDefaultAsync();
+
+            if (procInfo == null)
+            {
+                return NotFound("Adapters Info not found");
+            }
+
+            return Ok(procInfo);
+        }
     }
 
     [Route("api/[controller]")]
