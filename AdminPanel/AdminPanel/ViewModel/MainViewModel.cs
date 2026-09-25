@@ -27,6 +27,7 @@ namespace AdminPanel.ViewModel
         {
             _ = StartPollingAsync();
         }
+
         private async Task StartPollingAsync()
         {
             using HttpClient client = new HttpClient();
@@ -63,6 +64,8 @@ namespace AdminPanel.ViewModel
                 await Task.Delay(5000);
             }
         }
+
+        private CancellationTokenSource? _currentCts;
 
         public async Task ClientInfo(string Id)
         {
@@ -180,41 +183,47 @@ namespace AdminPanel.ViewModel
 
         public async Task DetermineDataType(string Id, string DataType)
         {
-            switch(DataType)
+            _currentCts?.Cancel();
+            _currentCts = new CancellationTokenSource();
+            var token = _currentCts.Token;
+
+            staticInfoTextBox.DnmInfoText = string.Empty;
+
+            switch (DataType)
             {
                 case "CpuInfo":
                     DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(staticInfoTextBox);
-                    _ = dnmCpu.TakeData(Id);
+                    _ = dnmCpu.TakeData(Id, token);
                     break;
 
                 case "RamInfo":
                     DnmRamInfoResp dnmRam = new DnmRamInfoResp(staticInfoTextBox);
-                    _ = dnmRam.TakeData(Id);
+                    _ = dnmRam.TakeData(Id, token);
                     break;
 
                 case "ProcessInfo":
                     DnmProcInfoResp dnmProc = new DnmProcInfoResp(staticInfoTextBox);
-                    _ = dnmProc.TakeData(Id);
+                    _ = dnmProc.TakeData(Id, token);
                     break;
 
                 case "PortsInfo":
                     DnmPortsInfoResp dnmPorts = new DnmPortsInfoResp(staticInfoTextBox);
-                    _ = dnmPorts.TakeData(Id);
+                    _ = dnmPorts.TakeData(Id, token);
                     break;
 
                 case "ConnectionsInfo":
                     DnmConnectInfoResp dnmConnect = new DnmConnectInfoResp(staticInfoTextBox);
-                    _ = dnmConnect.TakeData(Id);
+                    _ = dnmConnect.TakeData(Id, token);
                     break;
 
                 case "ApplicationsInfo":
                     DnmAppInfoResp dnmApp = new DnmAppInfoResp(staticInfoTextBox);
-                    _ = dnmApp.TakeData(Id);
+                    _ = dnmApp.TakeData(Id, token);
                     break;
 
                 case "AdaptersInfo":
                     DnmAdaptersInfoResp dnmAdapter = new DnmAdaptersInfoResp(staticInfoTextBox);
-                    _ = dnmAdapter.TakeData(Id);
+                    _ = dnmAdapter.TakeData(Id, token);
                     break;
 
                 default:

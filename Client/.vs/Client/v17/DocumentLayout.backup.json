@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\adaptersinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\models\\adaptersinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\applicationinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\models\\applicationinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\adaptersinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\adaptersinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\adaptersinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|solutionrelative:client\\modules\\pcinfo\\models\\adaptersinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{425675CF-2DE1-4B05-AADA-2E4B3009A48E}|Client\\Client.csproj|d:\\c#\\dotnet\\exserverandclient\\client\\client\\modules\\pcinfo\\models\\systeminfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -151,19 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SendSystemInfoToServer.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "RelativeToolTip": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAEwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-30T17:48:28.567Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ApplicationInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ApplicationInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\ApplicationInfo.cs",
@@ -175,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AdaptersInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\AdaptersInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\AdaptersInfo.cs",
@@ -187,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CurrentRAMInfoModel.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\CurrentRAMInfoModel.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\CurrentRAMInfoModel.cs",
@@ -199,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProcessesInfoModel.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\ProcessesInfoModel.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\ProcessesInfoModel.cs",
@@ -211,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PortInfoModel.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\PortInfoModel.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\PortInfoModel.cs",
@@ -223,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ConnectionsInfoModel.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\ConnectionsInfoModel.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\ConnectionsInfoModel.cs",
@@ -231,12 +219,11 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ConnectionsInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:40:46.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:40:46.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ApplicationInfoModel.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
@@ -244,12 +231,36 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T13:08:45.835Z",
+              "WhenOpened": "2026-08-16T13:08:45.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdaptersInfoModel.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
+              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
+              "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T17:38:53.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "SendSystemInfoToServer.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
+              "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
+              "RelativeToolTip": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAEwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T17:48:28.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "SystemInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\SystemInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\SystemInfo.cs",
@@ -261,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RAMInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\RAMInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\RAMInfo.cs",
@@ -273,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ProcessesInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\ProcessesInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\ProcessesInfo.cs",
@@ -285,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PortInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\PortInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\PortInfo.cs",
@@ -297,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CurrentRAMInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\CurrentRAMInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\CurrentRAMInfo.cs",
@@ -309,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CurrentCPUInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\CurrentCPUInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\CurrentCPUInfo.cs",
@@ -321,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CPUInfo.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\CPUInfo.cs",
               "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\CPUInfo.cs",
@@ -330,18 +341,6 @@
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-31T17:32:51.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdaptersInfoModel.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
-              "RelativeDocumentMoniker": "Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
-              "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\AdaptersInfoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:38:53.208Z"
             },
             {
               "$type": "Document",

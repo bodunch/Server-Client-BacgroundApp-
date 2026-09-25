@@ -21,7 +21,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
             _staticInfoTextBox = staticInfoTextBox;
         }
 
-        public async Task TakeData(string Id)
+        public async Task TakeData(string Id, CancellationToken token)
         {
             using HttpClient client = new HttpClient();
 
@@ -30,7 +30,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                 PropertyNameCaseInsensitive = true
             };
 
-            while (true)
+            while (!token.IsCancellationRequested)
             {
                 try
                 {
@@ -40,7 +40,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                     request.Headers.Add("ClientId", Id);
 
-                    HttpResponseMessage response = await client.SendAsync(request);
+                    HttpResponseMessage response = await client.SendAsync(request, token);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -78,12 +78,23 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                         _staticInfoTextBox.DnmInfoText = $"HTTP Error: {(int)response.StatusCode}";
                     }
                 }
+                catch (OperationCanceledException)
+                {
+                    break;
+                }
                 catch (Exception ex)
                 {
                     _staticInfoTextBox.DnmInfoText = $"ERROR: {ex.Message}";
                 }
 
-                await Task.Delay(5000);
+                try
+                {
+                    await Task.Delay(5000, token);
+                }
+                catch (OperationCanceledException)
+                {
+                    break;
+                }
             }
         }
     }

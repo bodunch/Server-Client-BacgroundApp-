@@ -43,8 +43,48 @@
   },
   {
     "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetDynamicAdaptersInfo",
+    "RelativePath": "api/Clients/dynamicinfo/adaptersinfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetDynamicAppInfo",
+    "RelativePath": "api/Clients/dynamicinfo/appinfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetDynamicConnectionsInfo",
+    "RelativePath": "api/Clients/dynamicinfo/connectinfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
     "Method": "GetDynamicCpuInfo",
     "RelativePath": "api/Clients/dynamicinfo/cpuinfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientsController",
+    "Method": "GetDynamicPortsInfo",
+    "RelativePath": "api/Clients/dynamicinfo/portsinfo",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

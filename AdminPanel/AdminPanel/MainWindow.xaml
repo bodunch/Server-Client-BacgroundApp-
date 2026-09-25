@@ -136,6 +136,7 @@
             <Button Grid.Row="3"
                     Grid.Column="6"
                     Tag="ApplicationsInfo"
+                    Content="Applications info"
                     Click="OpenDynamicClientInfo" />
             <Button Grid.Row="3"
                     Grid.Column="7"
