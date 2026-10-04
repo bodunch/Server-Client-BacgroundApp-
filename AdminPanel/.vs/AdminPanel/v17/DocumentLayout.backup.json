@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\dnmdatafromserver\\dnmcpuinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\dnmdatafromserver\\dnmcpuinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\services\\cpu\\analizingcpuactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\services\\cpu\\analizingcpuactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\services\\determinecurrtextcolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\services\\determinecurrtextcolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\dnmdatafromserver\\dnmcpuinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\dnmdatafromserver\\dnmcpuinforesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\services\\richtextboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\services\\richtextboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml",
               "RelativeToolTip": "AdminPanel\\MainWindow.xaml",
-              "ViewState": "AgIAAIMAAAAAAAAAAAArwKUAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAArwKUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-09-11T18:41:35.832Z",
               "IsPinned": true,
@@ -75,9 +75,23 @@
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml.cs",
               "RelativeToolTip": "AdminPanel\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-11T18:41:25.117Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\MainViewModel.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\MainViewModel.cs",
+              "RelativeToolTip": "AdminPanel\\ViewModel\\MainViewModel.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAowM0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T10:46:58.744Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -87,54 +101,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "AdminPanel\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAMEAAAAAAAAAAAAowL8AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T10:46:58.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DnmCpuInfoResp.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmCpuInfoResp.cs",
               "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmCpuInfoResp.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\DnmDataFromServer\\DnmCpuInfoResp.cs",
               "RelativeToolTip": "AdminPanel\\ViewModel\\DnmDataFromServer\\DnmCpuInfoResp.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowFAAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDsAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-03T09:43:09.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DetermineCurrTextColor.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\DetermineCurrTextColor.cs",
               "RelativeDocumentMoniker": "AdminPanel\\Services\\DetermineCurrTextColor.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\DetermineCurrTextColor.cs",
               "RelativeToolTip": "AdminPanel\\Services\\DetermineCurrTextColor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowCIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-04T10:02:32.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RichTextBoxHelper.cs",
-              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\RichTextBoxHelper.cs",
-              "RelativeDocumentMoniker": "AdminPanel\\Services\\RichTextBoxHelper.cs",
-              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\RichTextBoxHelper.cs",
-              "RelativeToolTip": "AdminPanel\\Services\\RichTextBoxHelper.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AnalizingCpuActivity.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\CPU\\AnalizingCpuActivity.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\Services\\CPU\\AnalizingCpuActivity.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\CPU\\AnalizingCpuActivity.cs*",
+              "RelativeToolTip": "AdminPanel\\Services\\CPU\\AnalizingCpuActivity.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-03T09:40:58.08Z",
+              "WhenOpened": "2026-10-04T15:29:05.952Z",
               "EditorCaption": ""
             }
           ]

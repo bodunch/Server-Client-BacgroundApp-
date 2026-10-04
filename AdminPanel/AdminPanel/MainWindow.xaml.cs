@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AdminPanel.Services.CPU;
 
 namespace AdminPanel
 {
@@ -25,6 +26,8 @@ namespace AdminPanel
         {
             if(sender is Button button && button.Tag != null)
             {
+                AnalizingCpuActivity.ResetHistory();
+
                 DynamicButtonsPanel.Visibility = Visibility.Visible;
 
                 string tag = button.Tag.ToString()!;
