@@ -12,6 +12,7 @@ using System.Windows.Media.Animation;
 using AdminPanel.ViewModel;
 using System.Net.Http.Headers;
 using System.Diagnostics.Contracts;
+using System.Windows.Controls;
 
 namespace AdminPanel.ViewModel
 {
@@ -181,18 +182,19 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        public async Task DetermineDataType(string Id, string DataType)
+        public async Task DetermineDataType(string Id, string DataType, RichTextBox targetRichTextBox)
         {
             _currentCts?.Cancel();
             _currentCts = new CancellationTokenSource();
             var token = _currentCts.Token;
 
             staticInfoTextBox.DnmInfoText = string.Empty;
+            targetRichTextBox.Document.Blocks.Clear();
 
             switch (DataType)
             {
                 case "CpuInfo":
-                    DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(staticInfoTextBox);
+                    DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(staticInfoTextBox, targetRichTextBox);
                     _ = dnmCpu.TakeData(Id, token);
                     break;
 

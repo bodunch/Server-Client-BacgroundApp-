@@ -2,6 +2,8 @@
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
+using AdminPanel.Services;
+using System.Windows.Controls;
 
 namespace AdminPanel.ViewModel.DnmDataFromServer
 {
@@ -9,11 +11,14 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
     {
         private readonly StaticInfoTextBox _staticInfoTextBox;
 
+        private readonly RichTextBox _richTextBox;
+
         private string currentTimeStamp;
 
-        public DnmCpuInfoResp(StaticInfoTextBox staticInfoTextBox)
+        public DnmCpuInfoResp(StaticInfoTextBox staticInfoTextBox, RichTextBox richTextBox)
         {
             _staticInfoTextBox = staticInfoTextBox;
+            _richTextBox = richTextBox;
         }
 
         public async Task TakeData(string Id, CancellationToken token)
@@ -48,23 +53,43 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if(cpuData != null && dnmCpuInfo.TimeStamp != currentTimeStamp)
                             {
-                                _staticInfoTextBox.DnmInfoText += $"Computer name: {cpuData.ComputerName} | " +
+                                string logText = $"Computer name: {cpuData.ComputerName} | " +
                                     $"Load CPU: {cpuData.LoadCPU} | " +
                                     $"Error code: {cpuData.ErrorCode} | " +
                                     $"Status: {cpuData.Status} | " +
-                                    $"Time stamp: {dnmCpuInfo.TimeStamp} | " +
-                                    Environment.NewLine;
+                                    $"Time stamp: {dnmCpuInfo.TimeStamp} | ";
+
+                                string color = DetermineCurrTextColor.CpuDataColor(cpuData);
+                                switch(color)
+                                {
+                                    case "red":
+                                        RichTextBoxHelper.AppendRedText(_richTextBox, logText);
+                                        break;
+
+                                    case "yellow":
+                                        RichTextBoxHelper.AppendYellowText(_richTextBox, logText);
+                                        break;
+
+                                    case "black":
+                                        RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                        break;
+
+                                    default:
+                                        RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                        break;
+                                }
+                                
                                 currentTimeStamp = dnmCpuInfo.TimeStamp;
                             }
                         }
                         else
                         {
-                            _staticInfoTextBox.DnmInfoText = "Data not found";
+                            RichTextBoxHelper.AppendRedText(_richTextBox, "Data not found");
                         }
                     }
                     else
                     {
-                        _staticInfoTextBox.DnmInfoText = $"HTTP Error: {(int)response.StatusCode}";
+                        RichTextBoxHelper.AppendRedText(_richTextBox, $"HTTP Error: {(int)response.StatusCode}");
                     }
                 }
                 catch (OperationCanceledException)
@@ -73,7 +98,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                 }
                 catch (Exception ex)
                 {
-                    _staticInfoTextBox.DnmInfoText = $"ERROR: {ex.Message}";
+                    RichTextBoxHelper.AppendRedText(_richTextBox, $"ERROR: {ex.Message}");
                 }
 
                 try

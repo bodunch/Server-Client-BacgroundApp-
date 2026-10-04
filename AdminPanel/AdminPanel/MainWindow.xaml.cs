@@ -38,14 +38,17 @@ namespace AdminPanel
         
         private async void OpenDynamicClientInfo(object sender, RoutedEventArgs e)
         {
-            if(sender is Button button && button.Tag != null)
+            if (sender is Button button && button.Tag is string dataType)
             {
-                string dataType = button.Tag.ToString()!;  
+                OnDataTypeSelected(dataType);
+            }
+        }
 
-                if(DataContext is MainViewModel mvm)
-                {
-                     await mvm.DetermineDataType(mvm.SelectedClientId, dataType);
-                }
+        private async void OnDataTypeSelected(string dataType)
+        {
+            if (DataContext is MainViewModel viewModel && !string.IsNullOrEmpty(viewModel.SelectedClientId))
+            {
+                await viewModel.DetermineDataType(viewModel.SelectedClientId, dataType, dynamicInfoTextBox);
             }
         }
     }
