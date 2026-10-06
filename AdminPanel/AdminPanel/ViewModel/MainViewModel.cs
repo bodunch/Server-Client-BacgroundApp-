@@ -194,12 +194,12 @@ namespace AdminPanel.ViewModel
             switch (DataType)
             {
                 case "CpuInfo":
-                    DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(staticInfoTextBox, targetRichTextBox);
+                    DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(targetRichTextBox);
                     _ = dnmCpu.TakeData(Id, token);
                     break;
 
                 case "RamInfo":
-                    DnmRamInfoResp dnmRam = new DnmRamInfoResp(staticInfoTextBox);
+                    DnmRamInfoResp dnmRam = new DnmRamInfoResp(targetRichTextBox);
                     _ = dnmRam.TakeData(Id, token);
                     break;
 

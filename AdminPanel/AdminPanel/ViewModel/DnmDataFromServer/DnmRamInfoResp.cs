@@ -1,4 +1,5 @@
 ﻿using AdminPanel.Model;
+using AdminPanel.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,20 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace AdminPanel.ViewModel.DnmDataFromServer
 {
     public class DnmRamInfoResp
     {
-        private readonly StaticInfoTextBox _staticInfoTextBox;
+
+        private readonly RichTextBox _richTextBox;
 
         private string currentTimeStamp;
 
-        public DnmRamInfoResp(StaticInfoTextBox staticInfoTextBox)
+        public DnmRamInfoResp( RichTextBox richTextBox)
         {
-            _staticInfoTextBox = staticInfoTextBox;
+            _richTextBox = richTextBox;
         }
 
         public async Task TakeData(string Id, CancellationToken token)
@@ -52,21 +55,42 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if (ramData != null && dnmRamInfo.TimeStamp != currentTimeStamp)
                             {
-                                _staticInfoTextBox.DnmInfoText += $"Computer name: {ramData.ComputerName} | " +
+                                string logText = $"Computer name: {ramData.ComputerName} | " +
                                     $"Total memory: {ramData.TotalMem} | " +
                                     $"Free memory: {ramData.FreeMem} | " +
                                     Environment.NewLine;
-                                    currentTimeStamp = dnmRamInfo.TimeStamp;
+
+                                string color = DetermineCurrTextColor.RamDataColor(ramData);
+                                switch (color)
+                                {
+                                    case "red":
+                                        RichTextBoxHelper.AppendRedText(_richTextBox, logText);
+                                        break;
+
+                                    case "yellow":
+                                        RichTextBoxHelper.AppendYellowText(_richTextBox, logText);
+                                        break;
+
+                                    case "black":
+                                        RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                        break;
+
+                                    default:
+                                        RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                        break;
+                                }
+
+                                currentTimeStamp = dnmRamInfo.TimeStamp;
                             }
                         }
                         else
                         {
-                            _staticInfoTextBox.DnmInfoText = "Data not found";
+                            RichTextBoxHelper.AppendRedText(_richTextBox, "Data not found");
                         }
                     }
                     else
                     {
-                        _staticInfoTextBox.DnmInfoText = $"HTTP Error: {(int)response.StatusCode}";
+                        RichTextBoxHelper.AppendRedText(_richTextBox, $"HTTP Error: {(int)response.StatusCode}");
                     }
                 }
                 catch (OperationCanceledException)
@@ -75,7 +99,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                 }
                 catch (Exception ex)
                 {
-                    _staticInfoTextBox.DnmInfoText = $"ERROR: {ex.Message}";
+                    RichTextBoxHelper.AppendRedText(_richTextBox, $"ERROR: {ex.Message}");
                 }
 
                 try

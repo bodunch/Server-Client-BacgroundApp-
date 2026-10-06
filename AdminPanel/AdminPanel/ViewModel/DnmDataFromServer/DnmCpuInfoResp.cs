@@ -9,15 +9,13 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 {
     public class DnmCpuInfoResp
     {
-        private readonly StaticInfoTextBox _staticInfoTextBox;
 
         private readonly RichTextBox _richTextBox;
 
         private string currentTimeStamp;
 
-        public DnmCpuInfoResp(StaticInfoTextBox staticInfoTextBox, RichTextBox richTextBox)
+        public DnmCpuInfoResp(RichTextBox richTextBox)
         {
-            _staticInfoTextBox = staticInfoTextBox;
             _richTextBox = richTextBox;
         }
 

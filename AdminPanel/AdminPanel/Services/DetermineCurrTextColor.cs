@@ -1,5 +1,6 @@
 ﻿using AdminPanel.Model;
 using AdminPanel.Services.CPU;
+using AdminPanel.Services.RAM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,20 @@ namespace AdminPanel.Services
                 _ when load > 75.0 => "yellow",
                 _ when cpuAnomalyYellow == "yellow" => "yellow",
 
+                _ => "black"
+            };
+        }
+
+        public static string RamDataColor(DnmRamInfo data)
+        {
+            double free = double.Parse(data.FreeMem);
+            double total = double.Parse(data.TotalMem);
+
+            string cpuAnomalyYellow = AnalizingRamActivity.YellowAnomaly(total, free);
+
+            return data switch
+            {
+                _ when cpuAnomalyYellow == "yellow" => "yellow",
                 _ => "black"
             };
         }
