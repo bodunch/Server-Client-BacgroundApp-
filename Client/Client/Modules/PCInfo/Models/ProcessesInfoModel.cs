@@ -17,6 +17,7 @@ namespace Client.Modules.PCInfo.Models
         public string Name { get; set; } = string.Empty;
         public string Id { get; set; } = string.Empty;  
         public string RAM { get; set; } = string.Empty;
+        public string SHA256 { get; set; } = string.Empty;
         public string StartTime { get; set; } = string.Empty;   
         public string Path { get; set; } = string.Empty;
     }

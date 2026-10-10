@@ -1,6 +1,7 @@
 ﻿using AdminPanel.Model;
 using AdminPanel.Services.CPU;
 using AdminPanel.Services.RAM;
+using AdminPanel.Services.Procceses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,11 @@ namespace AdminPanel.Services
                 _ when cpuAnomalyYellow == "yellow" => "yellow",
                 _ => "black"
             };
+        }
+
+        public static string ProcDataColor(ProcessProperty data)
+        {
+            return "red";
         }
     }
 }

@@ -204,7 +204,7 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "ProcessInfo":
-                    DnmProcInfoResp dnmProc = new DnmProcInfoResp(staticInfoTextBox);
+                    DnmProcInfoResp dnmProc = new DnmProcInfoResp(targetRichTextBox);
                     _ = dnmProc.TakeData(Id, token);
                     break;
 

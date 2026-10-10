@@ -1,4 +1,7 @@
-﻿using AdminPanel.ViewModel;
+﻿using AdminPanel.Services.CPU;
+using AdminPanel.Services.Procceses;
+using AdminPanel.Services.RAM;
+using AdminPanel.ViewModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Windows;
@@ -11,8 +14,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AdminPanel.Services.CPU;
-using AdminPanel.Services.RAM;
 
 namespace AdminPanel
 {
@@ -29,6 +30,7 @@ namespace AdminPanel
             {
                 AnalizingCpuActivity.ResetHistory();
                 AnalizingRamActivity.ResetHistory();
+            
 
                 DynamicButtonsPanel.Visibility = Visibility.Visible;
 

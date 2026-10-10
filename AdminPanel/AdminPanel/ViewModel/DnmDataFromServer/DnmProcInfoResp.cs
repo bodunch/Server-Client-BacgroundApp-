@@ -1,4 +1,5 @@
 ﻿using AdminPanel.Model;
+using AdminPanel.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,19 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace AdminPanel.ViewModel.DnmDataFromServer
 {
     public class DnmProcInfoResp
     {
-        private readonly StaticInfoTextBox _staticInfoTextBox;
+        private readonly RichTextBox _richTextBox;
 
         private string currentTimeStamp;
 
-        public DnmProcInfoResp(StaticInfoTextBox staticInfoTextBox)
+        public DnmProcInfoResp(RichTextBox richTextBox)
         {
-            _staticInfoTextBox = staticInfoTextBox;
+            _richTextBox = richTextBox;
         }
 
         public async Task TakeData(string Id, CancellationToken token)
@@ -52,30 +54,59 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if (procData != null && dnmProcInfo.TimeStamp != currentTimeStamp)
                             {
-                                var sb = new StringBuilder();
-                                sb.AppendLine($"Computer: {procData.ComputerName} | Time: {dnmProcInfo.TimeStamp}");
-                                sb.AppendLine(new string('-', 50));
+                                string header = $"Computer: {procData.ComputerName} | " + $"Time: {dnmProcInfo.TimeStamp}";
+
+                                RichTextBoxHelper.AppendBlackText(_richTextBox, header);
+                                RichTextBoxHelper.AppendBlackText(_richTextBox, new string('-', 100));
 
                                 if (procData.Process != null)
                                 {
                                     foreach (var proc in procData.Process)
                                     {
-                                        sb.AppendLine($"Name: {proc.Name,-20} | Id: {proc.Id,-6} | Ram: {proc.RAM,-10} | Start time: {proc.StartTime} | Path: {proc.Path}");
+                                        string logText =
+                                            $"Name: {proc.Name,-20} | " +
+                                            $"Id: {proc.Id,-6} | " +
+                                            $"RAM: {proc.RAM,-10} | " +
+                                            $"SHA256: {proc.SHA256,-30} | " +
+                                            $"Start time: {proc.StartTime} | " +
+                                            $"Path: {proc.Path}";
+
+                                        string color = DetermineCurrTextColor.ProcDataColor(proc);
+
+                                        switch (color)
+                                        {
+                                            case "red":
+                                                RichTextBoxHelper.AppendRedText(_richTextBox, logText);
+                                                break;
+
+                                            case "yellow":
+                                                RichTextBoxHelper.AppendYellowText(_richTextBox, logText);
+                                                break;
+
+                                            case "black":
+                                                RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                                break;
+
+                                            default:
+                                                RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                                break;
+                                        }
                                     }
                                 }
 
-                                _staticInfoTextBox.DnmInfoText = sb.ToString() + Environment.NewLine;
+                                RichTextBoxHelper.AppendBlackText(_richTextBox, Environment.NewLine);
+
                                 currentTimeStamp = dnmProcInfo.TimeStamp;
                             }
                         }
                         else
                         {
-                            _staticInfoTextBox.DnmInfoText = "Data not found";
+                            RichTextBoxHelper.AppendRedText(_richTextBox, "Data not found");
                         }
                     }
                     else
                     {
-                        _staticInfoTextBox.DnmInfoText = $"HTTP Error: {(int)response.StatusCode}";
+                        RichTextBoxHelper.AppendRedText(_richTextBox, $"HTTP Error: {(int)response.StatusCode}");
                     }
                 }
                 catch (OperationCanceledException)
@@ -84,7 +115,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                 }
                 catch (Exception ex)
                 {
-                    _staticInfoTextBox.DnmInfoText = $"ERROR: {ex.Message}";
+                    RichTextBoxHelper.AppendRedText(_richTextBox, $"ERROR: {ex.Message}"); 
                 }
 
                 try
