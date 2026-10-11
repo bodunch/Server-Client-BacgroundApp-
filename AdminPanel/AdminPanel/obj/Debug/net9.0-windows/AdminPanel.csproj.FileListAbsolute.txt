@@ -20,3 +20,9 @@ D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\obj\Debug\net9.0-windows\Ad
 D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\obj\Debug\net9.0-windows\AdminPanel.genruntimeconfig.cache
 D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\obj\Debug\net9.0-windows\ref\AdminPanel.dll
 D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\bin\Debug\net9.0-windows\appsettings.json
+D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.dll
+D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll
+D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\obj\Debug\net9.0-windows\AdminPanel.csproj.AssemblyReference.cache
+D:\C#\dotnet\ExserverAndClient\AdminPanel\AdminPanel\obj\Debug\net9.0-windows\AdminPanel.csproj.Up2Date

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Animation;
+using AdminPanel.Services.Procceses.Files;
 
 namespace AdminPanel.Services
 {
@@ -63,7 +64,14 @@ namespace AdminPanel.Services
 
         public static string ProcDataColor(ProcessProperty data)
         {
-            return "red";
+            string hashColor = ThreatManager.CheckOrRegisterHash(data.SHA256);
+
+            return data switch
+            {
+                _ when hashColor == "red" => "red",
+
+                _ => "black"
+            };
         }
     }
 }

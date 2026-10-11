@@ -147,8 +147,7 @@
               "ViewState": "AgIAABgAAAAAAAAAAAAYwBwAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T17:39:02.471Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -164,8 +163,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ProcessesInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:40:40.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:40:40.549Z"
             },
             {
               "$type": "Document",
@@ -189,8 +187,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\Models\\ApplicationInfoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T13:08:45.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-16T13:08:45.835Z"
             },
             {
               "$type": "Document",
@@ -238,8 +235,7 @@
               "RelativeToolTip": "Client\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T17:39:04.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-10T17:39:04.228Z"
             },
             {
               "$type": "Document",
@@ -264,8 +260,7 @@
               "RelativeToolTip": "Client\\Modules\\ServerSend\\DynamicData\\SendProcessesInfoToServer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-10T10:28:44.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T10:28:44.905Z"
             },
             {
               "$type": "Document",

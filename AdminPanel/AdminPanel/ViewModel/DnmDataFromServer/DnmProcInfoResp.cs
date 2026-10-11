@@ -54,9 +54,6 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if (procData != null && dnmProcInfo.TimeStamp != currentTimeStamp)
                             {
-                                string header = $"Computer: {procData.ComputerName} | " + $"Time: {dnmProcInfo.TimeStamp}";
-
-                                RichTextBoxHelper.AppendBlackText(_richTextBox, header);
                                 RichTextBoxHelper.AppendBlackText(_richTextBox, new string('-', 100));
 
                                 if (procData.Process != null)
@@ -64,10 +61,10 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                                     foreach (var proc in procData.Process)
                                     {
                                         string logText =
-                                            $"Name: {proc.Name,-20} | " +
-                                            $"Id: {proc.Id,-6} | " +
-                                            $"RAM: {proc.RAM,-10} | " +
-                                            $"SHA256: {proc.SHA256,-30} | " +
+                                            $"Name: {proc.Name} | " +
+                                            $"Id: {proc.Id} | " +
+                                            $"RAM: {proc.RAM} | " +
+                                            $"SHA256: {proc.SHA256} | " +
                                             $"Start time: {proc.StartTime} | " +
                                             $"Path: {proc.Path}";
 

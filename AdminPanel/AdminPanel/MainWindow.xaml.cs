@@ -1,5 +1,6 @@
 ﻿using AdminPanel.Services.CPU;
 using AdminPanel.Services.Procceses;
+using AdminPanel.Services.Procceses.ThreatManager;
 using AdminPanel.Services.RAM;
 using AdminPanel.ViewModel;
 using System.ComponentModel.DataAnnotations;
@@ -22,6 +23,9 @@ namespace AdminPanel
         public MainWindow()
         {
             InitializeComponent();
+
+            var cts = new CancellationToken();
+            _ = BackgroundCheckerHash.HashCheckers(cts);
         }
 
         private async void OpenClientInfo(object sender, RoutedEventArgs e)
