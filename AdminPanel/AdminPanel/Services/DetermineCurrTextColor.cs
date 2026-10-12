@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Animation;
 using AdminPanel.Services.Procceses.Files;
+using AdminPanel.Services.Ports;
 
 namespace AdminPanel.Services
 {
@@ -69,6 +70,20 @@ namespace AdminPanel.Services
             return data switch
             {
                 _ when hashColor == "red" => "red",
+
+                _ => "black"
+            };
+        }
+
+        public static string PortsDataColor(PortProperty data)
+        {
+            string color = AnalizingPortActivity.EvaluatePorts(data.Adress, data.Port);
+
+            return data switch
+            {
+                _ when color == "red" => "red",
+
+                _ when color == "yellow" => "yellow",
 
                 _ => "black"
             };

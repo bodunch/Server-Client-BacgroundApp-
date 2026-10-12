@@ -209,7 +209,7 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "PortsInfo":
-                    DnmPortsInfoResp dnmPorts = new DnmPortsInfoResp(staticInfoTextBox);
+                    DnmPortsInfoResp dnmPorts = new DnmPortsInfoResp(targetRichTextBox);
                     _ = dnmPorts.TakeData(Id, token);
                     break;
 
