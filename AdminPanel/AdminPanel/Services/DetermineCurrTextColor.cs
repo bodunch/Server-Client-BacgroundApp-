@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Media.Animation;
 using AdminPanel.Services.Procceses.Files;
 using AdminPanel.Services.Ports;
+using AdminPanel.Services.Connections;
 
 namespace AdminPanel.Services
 {
@@ -81,6 +82,20 @@ namespace AdminPanel.Services
 
             return data switch
             {
+                _ when color == "red" => "red",
+
+                _ when color == "yellow" => "yellow",
+
+                _ => "black"
+            };
+        }
+
+        public static string ConnectDataColor(ConnectionProperty data)
+        {
+            string color = AnalizingConnnectionActivity.EvaluateConnections(data.LocalConnection, data.RemoteConnection);
+
+            return data switch
+            { 
                 _ when color == "red" => "red",
 
                 _ when color == "yellow" => "yellow",

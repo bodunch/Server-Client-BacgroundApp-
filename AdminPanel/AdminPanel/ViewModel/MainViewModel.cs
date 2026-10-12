@@ -214,7 +214,7 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "ConnectionsInfo":
-                    DnmConnectInfoResp dnmConnect = new DnmConnectInfoResp(staticInfoTextBox);
+                    DnmConnectInfoResp dnmConnect = new DnmConnectInfoResp(targetRichTextBox);
                     _ = dnmConnect.TakeData(Id, token);
                     break;
 

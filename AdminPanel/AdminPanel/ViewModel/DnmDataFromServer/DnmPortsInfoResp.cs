@@ -54,8 +54,6 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if (portsData != null && dnmPortsInfo.TimeStamp != currentTimeStamp)
                             {
-                                RichTextBoxHelper.AppendBlackText(_richTextBox, new string('-', 100));
-
                                 if (portsData.Port != null)
                                 {
                                     foreach (var port in portsData.Port)

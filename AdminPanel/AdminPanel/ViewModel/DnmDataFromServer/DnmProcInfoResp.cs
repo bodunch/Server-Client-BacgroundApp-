@@ -54,7 +54,6 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if (procData != null && dnmProcInfo.TimeStamp != currentTimeStamp)
                             {
-                                RichTextBoxHelper.AppendBlackText(_richTextBox, new string('-', 100));
 
                                 if (procData.Process != null)
                                 {
