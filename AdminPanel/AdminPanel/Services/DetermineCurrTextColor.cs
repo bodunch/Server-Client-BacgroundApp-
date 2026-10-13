@@ -103,5 +103,10 @@ namespace AdminPanel.Services
                 _ => "black"
             };
         }
+
+        public static string AppDataColor(ApplicationProperty data)
+        {
+            return "black";
+        }
     }
 }

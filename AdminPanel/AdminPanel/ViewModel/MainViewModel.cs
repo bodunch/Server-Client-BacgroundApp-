@@ -219,7 +219,7 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "ApplicationsInfo":
-                    DnmAppInfoResp dnmApp = new DnmAppInfoResp(staticInfoTextBox);
+                    DnmAppInfoResp dnmApp = new DnmAppInfoResp(targetRichTextBox);
                     _ = dnmApp.TakeData(Id, token);
                     break;
 
