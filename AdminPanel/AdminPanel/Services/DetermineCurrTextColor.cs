@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using AdminPanel.Services.Procceses.Files;
 using AdminPanel.Services.Ports;
 using AdminPanel.Services.Connections;
+using AdminPanel.Services.Adapters;
 
 namespace AdminPanel.Services
 {
@@ -107,6 +108,18 @@ namespace AdminPanel.Services
         public static string AppDataColor(ApplicationProperty data)
         {
             return "black";
+        }
+
+        public static string AdapterDataColor(AdapterProperty data)
+        {
+            string color = AnalizingAdaptersActivity.EvaluateAdapters(data.Name, data.Status, data.Speed, data.Received, data.Sent);
+
+            return data switch
+            {
+                _ when color == "yellow" => "yellow",
+
+                _ => "black"
+            };
         }
     }
 }

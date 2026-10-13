@@ -54,7 +54,6 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if (procData != null && dnmProcInfo.TimeStamp != currentTimeStamp)
                             {
-
                                 if (procData.Process != null)
                                 {
                                     foreach (var proc in procData.Process)

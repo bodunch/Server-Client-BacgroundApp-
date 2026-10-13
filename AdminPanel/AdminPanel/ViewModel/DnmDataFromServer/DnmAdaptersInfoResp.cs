@@ -1,4 +1,5 @@
 ﻿using AdminPanel.Model;
+using AdminPanel.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,19 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace AdminPanel.ViewModel.DnmDataFromServer
 {
     public class DnmAdaptersInfoResp
     {
-        private readonly StaticInfoTextBox _staticInfoTextBox;
+        private readonly RichTextBox _richTextBox;
 
         private string currentTimeStamp;
 
-        public DnmAdaptersInfoResp(StaticInfoTextBox staticInfoTextBox)
+        public DnmAdaptersInfoResp(RichTextBox richTextBox)
         {
-            _staticInfoTextBox = staticInfoTextBox;
+            _richTextBox = richTextBox;
         }
 
         public async Task TakeData(string Id, CancellationToken token)
@@ -52,30 +54,50 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 
                             if (adapterData != null && dnmAdaptersInfo.TimeStamp != currentTimeStamp)
                             {
-                                var sb = new StringBuilder();
-                                sb.AppendLine($"Computer: {adapterData.ComputerName} | Time: {dnmAdaptersInfo.TimeStamp}");
-                                sb.AppendLine(new string('-', 50));
-
                                 if (adapterData.Adapter != null)
                                 {
                                     foreach (var adapter in adapterData.Adapter)
                                     {
-                                        sb.AppendLine($"Name: {adapter.Name,-20} | Status: {adapter.Status} | Speed: {adapter.Speed} | Received: {adapter.Received} | Sent: {adapter.Sent}");
+                                        string logText = $"Name: {adapter.Name} |" +
+                                            $" Status: {adapter.Status} | " +
+                                            $"Speed: {adapter.Speed} | " +
+                                            $"Received: {adapter.Received} | " +
+                                            $"Sent: {adapter.Sent}";
+
+                                        string color = DetermineCurrTextColor.AdapterDataColor(adapter);
+
+                                        switch (color)
+                                        {
+                                            case "red":
+                                                RichTextBoxHelper.AppendRedText(_richTextBox, logText);
+                                                break;
+
+                                            case "yellow":
+                                                RichTextBoxHelper.AppendYellowText(_richTextBox, logText);
+                                                break;
+
+                                            case "black":
+                                                RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                                break;
+
+                                            default:
+                                                RichTextBoxHelper.AppendBlackText(_richTextBox, logText);
+                                                break;
+                                        }
                                     }
                                 }
 
-                                _staticInfoTextBox.DnmInfoText = sb.ToString() + Environment.NewLine;
                                 currentTimeStamp = dnmAdaptersInfo.TimeStamp;
                             }
                         }
                         else
                         {
-                            _staticInfoTextBox.DnmInfoText = "Data not found";
+                            RichTextBoxHelper.AppendRedText(_richTextBox, "Data not found");
                         }
                     }
                     else
                     {
-                        _staticInfoTextBox.DnmInfoText = $"HTTP Error: {(int)response.StatusCode}";
+                        RichTextBoxHelper.AppendRedText(_richTextBox, $"HTTP Error: {(int)response.StatusCode}");
                     }
                 }
                 catch (OperationCanceledException)
@@ -84,7 +106,7 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                 }
                 catch (Exception ex)
                 {
-                    _staticInfoTextBox.DnmInfoText = $"ERROR: {ex.Message}";
+                    RichTextBoxHelper.AppendRedText(_richTextBox, $"ERROR: {ex.Message}");
                 }
 
                 try

@@ -224,7 +224,7 @@ namespace AdminPanel.ViewModel
                     break;
 
                 case "AdaptersInfo":
-                    DnmAdaptersInfoResp dnmAdapter = new DnmAdaptersInfoResp(staticInfoTextBox);
+                    DnmAdaptersInfoResp dnmAdapter = new DnmAdaptersInfoResp(targetRichTextBox);
                     _ = dnmAdapter.TakeData(Id, token);
                     break;
 

@@ -86,7 +86,6 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
                                     }
                                 }
 
-                                RichTextBoxHelper.AppendRedText(_richTextBox, "Data not found");
                                 currentTimeStamp = dnmAppInfo.TimeStamp;
                             }
                         }
