@@ -32,6 +32,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Server.Controllers.ChartsController",
+    "Method": "GetCpuChartData",
+    "RelativePath": "api/Charts/cpu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.ClientsController",
     "Method": "GetClientsInfo",
     "RelativePath": "api/Clients",

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Server.Data;
 using Server.Data.DbQueue;
+using Server.Services;
 
 namespace Server
 {
@@ -15,6 +16,7 @@ namespace Server
             builder.Services.AddControllers();
             builder.Services.AddSingleton<DatabaseQueueService>();
             builder.Services.AddHostedService<DatabaseQueueWorker>();
+            builder.Services.AddHostedService<DatabaseCleanupWorker>();
 
             var app = builder.Build();
 
