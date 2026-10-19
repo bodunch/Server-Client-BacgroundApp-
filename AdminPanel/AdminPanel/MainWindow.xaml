@@ -165,5 +165,11 @@
             </RichTextBox.Resources>
         </RichTextBox>
 
+        <TextBox x:Name="сhartLogTextBox"
+                 Grid.Row="7"
+                 Grid.RowSpan="7"
+                 Grid.Column="3"
+                 Grid.ColumnSpan="3" />
+
     </Grid>
 </Window>

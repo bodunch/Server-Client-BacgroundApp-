@@ -59,7 +59,7 @@ namespace AdminPanel
         {
             if (DataContext is MainViewModel viewModel && !string.IsNullOrEmpty(viewModel.SelectedClientId))
             {
-                await viewModel.DetermineDataType(viewModel.SelectedClientId, dataType, dynamicInfoTextBox);
+                await viewModel.DetermineDataType(viewModel.SelectedClientId, dataType, dynamicInfoTextBox, сhartLogTextBox);
             }
         }
     }

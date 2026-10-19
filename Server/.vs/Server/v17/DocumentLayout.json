@@ -80,9 +80,10 @@
               "RelativeDocumentMoniker": "Server\\Controllers\\ChartsController.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Controllers\\ChartsController.cs",
               "RelativeToolTip": "Server\\Controllers\\ChartsController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T11:20:02.843Z"
+              "WhenOpened": "2026-10-18T11:20:02.843Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -92,7 +93,7 @@
               "RelativeDocumentMoniker": "Server\\Services\\DatabaseCleanupWorker.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Services\\DatabaseCleanupWorker.cs",
               "RelativeToolTip": "Server\\Services\\DatabaseCleanupWorker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-18T11:28:12.629Z",
               "EditorCaption": ""

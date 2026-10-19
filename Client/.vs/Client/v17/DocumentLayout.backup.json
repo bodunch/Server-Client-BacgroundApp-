@@ -143,8 +143,7 @@
               "ViewState": "AgIAABgAAAAAAAAAAAAYwBwAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T17:39:02.471Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -220,8 +219,7 @@
               "RelativeToolTip": "Client\\Modules\\PCInfo\\CurrentCPUInfo.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAADwvxcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T14:06:03.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T14:06:03.232Z"
             },
             {
               "$type": "Document",
@@ -243,7 +241,7 @@
               "RelativeDocumentMoniker": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
               "RelativeToolTip": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-30T17:48:28.567Z",
               "EditorCaption": ""

@@ -9,7 +9,6 @@ namespace AdminPanel.ViewModel.DnmDataFromServer
 {
     public class DnmCpuInfoResp
     {
-
         private readonly RichTextBox _richTextBox;
 
         private string currentTimeStamp;

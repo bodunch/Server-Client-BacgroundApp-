@@ -13,6 +13,7 @@ using AdminPanel.ViewModel;
 using System.Net.Http.Headers;
 using System.Diagnostics.Contracts;
 using System.Windows.Controls;
+using AdminPanel.Services.Charts;
 
 namespace AdminPanel.ViewModel
 {
@@ -182,7 +183,7 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        public async Task DetermineDataType(string Id, string DataType, RichTextBox targetRichTextBox)
+        public async Task DetermineDataType(string Id, string DataType, RichTextBox targetRichTextBox, TextBox сhartLogTextBox)
         {
             _currentCts?.Cancel();
             _currentCts = new CancellationTokenSource();
@@ -196,6 +197,10 @@ namespace AdminPanel.ViewModel
                 case "CpuInfo":
                     DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(targetRichTextBox);
                     _ = dnmCpu.TakeData(Id, token);
+
+                    CpuChart cpuChart = new CpuChart(сhartLogTextBox);
+                    _ = cpuChart.TakeDataForChart(Id);
+
                     break;
 
                 case "RamInfo":
