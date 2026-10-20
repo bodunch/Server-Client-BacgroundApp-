@@ -22,7 +22,7 @@ namespace AdminPanel.Services.Charts
             _textBox = textBox;
         }
 
-        public async Task TakeDataForChart(string clientId)
+        public async Task TakeDataForChart(string clientId, CancellationToken token)
         {
             if (string.IsNullOrEmpty(clientId))
             {
@@ -30,43 +30,54 @@ namespace AdminPanel.Services.Charts
                 return;
             }
 
-            try
+            using var httpClient = new HttpClient();
+            httpClient.BaseAddress = new Uri("http://localhost:5000/");
+
+            while (!token.IsCancellationRequested)
             {
-                using var httpClient = new HttpClient();
-                httpClient.BaseAddress = new Uri("http://localhost:5000/");
-                httpClient.DefaultRequestHeaders.Clear();
-                httpClient.DefaultRequestHeaders.Add("ClientId", clientId);
-
-                string endpoint = "api/charts/cpu";
-
-                HttpResponseMessage response = await httpClient.GetAsync(endpoint);
-
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    string jsonResponse = await response.Content.ReadAsStringAsync();
+                    httpClient.DefaultRequestHeaders.Clear();
+                    httpClient.DefaultRequestHeaders.Add("ClientId", clientId);
 
-                    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                    var points = JsonSerializer.Deserialize<List<CpuLogPoint>>(jsonResponse, options);
+                    string endpoint = "api/charts/cpu";
 
-                    if (points != null && points.Any())
+                    HttpResponseMessage response = await httpClient.GetAsync(endpoint, token);
+
+                    if (response.IsSuccessStatusCode)
                     {
-                        var sb = new StringBuilder();
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
 
-                        foreach (var pt in points)
+                        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                        var points = JsonSerializer.Deserialize<List<CpuLogPoint>>(jsonResponse, options);
+
+                        if (points != null && points.Any())
                         {
-                            sb.AppendLine($"[Time: {pt.Time}] — Load: {pt.Value}%");
-                        }
+                            var sb = new StringBuilder();
 
-                        _textBox.Text = sb.ToString();
+                            foreach (var pt in points)
+                            {
+                                sb.AppendLine($"[Time: {pt.Time}] — Load: {pt.Value}%");
+                            }
+
+                            System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                _textBox.Text = sb.ToString();
+                            });
+                        }
                     }
                 }
-                else
+                catch { }
+
+                try
                 {
-                    string errorContent = await response.Content.ReadAsStringAsync();
-                    _textBox.Text = $"Too enougth data";
+                    await Task.Delay(10000, token);
                 }
-            }
-            catch { }
+                catch (OperationCanceledException)
+                {
+                    break;
+                }
+            } 
         }
     }
 }

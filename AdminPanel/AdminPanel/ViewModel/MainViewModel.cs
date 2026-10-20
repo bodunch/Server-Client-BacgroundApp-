@@ -199,7 +199,7 @@ namespace AdminPanel.ViewModel
                     _ = dnmCpu.TakeData(Id, token);
 
                     CpuChart cpuChart = new CpuChart(сhartLogTextBox);
-                    _ = cpuChart.TakeDataForChart(Id);
+                    _ = cpuChart.TakeDataForChart(Id, token);
 
                     break;
 
