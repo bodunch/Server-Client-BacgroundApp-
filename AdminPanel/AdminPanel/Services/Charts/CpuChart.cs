@@ -54,19 +54,16 @@ namespace AdminPanel.Services.Charts
 
                         foreach (var pt in points)
                         {
-                            sb.AppendLine($"[Час: {pt.Time}] — Навантаження: {pt.Value}%");
+                            sb.AppendLine($"[Time: {pt.Time}] — Load: {pt.Value}%");
                         }
 
                         _textBox.Text = sb.ToString();
                     }
-                    else
-                    {
-                        _textBox.Text = "У базі даних поки немає збережених логів для цього запиту.";
-                    }
                 }
                 else
                 {
-                    _textBox.Text = $"Помилка сервера: {(int)response.StatusCode} {response.ReasonPhrase}";
+                    string errorContent = await response.Content.ReadAsStringAsync();
+                    _textBox.Text = $"Too enougth data";
                 }
             }
             catch { }

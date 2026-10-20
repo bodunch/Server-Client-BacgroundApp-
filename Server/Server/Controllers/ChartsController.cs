@@ -25,9 +25,14 @@ namespace Server.Controllers
 
             var cpuLogs = await _context.DnmCpuInfo
                 .Where(s => s.ClientId == clientId)
-                .OrderBy(s => s.Id)
-                .Take(10) 
+                .OrderByDescending(s => s.Id)
+                .OrderBy(s => s.Id) 
                 .ToListAsync();
+
+            if (cpuLogs.Count < 12)
+            {
+                return BadRequest(new { message = $"Too enogth data {cpuLogs.Count}/12" });
+            }
 
             var chartPoints = new List<object>();
 
