@@ -1,7 +1,11 @@
 ﻿using AdminPanel.Model;
 using AdminPanel.Model.ChartLogs;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.WPF;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
@@ -10,23 +14,35 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using static System.Net.Mime.MediaTypeNames;
+using System.Windows;
 
 namespace AdminPanel.Services.Charts
 {
     public class CpuChart
     {
-        private readonly TextBox _textBox;
+        private readonly CartesianChart _chart;
+        private readonly ObservableCollection<double> _cpuValues = new();
 
-        public CpuChart(TextBox textBox)
+        public CpuChart(CartesianChart chart)
         {
-            _textBox = textBox;
+            _chart = chart;
+
+            _chart.Series = new ISeries[]
+            {
+                new LineSeries<double>
+                {
+                    Values = _cpuValues,
+                    Fill = null, 
+                    LineSmoothness = 0.65 
+                }
+            };
         }
 
         public async Task TakeDataForChart(string clientId, CancellationToken token)
         {
             if (string.IsNullOrEmpty(clientId))
             {
-                _textBox.Text = "Client not found";
                 return;
             }
 
@@ -53,16 +69,13 @@ namespace AdminPanel.Services.Charts
 
                         if (points != null && points.Any())
                         {
-                            var sb = new StringBuilder();
-
-                            foreach (var pt in points)
-                            {
-                                sb.AppendLine($"[Time: {pt.Time}] — Load: {pt.Value}%");
-                            }
-
                             System.Windows.Application.Current.Dispatcher.Invoke(() =>
                             {
-                                _textBox.Text = sb.ToString();
+                                _cpuValues.Clear();
+                                foreach (var pt in points)
+                                {
+                                    _cpuValues.Add(pt.Value);
+                                }
                             });
                         }
                     }

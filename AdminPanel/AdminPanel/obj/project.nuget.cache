@@ -1,12 +1,63 @@
 {
   "version": 2,
-  "dgSpecHash": "wxHaZ+aV+Mw=",
+  "dgSpecHash": "tB7bDX/kicg=",
   "success": true,
   "projectFilePath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\AdminPanel.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Bodun\\.nuget\\packages\\harfbuzzsharp\\14.2.1.301\\harfbuzzsharp.14.2.1.301.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\14.2.1.301\\harfbuzzsharp.nativeassets.macos.14.2.1.301.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\14.2.1.301\\harfbuzzsharp.nativeassets.win32.14.2.1.301.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\livechartscore\\2.0.5\\livechartscore.2.0.5.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\livechartscore.skiasharpview\\2.0.5\\livechartscore.skiasharpview.2.0.5.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\livechartscore.skiasharpview.wpf\\2.0.5\\livechartscore.skiasharpview.wpf.2.0.5.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.12\\microsoft.extensions.configuration.10.0.12.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.12\\microsoft.extensions.configuration.abstractions.10.0.12.nupkg.sha512",
-    "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.12\\microsoft.extensions.primitives.10.0.12.nupkg.sha512"
+    "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.12\\microsoft.extensions.primitives.10.0.12.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\opentk\\3.3.1\\opentk.3.3.1.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\opentk.glwpfcontrol\\3.3.0\\opentk.glwpfcontrol.3.3.0.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\skiasharp\\4.153.1\\skiasharp.4.153.1.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\skiasharp.harfbuzz\\4.153.1\\skiasharp.harfbuzz.4.153.1.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\skiasharp.nativeassets.macos\\4.153.1\\skiasharp.nativeassets.macos.4.153.1.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\skiasharp.nativeassets.win32\\4.153.1\\skiasharp.nativeassets.win32.4.153.1.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\skiasharp.views.desktop.common\\4.153.1\\skiasharp.views.desktop.common.4.153.1.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\skiasharp.views.wpf\\4.153.1\\skiasharp.views.wpf.4.153.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'OpenTK 3.3.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\AdminPanel.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\AdminPanel.csproj",
+      "libraryId": "OpenTK",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'OpenTK.GLWpfControl 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\AdminPanel.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\AdminPanel.csproj",
+      "libraryId": "OpenTK.GLWpfControl",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'SkiaSharp.Views.WPF 4.153.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\AdminPanel.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\AdminPanel.csproj",
+      "libraryId": "SkiaSharp.Views.WPF",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    }
+  ]
 }

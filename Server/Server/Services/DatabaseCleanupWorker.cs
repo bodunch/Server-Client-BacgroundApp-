@@ -24,7 +24,7 @@ namespace Server.Services
                 {
                 }
 
-                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
             }
         }
 
@@ -33,7 +33,7 @@ namespace Server.Services
             using var scope = _serviceProvider.CreateScope();
             var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-            string thresholdDate = DateTime.Now.AddMinutes(-1).ToString("yyyy-MM-dd HH:mm:ss");
+            string thresholdDate = DateTime.Now.AddMinutes(-5).ToString("yyyy-MM-dd HH:mm:ss");
 
             var oldCpuLogs = await context.DnmCpuInfo
                 .Where(x => string.Compare(x.TimeStamp, thresholdDate) < 0)

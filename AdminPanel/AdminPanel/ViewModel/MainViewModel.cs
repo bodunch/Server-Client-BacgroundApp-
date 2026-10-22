@@ -1,19 +1,20 @@
 ﻿using AdminPanel.Model;
+using AdminPanel.Services.Charts;
+using AdminPanel.ViewModel;
 using AdminPanel.ViewModel.DnmDataFromServer;
+using LiveChartsCore.SkiaSharpView.WPF;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Media.Animation;
-using AdminPanel.ViewModel;
-using System.Net.Http.Headers;
-using System.Diagnostics.Contracts;
 using System.Windows.Controls;
-using AdminPanel.Services.Charts;
+using System.Windows.Media.Animation;
 
 namespace AdminPanel.ViewModel
 {
@@ -183,7 +184,7 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        public async Task DetermineDataType(string Id, string DataType, RichTextBox targetRichTextBox, TextBox сhartLogTextBox)
+        public async Task DetermineDataType(string Id, string DataType, RichTextBox targetRichTextBox, CartesianChart CpuCartesianChart)
         {
             _currentCts?.Cancel();
             _currentCts = new CancellationTokenSource();
@@ -198,7 +199,7 @@ namespace AdminPanel.ViewModel
                     DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(targetRichTextBox);
                     _ = dnmCpu.TakeData(Id, token);
 
-                    CpuChart cpuChart = new CpuChart(сhartLogTextBox);
+                    CpuChart cpuChart = new CpuChart(CpuCartesianChart);
                     _ = cpuChart.TakeDataForChart(Id, token);
 
                     break;
