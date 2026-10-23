@@ -184,7 +184,7 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        public async Task DetermineDataType(string Id, string DataType, RichTextBox targetRichTextBox, CartesianChart CpuCartesianChart)
+        public async Task DetermineDataType(string Id, string DataType, RichTextBox targetRichTextBox, CartesianChart _CartesianChart)
         {
             _currentCts?.Cancel();
             _currentCts = new CancellationTokenSource();
@@ -193,13 +193,15 @@ namespace AdminPanel.ViewModel
             staticInfoTextBox.DnmInfoText = string.Empty;
             targetRichTextBox.Document.Blocks.Clear();
 
+           CpuChart.ClearChart();
+
             switch (DataType)
             {
                 case "CpuInfo":
                     DnmCpuInfoResp dnmCpu = new DnmCpuInfoResp(targetRichTextBox);
                     _ = dnmCpu.TakeData(Id, token);
 
-                    CpuChart cpuChart = new CpuChart(CpuCartesianChart);
+                    CpuChart cpuChart = new CpuChart(_CartesianChart);
                     _ = cpuChart.TakeDataForChart(Id, token);
 
                     break;

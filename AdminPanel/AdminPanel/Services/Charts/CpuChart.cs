@@ -22,7 +22,8 @@ namespace AdminPanel.Services.Charts
     public class CpuChart
     {
         private readonly CartesianChart _chart;
-        private readonly ObservableCollection<double> _cpuValues = new();
+        private static readonly ObservableCollection<double> _cpuValues = new();
+        private static readonly ObservableCollection<string> _timeLabels = new();
 
         public CpuChart(CartesianChart chart)
         {
@@ -35,6 +36,15 @@ namespace AdminPanel.Services.Charts
                     Values = _cpuValues,
                     Fill = null, 
                     LineSmoothness = 0.65 
+                }
+            };
+
+            _chart.XAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Labels = _timeLabels,
+                    LabelsRotation = 15 
                 }
             };
         }
@@ -72,9 +82,14 @@ namespace AdminPanel.Services.Charts
                             System.Windows.Application.Current.Dispatcher.Invoke(() =>
                             {
                                 _cpuValues.Clear();
+                                _timeLabels.Clear();
+
                                 foreach (var pt in points)
                                 {
                                     _cpuValues.Add(pt.Value);
+
+                                    string shortTime = pt.Time.Length >= 19 ? pt.Time.Substring(11, 8) : pt.Time;
+                                    _timeLabels.Add(shortTime);
                                 }
                             });
                         }
@@ -91,6 +106,15 @@ namespace AdminPanel.Services.Charts
                     break;
                 }
             } 
+        }
+
+        public static void ClearChart()
+        {
+            System.Windows.Application.Current.Dispatcher.Invoke(() =>
+            {
+                _cpuValues.Clear();
+                _timeLabels.Clear();
+            });
         }
     }
 }

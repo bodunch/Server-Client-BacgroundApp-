@@ -1,4 +1,5 @@
-﻿using AdminPanel.Services.CPU;
+﻿using AdminPanel.Services.Charts;
+using AdminPanel.Services.CPU;
 using AdminPanel.Services.Procceses;
 using AdminPanel.Services.Procceses.ThreatManager;
 using AdminPanel.Services.RAM;
@@ -34,7 +35,6 @@ namespace AdminPanel
             {
                 AnalizingCpuActivity.ResetHistory();
                 AnalizingRamActivity.ResetHistory();
-            
 
                 DynamicButtonsPanel.Visibility = Visibility.Visible;
 
@@ -59,7 +59,7 @@ namespace AdminPanel
         {
             if (DataContext is MainViewModel viewModel && !string.IsNullOrEmpty(viewModel.SelectedClientId))
             {
-                await viewModel.DetermineDataType(viewModel.SelectedClientId, dataType, dynamicInfoTextBox, сpuCartesianChart);
+                await viewModel.DetermineDataType(viewModel.SelectedClientId, dataType, dynamicInfoTextBox, cartesianChart);
             }
         }
     }

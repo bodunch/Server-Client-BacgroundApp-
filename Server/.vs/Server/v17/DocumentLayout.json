@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "Server\\Controllers\\ChartsController.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Controllers\\ChartsController.cs",
               "RelativeToolTip": "Server\\Controllers\\ChartsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowCMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-18T11:20:02.843Z",
               "EditorCaption": ""
@@ -95,8 +95,7 @@
               "RelativeToolTip": "Server\\Services\\DatabaseCleanupWorker.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T11:28:12.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T11:28:12.629Z"
             }
           ]
         },

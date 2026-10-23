@@ -166,7 +166,7 @@
             </RichTextBox.Resources>
         </RichTextBox>
 
-        <lvc:CartesianChart x:Name="сpuCartesianChart"
+        <lvc:CartesianChart x:Name="cartesianChart"
                             Grid.Row="7"
                             Grid.RowSpan="7"
                             Grid.Column="3"
