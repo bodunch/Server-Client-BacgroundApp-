@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Server.Data;
 using System.Text.Json.Nodes;
+using Server.Data.Entities;
 
 namespace Server.Controllers
 {
@@ -99,6 +100,72 @@ namespace Server.Controllers
             }
 
             return Ok(chartPoints);
+        }
+
+        [HttpGet("processes")]
+        public async Task<IActionResult> GetProcessesChartData()
+        {
+            if(!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest();    
+            }
+
+            var procLogs = await _context.DnmProcessesInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderBy(s => s.Id)
+                .ToListAsync();
+
+            if (!procLogs.Any())
+            {
+                return BadRequest();
+            }
+
+            var chartPoints = new List<object>();
+
+            try
+            {
+                var latestLog = procLogs.Last();
+                var jsonNode = JsonNode.Parse(latestLog.JsonPayload);
+                var processesArray = jsonNode?["process"]?.AsArray();
+
+                if (processesArray != null)
+                {
+                    var topProcesses = processesArray
+                        .Select(p => new {
+                            Name = p?["name"]?.ToString() ?? "Unknown",
+                            RamValue = ParseRamToMegabytes(p?["ram"]?.ToString() ?? "0")
+                        })
+                        .OrderByDescending(x => x.RamValue)
+                        .Take(10);
+
+                    foreach (var p in topProcesses)
+                    {
+                        chartPoints.Add(new
+                        {
+                            Name = p.Name,
+                            Value = p.RamValue
+                        });
+                    }
+                }
+            }
+            catch { }
+
+            return Ok(chartPoints);
+        }
+
+        private double ParseRamToMegabytes(string ramStr)
+        {
+            if (string.IsNullOrEmpty(ramStr)) return 0;
+
+            string cleanStr = ramStr.Replace(',', '.');
+
+            cleanStr = new string(cleanStr.Where(c => char.IsDigit(c) || c == '.' || c == '-').ToArray());
+
+            if (double.TryParse(cleanStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double result))
+            {
+                return result;
+            }
+            return 0;
         }
     }
 }

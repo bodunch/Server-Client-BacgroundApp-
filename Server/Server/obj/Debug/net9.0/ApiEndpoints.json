@@ -43,6 +43,16 @@
   },
   {
     "ContainingType": "Server.Controllers.ChartsController",
+    "Method": "GetProcessesChartData",
+    "RelativePath": "api/Charts/processes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ChartsController",
     "Method": "GetRamChartData",
     "RelativePath": "api/Charts/ram",
     "HttpMethod": "GET",
