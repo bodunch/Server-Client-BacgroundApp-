@@ -193,7 +193,8 @@ namespace AdminPanel.ViewModel
             staticInfoTextBox.DnmInfoText = string.Empty;
             targetRichTextBox.Document.Blocks.Clear();
 
-           CpuChart.ClearChart();
+            CpuChart.ClearChart();
+            RamChart.ClearChart();
 
             switch (DataType)
             {
@@ -209,6 +210,9 @@ namespace AdminPanel.ViewModel
                 case "RamInfo":
                     DnmRamInfoResp dnmRam = new DnmRamInfoResp(targetRichTextBox);
                     _ = dnmRam.TakeData(Id, token);
+
+                    RamChart ramChart = new RamChart(_CartesianChart);
+                    _ = ramChart.TakeDataForChart(Id, token);
                     break;
 
                 case "ProcessInfo":

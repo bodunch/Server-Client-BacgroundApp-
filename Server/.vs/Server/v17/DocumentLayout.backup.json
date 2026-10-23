@@ -44,9 +44,10 @@
               "RelativeDocumentMoniker": "Server\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T06:24:57.725Z"
+              "WhenOpened": "2026-10-20T06:24:57.725Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,7 +59,8 @@
               "RelativeToolTip": "Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T17:38:34.313Z"
+              "WhenOpened": "2026-08-05T17:38:34.313Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -70,7 +72,8 @@
               "RelativeToolTip": "Server\\Controllers\\ReportController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-08T14:59:00.188Z"
+              "WhenOpened": "2026-08-08T14:59:00.188Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -80,7 +83,7 @@
               "RelativeDocumentMoniker": "Server\\Controllers\\ChartsController.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Controllers\\ChartsController.cs",
               "RelativeToolTip": "Server\\Controllers\\ChartsController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAowCMAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAowGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-18T11:20:02.843Z",
               "EditorCaption": ""
@@ -93,9 +96,10 @@
               "RelativeDocumentMoniker": "Server\\Services\\DatabaseCleanupWorker.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Services\\DatabaseCleanupWorker.cs",
               "RelativeToolTip": "Server\\Services\\DatabaseCleanupWorker.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T11:28:12.629Z"
+              "WhenOpened": "2026-10-18T11:28:12.629Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -57,5 +57,48 @@ namespace Server.Controllers
 
             return Ok(chartPoints);
         }
+
+        [HttpGet("ram")]
+        public async Task<IActionResult> GetRamChartData()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest();
+            }
+
+            var ramLogs = await _context.DnmRamInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderBy(s => s.Id)
+                .ToListAsync();
+
+            if (ramLogs.Count < 12)
+            {
+                return BadRequest();
+            }
+
+            var chartPoints = new List<object>();
+
+            foreach (var log in ramLogs)
+            {
+                try
+                {
+                    var jsonNode = JsonNode.Parse(log.JsonPayload);
+
+                    string loadStr = jsonNode?["freeMem"]?.ToString()?.Trim() ?? "0";
+
+                    if (double.TryParse(loadStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double loadValue))
+                    {
+                        chartPoints.Add(new
+                        {
+                            Time = log.TimeStamp,
+                            Value = loadValue
+                        });
+                    }
+                }
+                catch { }
+            }
+
+            return Ok(chartPoints);
+        }
     }
 }

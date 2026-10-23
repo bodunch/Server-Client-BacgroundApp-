@@ -42,6 +42,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Server.Controllers.ChartsController",
+    "Method": "GetRamChartData",
+    "RelativePath": "api/Charts/ram",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.ClientsController",
     "Method": "GetClientsInfo",
     "RelativePath": "api/Clients",
