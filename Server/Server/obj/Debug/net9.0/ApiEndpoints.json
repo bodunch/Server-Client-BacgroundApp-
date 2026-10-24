@@ -43,6 +43,16 @@
   },
   {
     "ContainingType": "Server.Controllers.ChartsController",
+    "Method": "GetPortsChartData",
+    "RelativePath": "api/Charts/ports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ChartsController",
     "Method": "GetProcessesChartData",
     "RelativePath": "api/Charts/processes",
     "HttpMethod": "GET",

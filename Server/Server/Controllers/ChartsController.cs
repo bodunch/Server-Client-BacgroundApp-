@@ -11,9 +11,9 @@ namespace Server.Controllers
     public class ChartsController : ControllerBase
     {
         private readonly AppDbContext _context;
-        public ChartsController(AppDbContext context) 
+        public ChartsController(AppDbContext context)
         {
-            _context = context; 
+            _context = context;
         }
 
         [HttpGet("cpu")]
@@ -26,7 +26,7 @@ namespace Server.Controllers
 
             var cpuLogs = await _context.DnmCpuInfo
                 .Where(s => s.ClientId == clientId)
-                .OrderBy(s => s.Id) 
+                .OrderBy(s => s.Id)
                 .ToListAsync();
 
             if (cpuLogs.Count < 12)
@@ -48,7 +48,7 @@ namespace Server.Controllers
                     {
                         chartPoints.Add(new
                         {
-                            Time = log.TimeStamp, 
+                            Time = log.TimeStamp,
                             Value = loadValue
                         });
                     }
@@ -105,9 +105,9 @@ namespace Server.Controllers
         [HttpGet("processes")]
         public async Task<IActionResult> GetProcessesChartData()
         {
-            if(!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
             {
-                return BadRequest();    
+                return BadRequest();
             }
 
             var procLogs = await _context.DnmProcessesInfo
@@ -131,7 +131,8 @@ namespace Server.Controllers
                 if (processesArray != null)
                 {
                     var topProcesses = processesArray
-                        .Select(p => new {
+                        .Select(p => new
+                        {
                             Name = p?["name"]?.ToString() ?? "Unknown",
                             RamValue = ParseRamToMegabytes(p?["ram"]?.ToString() ?? "0")
                         })
@@ -153,6 +154,51 @@ namespace Server.Controllers
             return Ok(chartPoints);
         }
 
+        [HttpGet("ports")]
+        public async Task<IActionResult> GetPortsChartData()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest();
+            }
+
+            var portLogs = await _context.DnmPortsInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderBy(s => s.Id)
+                .ToListAsync();
+
+            if (!portLogs.Any())
+            {
+                return BadRequest();
+            }
+
+            var chartPoints = new List<object>();
+
+            var latestPort = portLogs.Last();
+            var jsonNode = JsonNode.Parse(latestPort.JsonPayload);
+            var portsArray = jsonNode?["port"]?.AsArray();
+
+            if (portsArray != null)
+            {
+                var groupedPorts = portsArray
+                    .GroupBy(p => p?["adress"]?.ToString() ?? "Unknown")
+                    .Select(g => new {
+                        Address = g.Key,
+                        Count = g.Count()
+                    });
+
+                foreach (var group in groupedPorts)
+                {
+                    chartPoints.Add(new
+                    {
+                        Name = group.Address,
+                        Value = group.Count
+                    });
+                }
+            }
+            return Ok(chartPoints);
+        }
+            
         private double ParseRamToMegabytes(string ramStr)
         {
             if (string.IsNullOrEmpty(ramStr)) return 0;
