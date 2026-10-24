@@ -198,6 +198,7 @@ namespace AdminPanel.ViewModel
             ProcessesChart.ClearChart();
             PortsChart.ClearChart();
             ConnectsChart.ClearChart();
+            AppChart.ClearChart();
 
             switch (DataType)
             {
@@ -245,6 +246,9 @@ namespace AdminPanel.ViewModel
                 case "ApplicationsInfo":
                     DnmAppInfoResp dnmApp = new DnmAppInfoResp(targetRichTextBox);
                     _ = dnmApp.TakeData(Id, token);
+
+                    AppChart appChart = new AppChart(_CartesianChart);
+                    _ = appChart.TakeDataForChart(Id, token);
                     break;
 
                 case "AdaptersInfo":

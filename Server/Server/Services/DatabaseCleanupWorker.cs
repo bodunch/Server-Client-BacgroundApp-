@@ -80,6 +80,15 @@ namespace Server.Services
                 context.DnmConnectionsInfo.RemoveRange(oldConnectLogs);
             }
 
+            var oldAppLogs = await context.DnmAppInfo
+                .Where(x => string.Compare(x.TimeStamp, thresholdDate) < 0)
+                .ToListAsync();
+
+            if (oldAppLogs.Any())
+            {
+                context.DnmAppInfo.RemoveRange(oldAppLogs);
+            }
+
             int deletedCount = await context.SaveChangesAsync();
         }
     }

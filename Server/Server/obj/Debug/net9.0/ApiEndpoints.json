@@ -33,6 +33,16 @@
   },
   {
     "ContainingType": "Server.Controllers.ChartsController",
+    "Method": "GetAppChartData",
+    "RelativePath": "api/Charts/app",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ChartsController",
     "Method": "GetConnectionsChartData",
     "RelativePath": "api/Charts/connections",
     "HttpMethod": "GET",

@@ -229,7 +229,7 @@
               "RelativeDocumentMoniker": "Client\\Program.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Program.cs",
               "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-10T17:39:04.228Z",
               "EditorCaption": ""
@@ -244,8 +244,7 @@
               "RelativeToolTip": "Client\\Modules\\ServerSend\\StaticData\\SendSystemInfoToServer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-30T17:48:28.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-30T17:48:28.567Z"
             },
             {
               "$type": "Document",

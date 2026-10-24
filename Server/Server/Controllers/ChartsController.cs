@@ -245,6 +245,58 @@ namespace Server.Controllers
             return Ok(chartPoints);
         }
 
+        [HttpGet("app")]
+        public async Task<IActionResult> GetAppChartData()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest();
+            }
+
+            var appLogs = await _context.DnmAppInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderBy(s => s.Id)
+                .ToListAsync();
+
+            if (!appLogs.Any())
+            {
+                return BadRequest();
+            }
+
+            var chartPoints = new List<object>();
+
+            try
+            {
+                var latestLog = appLogs.Last();
+                var jsonNode = JsonNode.Parse(latestLog.JsonPayload);
+                var appArray = jsonNode?["application"]?.AsArray();
+
+                if (appArray != null)
+                {
+                    var topApp = appArray
+                        .Select(p => new
+                        {
+                            Name = p?["appName"]?.ToString() ?? "Unknown",
+                            RamValue = ParseRamToMegabytes(p?["ram"]?.ToString() ?? "0")
+                        })
+                        .OrderByDescending(x => x.RamValue)
+                        .Take(10);
+
+                    foreach (var p in topApp)
+                    {
+                        chartPoints.Add(new
+                        {
+                            Name = p.Name,
+                            Value = p.RamValue
+                        });
+                    }
+                }
+            }
+            catch { }
+
+            return Ok(chartPoints);
+        }
+
         private double ParseRamToMegabytes(string ramStr)
         {
             if (string.IsNullOrEmpty(ramStr)) return 0;
