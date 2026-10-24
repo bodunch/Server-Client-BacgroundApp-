@@ -297,6 +297,49 @@ namespace Server.Controllers
             return Ok(chartPoints);
         }
 
+        [HttpGet("adapters")]
+        public async Task<IActionResult> GetAdaptersChartData()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest();
+            }
+
+            var adapterLogs = await _context.DnmAdaptersInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderBy(s => s.Id)
+                .ToListAsync();
+
+            if (!adapterLogs.Any())
+            {
+                return BadRequest();
+            }
+
+            var chartPoints = new List<object>();
+
+            var latestLog = adapterLogs.Last();
+            var jsonNode = JsonNode.Parse(latestLog.JsonPayload);
+            var adaptersArray = jsonNode?["adapter"]?.AsArray();
+
+            if (adaptersArray != null)
+            {
+                foreach (var ad in adaptersArray)
+                {
+                    string name = ad?["name"]?.ToString() ?? "Unknown";
+                    double received = ParseTrafficToMegabytes(ad?["received"]?.ToString() ?? "0");
+                    double sent = ParseTrafficToMegabytes(ad?["sent"]?.ToString() ?? "0");
+
+                    chartPoints.Add(new
+                    {
+                        Name = name,
+                        Received = received,
+                        Sent = sent
+                    });
+                }
+            }
+            return Ok(chartPoints);
+        }
+
         private double ParseRamToMegabytes(string ramStr)
         {
             if (string.IsNullOrEmpty(ramStr)) return 0;
@@ -308,6 +351,31 @@ namespace Server.Controllers
             if (double.TryParse(cleanStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double result))
             {
                 return result;
+            }
+            return 0;
+        }
+
+        private double ParseTrafficToMegabytes(string trafficStr)
+        {
+            if (string.IsNullOrEmpty(trafficStr)) return 0;
+
+            string cleanStr = trafficStr.Replace(',', '.');
+            double multiplier = 1.0;
+
+            if (cleanStr.Contains("KB", StringComparison.OrdinalIgnoreCase))
+            {
+                multiplier = 0.001; 
+            }
+            else if (cleanStr.Contains("GB", StringComparison.OrdinalIgnoreCase))
+            {
+                multiplier = 1000.0;// Переводимо гігабайти в мегабайти
+            }
+
+            cleanStr = new string(cleanStr.Where(c => char.IsDigit(c) || c == '.').ToArray());
+
+            if (double.TryParse(cleanStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double result))
+            {
+                return Math.Round(result * multiplier, 2);
             }
             return 0;
         }

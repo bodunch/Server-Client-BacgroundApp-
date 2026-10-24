@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\services\\databasecleanupworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\services\\databasecleanupworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\controllers\\chartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\controllers\\chartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\services\\databasecleanupworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|solutionrelative:server\\services\\databasecleanupworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC71E4FB-2D67-4103-B066-E21243A0E512}|Server\\Server.csproj|d:\\c#\\dotnet\\exserverandclient\\server\\server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,13 +38,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DatabaseCleanupWorker.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Services\\DatabaseCleanupWorker.cs",
               "RelativeDocumentMoniker": "Server\\Services\\DatabaseCleanupWorker.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Services\\DatabaseCleanupWorker.cs",
               "RelativeToolTip": "Server\\Services\\DatabaseCleanupWorker.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFgAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-23T16:14:01.805Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Server\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T06:24:57.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T06:24:57.725Z"
             },
             {
               "$type": "Document",
@@ -88,13 +87,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ChartsController.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Controllers\\ChartsController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\ChartsController.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\Server\\Server\\Controllers\\ChartsController.cs",
               "RelativeToolTip": "Server\\Controllers\\ChartsController.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAqwBwBAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAowCsBAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-18T11:20:02.843Z",
               "EditorCaption": ""

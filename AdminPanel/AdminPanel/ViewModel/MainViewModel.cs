@@ -199,6 +199,7 @@ namespace AdminPanel.ViewModel
             PortsChart.ClearChart();
             ConnectsChart.ClearChart();
             AppChart.ClearChart();
+            AdaptersChart.ClearChart();
 
             switch (DataType)
             {
@@ -254,6 +255,9 @@ namespace AdminPanel.ViewModel
                 case "AdaptersInfo":
                     DnmAdaptersInfoResp dnmAdapter = new DnmAdaptersInfoResp(targetRichTextBox);
                     _ = dnmAdapter.TakeData(Id, token);
+
+                    AdaptersChart adaChart = new AdaptersChart(_CartesianChart);
+                    _ = adaChart.TakeDataForChart(Id, token);
                     break;
 
                 default:

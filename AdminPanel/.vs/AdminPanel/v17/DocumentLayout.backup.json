@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\services\\charts\\adapterschart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\services\\charts\\adapterschart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|d:\\c#\\dotnet\\exserverandclient\\adminpanel\\adminpanel\\services\\charts\\appchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F18ADFD7-FD77-44AA-8A62-E10E1EE9BDBE}|AdminPanel\\AdminPanel.csproj|solutionrelative:adminpanel\\services\\charts\\appchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml",
@@ -47,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml",
@@ -59,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "AdminPanel\\MainWindow.xaml.cs",
@@ -78,10 +82,23 @@
               "RelativeDocumentMoniker": "AdminPanel\\ViewModel\\MainViewModel.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "AdminPanel\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAMgAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAAMBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-13T10:46:58.744Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdaptersChart.cs",
+              "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\Charts\\AdaptersChart.cs",
+              "RelativeDocumentMoniker": "AdminPanel\\Services\\Charts\\AdaptersChart.cs",
+              "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\Charts\\AdaptersChart.cs",
+              "RelativeToolTip": "AdminPanel\\Services\\Charts\\AdaptersChart.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAHUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T14:39:20.092Z",
               "EditorCaption": ""
             },
             {
@@ -90,13 +107,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AppChart.cs",
               "DocumentMoniker": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\Charts\\AppChart.cs",
               "RelativeDocumentMoniker": "AdminPanel\\Services\\Charts\\AppChart.cs",
               "ToolTip": "D:\\C#\\dotnet\\ExserverAndClient\\AdminPanel\\AdminPanel\\Services\\Charts\\AppChart.cs",
               "RelativeToolTip": "AdminPanel\\Services\\Charts\\AppChart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-24T14:12:45.357Z",
               "EditorCaption": ""

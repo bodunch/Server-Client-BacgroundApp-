@@ -89,6 +89,15 @@ namespace Server.Services
                 context.DnmAppInfo.RemoveRange(oldAppLogs);
             }
 
+            var oldAdaptersLogs = await context.DnmAdaptersInfo
+                .Where(x => string.Compare(x.TimeStamp, thresholdDate) < 0)
+                .ToListAsync();
+
+            if (oldAdaptersLogs.Any())
+            {
+                context.DnmAdaptersInfo.RemoveRange(oldAdaptersLogs);
+            }
+
             int deletedCount = await context.SaveChangesAsync();
         }
     }
