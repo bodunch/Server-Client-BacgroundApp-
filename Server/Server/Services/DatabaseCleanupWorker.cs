@@ -71,6 +71,15 @@ namespace Server.Services
                 context.DnmPortsInfo.RemoveRange(oldPortLogs);
             }
 
+            var oldConnectLogs = await context.DnmConnectionsInfo
+                .Where(x => string.Compare(x.TimeStamp, thresholdDate) < 0)
+                .ToListAsync();
+
+            if (oldConnectLogs.Any())
+            {
+                context.DnmConnectionsInfo.RemoveRange(oldConnectLogs);
+            }
+
             int deletedCount = await context.SaveChangesAsync();
         }
     }

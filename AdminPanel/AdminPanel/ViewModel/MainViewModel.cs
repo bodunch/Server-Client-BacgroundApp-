@@ -197,6 +197,7 @@ namespace AdminPanel.ViewModel
             RamChart.ClearChart();
             ProcessesChart.ClearChart();
             PortsChart.ClearChart();
+            ConnectsChart.ClearChart();
 
             switch (DataType)
             {
@@ -236,6 +237,9 @@ namespace AdminPanel.ViewModel
                 case "ConnectionsInfo":
                     DnmConnectInfoResp dnmConnect = new DnmConnectInfoResp(targetRichTextBox);
                     _ = dnmConnect.TakeData(Id, token);
+
+                    ConnectsChart connectsChart = new ConnectsChart(_CartesianChart);
+                    _ = connectsChart.TakeDataForChart(Id, token);
                     break;
 
                 case "ApplicationsInfo":

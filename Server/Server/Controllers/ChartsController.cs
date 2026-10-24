@@ -198,7 +198,53 @@ namespace Server.Controllers
             }
             return Ok(chartPoints);
         }
-            
+
+        [HttpGet("connections")]
+        public async Task<IActionResult> GetConnectionsChartData()
+        {
+            if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || !int.TryParse(headerValues.FirstOrDefault(), out int clientId))
+            {
+                return BadRequest();
+            }
+
+            var connectLogs = await _context.DnmConnectionsInfo
+                .Where(s => s.ClientId == clientId)
+                .OrderBy(s => s.Id)
+                .ToListAsync();
+
+            if (!connectLogs.Any())
+            {
+                return BadRequest();
+            }
+
+            var chartPoints = new List<object>();
+
+            var latestConnect = connectLogs.Last();
+            var jsonNode = JsonNode.Parse(latestConnect.JsonPayload);
+            var connectArray = jsonNode?["connection"]?.AsArray();
+
+            if (connectArray != null)
+            {
+                var groupedConnects = connectArray
+                    .GroupBy(p => p?["localConnection"]?.ToString() ?? "Unknown")
+                    .Select(g => new
+                    {
+                        Address = g.Key,
+                        Count = g.Count()
+                    });
+
+                foreach (var group in groupedConnects)
+                {
+                    chartPoints.Add(new
+                    {
+                        Name = group.Address,
+                        Value = group.Count
+                    });
+                }
+            }
+            return Ok(chartPoints);
+        }
+
         private double ParseRamToMegabytes(string ramStr)
         {
             if (string.IsNullOrEmpty(ramStr)) return 0;
