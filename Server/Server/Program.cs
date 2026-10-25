@@ -17,10 +17,10 @@ namespace Server
             builder.Services.AddSingleton<DatabaseQueueService>();
             builder.Services.AddHostedService<DatabaseQueueWorker>();
             builder.Services.AddHostedService<DatabaseCleanupWorker>();
+            builder.Services.AddSingleton<CommandQueueService>();
 
             var app = builder.Build();
 
-            //using controllers and their paths 
             app.MapControllers();
 
             app.Run("http://localhost:5000");

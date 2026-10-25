@@ -222,6 +222,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Server.Controllers.CommandsController",
+    "Method": "GetPendingCommand",
+    "RelativePath": "api/Commands/get-pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CommandsController",
+    "Method": "SendCommand",
+    "RelativePath": "api/Commands/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "Server.Controllers.CommandRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.ComputerController",
     "Method": "RevievComputerInfo",
     "RelativePath": "api/Computer",

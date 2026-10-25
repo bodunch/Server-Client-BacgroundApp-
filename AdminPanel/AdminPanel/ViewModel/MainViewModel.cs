@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using AdminPanel.ViewModel.SendCommand;
 
 namespace AdminPanel.ViewModel
 {
@@ -25,6 +26,7 @@ namespace AdminPanel.ViewModel
         public StaticInfoTextBox staticInfoTextBox { get; set; } = new();
 
         public string SelectedClientId { get; private set; }
+        public string SelectedMachineName { get; private set; }
 
         public MainViewModel()
         {
@@ -70,9 +72,10 @@ namespace AdminPanel.ViewModel
 
         private CancellationTokenSource? _currentCts;
 
-        public async Task ClientInfo(string Id)
+        public async Task ClientInfo(string Id, string MachineName)
         {
             SelectedClientId = Id;
+            SelectedMachineName = MachineName;
 
             using HttpClient client = new HttpClient();
 
@@ -258,6 +261,29 @@ namespace AdminPanel.ViewModel
 
                     AdaptersChart adaChart = new AdaptersChart(_CartesianChart);
                     _ = adaChart.TakeDataForChart(Id, token);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        public async Task DetermineCommand(string Id, string DataType, HttpClient httpClient)
+        {
+            SendCommandToServer sc = new SendCommandToServer();
+
+            switch(DataType)
+            {
+                case "BtnPowerOff":
+                    _ = sc.SendCommandPowerOff(Id, httpClient);
+                    break;
+
+                case "BtnReboot":
+                    _ = sc.SendCommandReboot(Id, httpClient);
+                    break;
+
+                case "BtnNetwork":
+                    _ = sc.SendCommandNetworOff(Id, httpClient);    
                     break;
 
                 default:
