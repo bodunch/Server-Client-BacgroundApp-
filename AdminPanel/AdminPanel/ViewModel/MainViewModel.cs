@@ -268,22 +268,22 @@ namespace AdminPanel.ViewModel
             }
         }
 
-        public async Task DetermineCommand(string Id, string DataType, HttpClient httpClient)
+        public async Task DetermineCommand(string machineName, string DataType, HttpClient httpClient)
         {
             SendCommandToServer sc = new SendCommandToServer();
 
             switch(DataType)
             {
                 case "BtnPowerOff":
-                    _ = sc.SendCommandPowerOff(Id, httpClient);
+                    _ = sc.SendCommandPowerOff(machineName, httpClient);
                     break;
 
                 case "BtnReboot":
-                    _ = sc.SendCommandReboot(Id, httpClient);
+                    _ = sc.SendCommandReboot(machineName, httpClient);
                     break;
 
                 case "BtnNetwork":
-                    _ = sc.SendCommandNetworOff(Id, httpClient);    
+                    _ = sc.SendCommandNetworOff(machineName, httpClient);    
                     break;
 
                 default:

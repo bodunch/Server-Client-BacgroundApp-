@@ -11,49 +11,53 @@ namespace AdminPanel.ViewModel.SendCommand
 {
     public class SendCommandToServer
     {
-        public async Task SendCommandPowerOff(string clientId, HttpClient httpClient)
+        public async Task SendCommandPowerOff(string machineName, HttpClient httpClient)
         {
-            try
-            {
-                var payload = new { CommandText = "pcoff" };
-
-                HttpResponseMessage response = await httpClient.PostAsJsonAsync($"http://localhost:5000/api/commands/send?machineName={clientId}", payload);
-            }
-            catch { }
+            await SendRequestAsync(machineName, "pcoff", httpClient);
         }
 
-        public async Task SendCommandReboot(string clientId, HttpClient httpClient)
+        public async Task SendCommandReboot(string machineName, HttpClient httpClient)
         {
-            try
-            {
-                var payload = new { CommandText = "pcreboot" };
-
-                HttpResponseMessage response = await httpClient.PostAsJsonAsync($"http://localhost:5000/api/commands/send?machineName={clientId}", payload);
-            }
-            catch { }
+            await SendRequestAsync(machineName, "pcreboot", httpClient);
         }
 
-        public async Task SendCommandNetworOff(string clientId, HttpClient httpClient)
+        public async Task SendCommandNetworOff(string machineName, HttpClient httpClient)
         {
-            try
-            {
-                var payload = new { CommandText = "network" };
-
-                HttpResponseMessage response = await httpClient.PostAsJsonAsync($"http://localhost:5000/api/commands/send?machineName={clientId}", payload);
-            }
-            catch { }
+            await SendRequestAsync(machineName, "network", httpClient);
         }
 
-        public async Task SendAdminCustomCommand(string clientId, HttpClient httpClient, string command)
+        public async Task SendAdminCustomCommand(string machineName, HttpClient httpClient, string command)
         {
             if (string.IsNullOrEmpty(command)) return;
+            await SendRequestAsync(machineName, command, httpClient);
+        }
+
+        private async Task SendRequestAsync(string machineName, string commandText, HttpClient httpClient)
+        {
+            if (string.IsNullOrEmpty(machineName))
+            {
+                machineName = Environment.MachineName;
+            }
 
             try
             {
-                var payload = new { CommandText = command };
-                HttpResponseMessage response = await httpClient.PostAsJsonAsync($"http://localhost:5000/api/commands/send?machineName={clientId}", payload);
+                var payload = new { CommandText = commandText };
+                HttpResponseMessage response = await httpClient.PostAsJsonAsync($"http://localhost:5000/api/commands/send?machineName={machineName}", payload);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    string errorDetails = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Сервер відхилив команду (Статус {response.StatusCode}):\n{errorDetails}", "Помилка сервера", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine($"[Admin] Команда '{commandText}' успішно надіслана для ПК: {machineName}");
+                }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка підключення до сервера: {ex.Message}", "Помилка мережі", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Server.Services;
 
 namespace Server.Controllers
@@ -8,21 +9,29 @@ namespace Server.Controllers
     public class CommandsController : ControllerBase
     {
         private readonly CommandQueueService _commandQueue;
-
-        public CommandsController(CommandQueueService commandQueue)
+        private readonly ILogger<CommandsController> _logger;
+        public CommandsController(CommandQueueService commandQueue, ILogger<CommandsController> logger)
         {
             _commandQueue = commandQueue;
+            _logger = logger;
         }
 
         [HttpPost("send")]
-        public IActionResult SendCommand([FromQuery] string clientId, [FromBody] CommandRequestDto request)
+        public IActionResult SendCommand([FromQuery] string? machineName, [FromBody] CommandRequestDto request)
         {
-            if (string.IsNullOrEmpty(clientId) || string.IsNullOrEmpty(request?.CommandText))
+            if (string.IsNullOrEmpty(machineName))
             {
-                return BadRequest("ClientId or CommandText is missing.");
+                machineName = Environment.MachineName;
             }
 
-            _commandQueue.EnqueueCommand(clientId, request.CommandText);
+            if (string.IsNullOrEmpty(request?.CommandText))
+            {
+                _logger.LogWarning("Спроба відправити порожню команду.");
+                return BadRequest("CommandText is missing.");
+            }
+
+            _logger.LogInformation($"[Admin -> Server] Додано команду для ПК '{machineName}': {request.CommandText}");
+            _commandQueue.EnqueueCommand(machineName, request.CommandText);
 
             return Ok();
         }
@@ -32,6 +41,7 @@ namespace Server.Controllers
         {
             if (!Request.Headers.TryGetValue("ClientId", out var headerValues) || string.IsNullOrEmpty(headerValues.FirstOrDefault()))
             {
+                _logger.LogInformation($"[Server -> Client] Віддано команду для ПК");
                 return BadRequest("ClientId header is missing.");
             }
 
@@ -42,7 +52,7 @@ namespace Server.Controllers
             {
                 return Ok();
             }
-
+            _logger.LogInformation($"[Server -> Client] Віддано команду для ПК '{clientId}': {command}");
             return Ok(new
             {
                 CommandText = command

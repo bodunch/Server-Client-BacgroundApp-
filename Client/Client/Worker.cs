@@ -23,6 +23,8 @@ namespace Client
         {
             using var client = _httpClientFactory.CreateClient();
 
+            client.BaseAddress = new Uri("http://localhost:5000/");
+
             SendSystemInfoToServer sendSysInfo = new SendSystemInfoToServer();
             await sendSysInfo.SendStaticDataToServerAsync(client, stoppingToken);
 

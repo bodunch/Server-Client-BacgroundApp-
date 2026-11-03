@@ -9,18 +9,29 @@ using System.Runtime.Versioning;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace Client.Modules.PowerShell.Service
 {
     public class CommandListenerService
     {
+        private readonly ILogger<CommandListenerService>? _logger;
+
+        public CommandListenerService()
+        {
+            _logger = null;
+        }
+
+        public CommandListenerService(ILogger<CommandListenerService> logger)
+        {
+            _logger = logger;
+        }
+
         [SupportedOSPlatform("windows")]
         public async Task CheckAndExecuteAsync(HttpClient client, CancellationToken stoppingToken)
         {
             try
             {
-                client.BaseAddress = new Uri("http://localhost:5000/");
-
                 if (!client.DefaultRequestHeaders.Contains("ClientId"))
                 {
                     client.DefaultRequestHeaders.Add("ClientId", Environment.MachineName);
@@ -39,20 +50,23 @@ namespace Client.Modules.PowerShell.Service
 
                         if (commandObj != null && !string.IsNullOrEmpty(commandObj.CommandText))
                         {
+                            LogMessage($"Отримано команду для виконання: {commandObj.CommandText}");
+
                             string executionResult = ExecutePowerShell(commandObj.CommandText);
 
-                            var resultPayload = new
-                            {
-                                Result = executionResult
-                            };
-
+                            var resultPayload = new { Result = executionResult };
                             await client.PostAsJsonAsync("api/commands/report-result", resultPayload, stoppingToken);
                         }
                     }
                 }
+                else
+                {
+                    LogWarning($"Сервер повернув помилку при опитуванні команд: {response.StatusCode}");
+                }
             }
-            catch
+            catch (Exception ex)
             {
+                LogError(ex, "Помилка під час отримання або виконання команди на клієнті.");
             }
         }
 
@@ -64,7 +78,7 @@ namespace Client.Modules.PowerShell.Service
                 var startInfo = new ProcessStartInfo
                 {
                     FileName = "powershell.exe",
-                    Arguments = $"-NoProfile -ExecutionPolicy Bypass -Command \"{command}\"",
+                    Arguments = $"-NoProfile -Command \"{command}\"",
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
                     UseShellExecute = false,
@@ -87,8 +101,27 @@ namespace Client.Modules.PowerShell.Service
             }
             catch (Exception ex)
             {
-                return $"Exception: {ex.Message}";
+                _logger.LogError(ex, "Помилка під час отримання або виконання команди на клієнті.");
+                return "";
             }
+        }
+
+        private void LogMessage(string message)
+        {
+            if (_logger != null) _logger.LogInformation(message);
+            else System.Diagnostics.Debug.WriteLine($"[INFO] {message}");
+        }
+
+        private void LogWarning(string message)
+        {
+            if (_logger != null) _logger.LogWarning(message);
+            else System.Diagnostics.Debug.WriteLine($"[WARN] {message}");
+        }
+
+        private void LogError(Exception ex, string message)
+        {
+            if (_logger != null) _logger.LogError(ex, message);
+            else System.Diagnostics.Debug.WriteLine($"[ERROR] {message}: {ex.Message}\n{ex.StackTrace}");
         }
     }
 }

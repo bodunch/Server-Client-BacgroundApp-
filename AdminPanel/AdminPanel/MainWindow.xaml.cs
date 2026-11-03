@@ -73,10 +73,11 @@ namespace AdminPanel
         {
             if(sender is Button button && button.Tag is string dataType)
             {
-                if(DataContext is MainViewModel viewModel && !string.IsNullOrEmpty(viewModel.SelectedClientId))
+                if(DataContext is MainViewModel viewModel)
                 {
                     await viewModel.DetermineCommand(viewModel.SelectedMachineName, dataType, _httpClient);
                 }
+                
             }    
         }
 
@@ -90,6 +91,7 @@ namespace AdminPanel
 
                 if(DataContext is MainViewModel viewModel)
                 {
+                    
                     SendCommandToServer scs = new SendCommandToServer();
                     await scs.SendAdminCustomCommand(viewModel.SelectedMachineName, _httpClient, command);
                     TxtCustomCommand.Clear();
