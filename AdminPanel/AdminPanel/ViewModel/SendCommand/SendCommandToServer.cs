@@ -47,16 +47,12 @@ namespace AdminPanel.ViewModel.SendCommand
                 if (!response.IsSuccessStatusCode)
                 {
                     string errorDetails = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Сервер відхилив команду (Статус {response.StatusCode}):\n{errorDetails}", "Помилка сервера", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                else
-                {
-                    System.Diagnostics.Debug.WriteLine($"[Admin] Команда '{commandText}' успішно надіслана для ПК: {machineName}");
+                    MessageBox.Show($"Server return bad status code. Status: {response.StatusCode}):\n{errorDetails}", "Server error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Помилка підключення до сервера: {ex.Message}", "Помилка мережі", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Error with connection with server: {ex.Message}", "Network error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

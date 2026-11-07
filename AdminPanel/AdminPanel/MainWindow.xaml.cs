@@ -24,6 +24,7 @@ namespace AdminPanel
     public partial class MainWindow : Window
     {
         private readonly HttpClient _httpClient;
+        private string targetClientMachineName;
 
         public MainWindow()
         {
@@ -45,10 +46,11 @@ namespace AdminPanel
                 DynamicButtonsPanel.Visibility = Visibility.Visible;
 
                 string tag = button.Tag.ToString()!;
+                targetClientMachineName = button.Content.ToString()!;
 
                 if (DataContext is MainViewModel mvm)
                 {
-                    await mvm.ClientInfo(tag, mvm.SelectedMachineName);
+                    await mvm.ClientInfo(tag, targetClientMachineName);
                 }
             }  
         }
@@ -75,7 +77,7 @@ namespace AdminPanel
             {
                 if(DataContext is MainViewModel viewModel)
                 {
-                    await viewModel.DetermineCommand(viewModel.SelectedMachineName, dataType, _httpClient);
+                    await viewModel.DetermineCommand(targetClientMachineName, dataType, _httpClient);
                 }
                 
             }    
@@ -93,7 +95,7 @@ namespace AdminPanel
                 {
                     
                     SendCommandToServer scs = new SendCommandToServer();
-                    await scs.SendAdminCustomCommand(viewModel.SelectedMachineName, _httpClient, command);
+                    await scs.SendAdminCustomCommand(targetClientMachineName, _httpClient, command);
                     TxtCustomCommand.Clear();
                 }
             }

@@ -16,8 +16,9 @@ namespace Server.Services
 
         public void EnqueueCommand(string machineName, string commandInput)
         {
-            if (string.IsNullOrWhiteSpace(commandInput)) return;
+            if (string.IsNullOrWhiteSpace(commandInput) || string.IsNullOrWhiteSpace(commandInput)) return;
 
+            string cleanMachineName = machineName.Trim();
             string commandToSend = commandInput.Trim();
 
             if (_predefinedCommands.TryGetValue(commandToSend, out var mappedScript))
@@ -25,7 +26,7 @@ namespace Server.Services
                 commandToSend = mappedScript;
             }
 
-            var queue = _clientQueues.GetOrAdd(machineName, _ => new ConcurrentQueue<string>());
+            var queue = _clientQueues.GetOrAdd(cleanMachineName, _ => new ConcurrentQueue<string>());
             queue.Enqueue(commandToSend);
         }
 

