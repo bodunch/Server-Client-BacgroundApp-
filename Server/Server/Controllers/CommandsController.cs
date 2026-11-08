@@ -48,7 +48,7 @@ namespace Server.Controllers
             {
                 return Ok();
             }
-             return Ok(new
+            return Ok(new
             {
                 CommandText = command
             });

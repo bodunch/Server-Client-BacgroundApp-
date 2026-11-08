@@ -18,186 +18,250 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="318*" />
-            <ColumnDefinition Width="19.876" />
-            <ColumnDefinition Width="398*" />
-            <ColumnDefinition Width="398*" />
-            <ColumnDefinition Width="12*" />
-            <ColumnDefinition Width="755*" />
-            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2.5*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*" />
-            <RowDefinition Height="63*" />
-            <RowDefinition Height="37*" />
-            <RowDefinition Height="100*" />
-            <RowDefinition Height="100*" />
-            <RowDefinition Height="100*" />
-            <RowDefinition Height="12*" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="55*" />
-            <RowDefinition Height="207*" />
-            <RowDefinition Height="17*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="1"
-               Content="Networked PCs:"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontSize="20"
-               FontWeight="Bold"
-               Height="37"
-               Width="160" />
-
-        <ScrollViewer Grid.Row="2"
-                      Grid.RowSpan="15"
-                      Grid.Column="0"
-                      VerticalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding ClientsItem}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Button Content="{Binding MachineName}"
-                                Tag="{Binding Id}"
-                                Click="OpenClientInfo"
-                                Margin="0,3,0,3"
-                                Padding="10,5" />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
-
-        <TextBlock Grid.Column="2"
-                   Grid.ColumnSpan="2"
-                   Grid.Row="1"
-                   Grid.RowSpan="2"
-                   x:Name="TextBox_Copy"
-                   TextWrapping="Wrap"
-                   Text="{Binding staticInfoTextBox.SystemInfoText}"
-                   FontFamily="Arial" />
-        <TextBlock Grid.Column="2"
-                   Grid.ColumnSpan="2"
-                   Grid.Row="3"
-                   x:Name="TextBox_Copy1"
-                   TextWrapping="Wrap"
-                   Text="{Binding staticInfoTextBox.ComputerInfoText}" />
-        <TextBlock Grid.Column="2"
-                   Grid.ColumnSpan="2"
-                   Grid.Row="4"
-                   x:Name="TextBox"
-                   TextWrapping="Wrap"
-                   Text="{Binding staticInfoTextBox.CpuInfoText}" />
-        <TextBlock Grid.Column="2"
-                   Grid.ColumnSpan="2"
-                   Grid.Row="5"
-                   x:Name="TextBox_Copy2"
-                   TextWrapping="Wrap"
-                   Text="{Binding staticInfoTextBox.RamInfoText}" />
-
-        <UniformGrid Grid.Column="2"
-                     Grid.Row="7"
-                     Grid.RowSpan="7"
-                     Rows="7"
-                     x:Name="DynamicButtonsPanel"
-                     Visibility="Collapsed">
-            <Button Grid.Row="7"
-                    Grid.Column="2"
-                    Tag="CpuInfo"
-                    Content="CPU info"
-                    Click="OpenDynamicClientInfo" />
-            <Button Grid.Row="8"
-                    Grid.Column="2"
-                    Tag="RamInfo"
-                    Content="RAM info"
-                    Click="OpenDynamicClientInfo" />
-            <Button Grid.Row="9"
-                    Grid.Column="2"
-                    Tag="ProcessInfo"
-                    Content="Processes info"
-                    Click="OpenDynamicClientInfo" />
-            <Button Grid.Row="10"
-                    Grid.Column="2"
-                    Tag="PortsInfo"
-                    Content="Ports info"
-                    Click="OpenDynamicClientInfo" />
-            <Button Grid.Row="11"
-                    Grid.Column="2"
-                    Tag="ConnectionsInfo"
-                    Content="Connections info"
-                    Click="OpenDynamicClientInfo" />
-            <Button Grid.Row="12"
-                    Grid.Column="2"
-                    Tag="ApplicationsInfo"
-                    Content="Applications info"
-                    Click="OpenDynamicClientInfo" />
-            <Button Grid.Row="13"
-                    Grid.Column="2"
-                    Tag="AdaptersInfo"
-                    Content="Adapters info"
-                    Click="OpenDynamicClientInfo" />
-
-            
-            
-        </UniformGrid>
-
-        <RichTextBox x:Name="dynamicInfoTextBox"
-                     Grid.Row="14"
-                     Grid.Column="2"
-                     Grid.ColumnSpan="4"
-                     IsReadOnly="True"
-                     Background="White"
-                     BorderBrush="White"
-                     HorizontalAlignment="Stretch"
-                     VerticalAlignment="Stretch"
-                     VerticalScrollBarVisibility="Auto"
-                     HorizontalScrollBarVisibility="Disabled">
-            <RichTextBox.Resources>
-                <Style TargetType="{x:Type Paragraph}">
-                    <Setter Property="Margin"
-                            Value="0" />
-                </Style>
-            </RichTextBox.Resources>
-        </RichTextBox>
-
-        <lvc:CartesianChart x:Name="cartesianChart"
-                            Grid.Row="7"
-                            Grid.RowSpan="7"
-                            Grid.Column="3"
-                            Grid.ColumnSpan="3" />
-
-        <Button Tag="BtnPowerOff"
-                Grid.Column="5"
+        <!-- Left clients -->
+        <Border Grid.Column="0"
                 Grid.Row="1"
-                Content="Turn off PC"
-                Click="SendStandartCommand" />
-        <Button Tag="BtnReboot"
-                Grid.Column="5"
-                Grid.Row="2"
-                Content="Reboot PC"
-                Click="SendStandartCommand" />
-        <Button Tag="BtnNetwork"
-                Grid.Column="5"
-                Grid.Row="3"
-                Content="Turn off network"
-                Click="SendStandartCommand" />
+                Grid.RowSpan="3"
+                Background="White"
+                BorderBrush="#333333"
+                BorderThickness="1.5"
+                CornerRadius="12"
+                Padding="10">
+            <ScrollViewer Grid.Row="2"
+                          Grid.RowSpan="15"
+                          Grid.Column="0"
+                          VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding ClientsItem}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
 
-        <TextBox x:Name="TxtCustomCommand"
-                 Grid.Column="5"
-                 Grid.Row="4" />
-        <Button Tag="BtnSendCustom"
-                Grid.Column="5"
-                Grid.Row="5"
-                Content="Send"
-                Click="SendAdminCommand" />
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding MachineName}"
+                                    Tag="{Binding Id}"
+                                    Click="OpenClientInfo"
+                                    Margin="0,3,0,3"
+                                    Padding="10,5" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Lower commands -->
+        <Border Grid.Column="1"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Background="White"
+                BorderBrush="#333333"
+                BorderThickness="1.5"
+                CornerRadius="12"
+                Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0"
+                         x:Name="TxtCustomCommand" />
+                
+                <Button Grid.Column="1" 
+                        Tag="BtnSendCustom"
+                        Content="Send"
+                        Click="SendAdminCommand" />
+
+                <Button Grid.Column="2"
+                        Tag="BtnPowerOff"
+                        Content="Turn off PC"
+                        Click="SendStandartCommand" />
+                
+                <Button Grid.Column="3"
+                        Tag="BtnReboot"
+                        Content="Reboot PC"
+                        Click="SendStandartCommand" />
+                
+                <Button Grid.Column="4"
+                        Tag="BtnNetwork"
+                        Content="Turn off network"
+                        Click="SendStandartCommand" />
+            </Grid>
+        </Border>
+
+        <!-- Right logs -->
+        <Border Grid.Column="2"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Background="White"
+                BorderBrush="#333333"
+                BorderThickness="1.5"
+                CornerRadius="12"
+                Padding="10">
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Border Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="7"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <lvc:CartesianChart x:Name="cartesianChart" />
+                </Border>
+
+                <Border Grid.Column="0"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="7"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <RichTextBox x:Name="dynamicInfoTextBox"
+                                 IsReadOnly="True"
+                                 Background="White"
+                                 BorderBrush="White"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"
+                                 VerticalScrollBarVisibility="Auto"
+                                 HorizontalScrollBarVisibility="Disabled">
+                        <RichTextBox.Resources>
+                            <Style TargetType="{x:Type Paragraph}">
+                                <Setter Property="Margin"
+                                        Value="0" />
+                            </Style>
+                        </RichTextBox.Resources>
+                    </RichTextBox>
+                </Border>
+
+                <UniformGrid Grid.Column="0"
+                             Grid.Row="0"
+                             Grid.ColumnSpan="7"
+                             Columns="7"
+                             x:Name="DynamicButtonsPanel"
+                             Visibility="Collapsed">
+                    <Button Grid.Row="0"
+                            Grid.Column="0"
+                            Tag="CpuInfo"
+                            Content="CPU info"
+                            Click="OpenDynamicClientInfo" />
+                    <Button Grid.Row="0"
+                            Grid.Column="1"
+                            Tag="RamInfo"
+                            Content="RAM info"
+                            Click="OpenDynamicClientInfo" />
+                    <Button Grid.Row="0"
+                            Grid.Column="2"
+                            Tag="ProcessInfo"
+                            Content="Processes info"
+                            Click="OpenDynamicClientInfo" />
+                    <Button Grid.Row="0"
+                            Grid.Column="3"
+                            Tag="PortsInfo"
+                            Content="Ports info"
+                            Click="OpenDynamicClientInfo" />
+                    <Button Grid.Row="0"
+                            Grid.Column="4"
+                            Tag="ConnectionsInfo"
+                            Content="Connections info"
+                            Click="OpenDynamicClientInfo" />
+                    <Button Grid.Row="0"
+                            Grid.Column="5"
+                            Tag="ApplicationsInfo"
+                            Content="Applications info"
+                            Click="OpenDynamicClientInfo" />
+                    <Button Grid.Row="0"
+                            Grid.Column="6"
+                            Tag="AdaptersInfo"
+                            Content="Adapters info"
+                            Click="OpenDynamicClientInfo" />
+                </UniformGrid>
+            </Grid>
+        </Border>
+
+        <!-- Center-upper static info -->
+        <Border Grid.Column="1"
+                Grid.Row="1"
+                Background="White"
+                BorderBrush="#333333"
+                BorderThickness="1.5"
+                CornerRadius="12"
+                Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0"
+                           Grid.Row="0"
+                           x:Name="TextBox_Copy"
+                           TextWrapping="Wrap"
+                           Text="{Binding staticInfoTextBox.SystemInfoText}"
+                           FontFamily="Arial" />
+                <TextBlock Grid.Column="0"
+                           Grid.Row="1"
+                           x:Name="TextBox_Copy1"
+                           TextWrapping="Wrap"
+                           Text="{Binding staticInfoTextBox.ComputerInfoText}" />
+                <TextBlock Grid.Column="1"
+                           Grid.Row="0"
+                           x:Name="TextBox"
+                           TextWrapping="Wrap"
+                           Text="{Binding staticInfoTextBox.CpuInfoText}" />
+                <TextBlock Grid.Column="1"
+                           Grid.Row="1"
+                           x:Name="TextBox_Copy2"
+                           TextWrapping="Wrap"
+                           Text="{Binding staticInfoTextBox.RamInfoText}" />
+            </Grid>
+        </Border>
+
+        <!-- Center monitoring -->
+        <Border Grid.Column="1"
+                Grid.Row="2"
+                Background="White"
+                BorderBrush="#333333"
+                BorderThickness="1.5"
+                CornerRadius="12"
+                Padding="10">
+        </Border>
     </Grid>
 </Window>
