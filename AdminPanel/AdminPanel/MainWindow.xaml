@@ -76,32 +76,87 @@
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0"
+                       Grid.Row="0"
+                       Content="Commands"/>
+
+                <Border Grid.Column="1"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0"
+                                Tag="BtnPowerOff"
+                                Content="Turn off PC"
+                                Click="SendStandartCommand" />
+
+                        <Button Grid.Column="1"
+                                Tag="BtnReboot"
+                                Content="Reboot PC"
+                                Click="SendStandartCommand" />
+
+                        <Button Grid.Column="2"
+                                Tag="BtnNetwork"
+                                Content="Turn off network"
+                                Click="SendStandartCommand" />
+
+                        <Button Grid.Column="3"
+                                Tag="BtnNetwork"
+                                Content="Turn off network" />
+                    </Grid>
+                </Border>
 
                 <TextBox Grid.Column="0"
+                         Grid.Row="1"
+                         Grid.ColumnSpan="2"
                          x:Name="TxtCustomCommand" />
-                
-                <Button Grid.Column="1" 
-                        Tag="BtnSendCustom"
-                        Content="Send"
-                        Click="SendAdminCommand" />
 
-                <Button Grid.Column="2"
-                        Tag="BtnPowerOff"
-                        Content="Turn off PC"
-                        Click="SendStandartCommand" />
+                <Border Grid.Column="2"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Button Grid.Column="0"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Tag="BtnSendCustom"
+                                Content="Send"
+                                Click="SendAdminCommand" />
+                    </Grid>
+                </Border>
+
                 
-                <Button Grid.Column="3"
-                        Tag="BtnReboot"
-                        Content="Reboot PC"
-                        Click="SendStandartCommand" />
-                
-                <Button Grid.Column="4"
-                        Tag="BtnNetwork"
-                        Content="Turn off network"
-                        Click="SendStandartCommand" />
+
             </Grid>
         </Border>
 
