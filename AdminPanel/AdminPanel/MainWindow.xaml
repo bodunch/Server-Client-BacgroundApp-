@@ -29,6 +29,13 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
+        <Label Grid.Column="0"
+               Grid.Row="0"
+               Content="APP Name"/>
+
+        <Button Grid.Column="2"
+                Grid.Row="0" />
+
         <!-- Left clients -->
         <Border Grid.Column="0"
                 Grid.Row="1"
@@ -38,28 +45,69 @@
                 BorderThickness="1.5"
                 CornerRadius="12"
                 Padding="10">
-            <ScrollViewer Grid.Row="2"
-                          Grid.RowSpan="15"
-                          Grid.Column="0"
-                          VerticalScrollBarVisibility="Auto">
-                <ItemsControl ItemsSource="{Binding ClientsItem}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Orientation="Vertical" />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
 
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Button Content="{Binding MachineName}"
-                                    Tag="{Binding Id}"
-                                    Click="OpenClientInfo"
-                                    Margin="0,3,0,3"
-                                    Padding="10,5" />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="20*" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0"
+                       Grid.Row="0"
+                       Content="Clients" />
+
+                <Button Grid.Column="1"
+                        Grid.Row="0"
+                        Content="Update" />
+
+                <Border Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox Grid.Column="0" />
+
+                        <Button Grid.Column="1" />
+                    </Grid>
+                </Border>
+
+                <ScrollViewer Grid.Row="2"
+                              Grid.Column="0"
+                              Grid.ColumnSpan="2"
+                              VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding ClientsItem}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding MachineName}"
+                                        Tag="{Binding Id}"
+                                        Click="OpenClientInfo"
+                                        Margin="0,3,0,3"
+                                        Padding="10,5" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
         </Border>
 
         <!-- Lower commands -->
@@ -152,6 +200,14 @@
                                 Tag="BtnSendCustom"
                                 Content="Send"
                                 Click="SendAdminCommand" />
+
+                        <Button Grid.Column="1"
+                                Grid.Row="0"
+                                Content="History" />
+
+                        <Button Grid.Column="1"
+                                Grid.Row="1"
+                                Content="Clear" />
                     </Grid>
                 </Border>
 
@@ -182,48 +238,21 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="6*" />
                 </Grid.RowDefinitions>
 
-                <Border Grid.Column="0"
-                        Grid.Row="1"
-                        Grid.ColumnSpan="7"
-                        Background="White"
-                        BorderBrush="#333333"
-                        BorderThickness="1.5"
-                        CornerRadius="12"
-                        Padding="10">
-                    <lvc:CartesianChart x:Name="cartesianChart" />
-                </Border>
+                <Label Grid.Column="0"
+                       Grid.Row="0"
+                       Content="Logs"
+                       HorizontalAlignment="Left"/>
 
-                <Border Grid.Column="0"
-                        Grid.Row="2"
-                        Grid.ColumnSpan="7"
-                        Background="White"
-                        BorderBrush="#333333"
-                        BorderThickness="1.5"
-                        CornerRadius="12"
-                        Padding="10">
-                    <RichTextBox x:Name="dynamicInfoTextBox"
-                                 IsReadOnly="True"
-                                 Background="White"
-                                 BorderBrush="White"
-                                 HorizontalAlignment="Stretch"
-                                 VerticalAlignment="Stretch"
-                                 VerticalScrollBarVisibility="Auto"
-                                 HorizontalScrollBarVisibility="Disabled">
-                        <RichTextBox.Resources>
-                            <Style TargetType="{x:Type Paragraph}">
-                                <Setter Property="Margin"
-                                        Value="0" />
-                            </Style>
-                        </RichTextBox.Resources>
-                    </RichTextBox>
-                </Border>
+                <Button Grid.Column="6"
+                        Grid.Row="0" />
 
                 <UniformGrid Grid.Column="0"
-                             Grid.Row="0"
+                             Grid.Row="1"
                              Grid.ColumnSpan="7"
                              Columns="7"
                              x:Name="DynamicButtonsPanel"
@@ -264,6 +293,44 @@
                             Content="Adapters info"
                             Click="OpenDynamicClientInfo" />
                 </UniformGrid>
+
+                <Border Grid.Column="0"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="7"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <lvc:CartesianChart x:Name="cartesianChart" />
+                </Border>
+
+                <Border Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="7"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <RichTextBox x:Name="dynamicInfoTextBox"
+                                 IsReadOnly="True"
+                                 Background="White"
+                                 BorderBrush="White"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"
+                                 VerticalScrollBarVisibility="Auto"
+                                 HorizontalScrollBarVisibility="Disabled">
+                        <RichTextBox.Resources>
+                            <Style TargetType="{x:Type Paragraph}">
+                                <Setter Property="Margin"
+                                        Value="0" />
+                            </Style>
+                        </RichTextBox.Resources>
+                    </RichTextBox>
+                </Border>
+
+                
             </Grid>
         </Border>
 
@@ -276,36 +343,53 @@
                 CornerRadius="12"
                 Padding="10">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="8*" />
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Column="0"
-                           Grid.Row="0"
-                           x:Name="TextBox_Copy"
-                           TextWrapping="Wrap"
-                           Text="{Binding staticInfoTextBox.SystemInfoText}"
-                           FontFamily="Arial" />
-                <TextBlock Grid.Column="0"
-                           Grid.Row="1"
-                           x:Name="TextBox_Copy1"
-                           TextWrapping="Wrap"
-                           Text="{Binding staticInfoTextBox.ComputerInfoText}" />
-                <TextBlock Grid.Column="1"
-                           Grid.Row="0"
-                           x:Name="TextBox"
-                           TextWrapping="Wrap"
-                           Text="{Binding staticInfoTextBox.CpuInfoText}" />
-                <TextBlock Grid.Column="1"
-                           Grid.Row="1"
-                           x:Name="TextBox_Copy2"
-                           TextWrapping="Wrap"
-                           Text="{Binding staticInfoTextBox.RamInfoText}" />
+                <Label Grid.Row="0"
+                       Content="Static info"/>
+
+                <Border Grid.Row="1"
+                        Background="White"
+                        BorderBrush="#333333"
+                        BorderThickness="1.5"
+                        CornerRadius="12"
+                        Padding="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   x:Name="TextBox_Copy"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding staticInfoTextBox.SystemInfoText}"
+                                   FontFamily="Arial" />
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="1"
+                                   x:Name="TextBox_Copy1"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding staticInfoTextBox.ComputerInfoText}" />
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="0"
+                                   x:Name="TextBox"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding staticInfoTextBox.CpuInfoText}" />
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   x:Name="TextBox_Copy2"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding staticInfoTextBox.RamInfoText}" />
+                    </Grid>
+                </Border>
             </Grid>
         </Border>
 
