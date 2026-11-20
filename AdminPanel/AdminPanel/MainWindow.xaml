@@ -418,11 +418,13 @@
 
                 <Button Grid.Column="1"
                         Grid.Row="0"
-                        Content="Start"/>
+                        Content="Start"
+                        Click="BtnStartStream_Click"/>
 
                 <Button Grid.Column="2"
                         Grid.Row="0"
-                        Content="Pause"/>
+                        Content="Pause"
+                        Click="BtnPauseStream_Click"/>
 
                 <Border Grid.Column="0"
                         Grid.ColumnSpan="3"
@@ -432,7 +434,9 @@
                         BorderThickness="1.5"
                         CornerRadius="12"
                         Padding="10">
-                    <Image />
+
+                    <Image x:Name="ClientScreenImage"
+                           Stretch="Uniform"/>
                 </Border>
             </Grid>
         </Border>

@@ -2,11 +2,13 @@
 using AdminPanel.Services.Charts;
 using AdminPanel.ViewModel;
 using AdminPanel.ViewModel.DnmDataFromServer;
+using AdminPanel.ViewModel.SendCommand;
 using LiveChartsCore.SkiaSharpView.WPF;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -15,7 +17,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
-using AdminPanel.ViewModel.SendCommand;
+using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace AdminPanel.ViewModel
 {
@@ -27,6 +30,8 @@ namespace AdminPanel.ViewModel
 
         public string SelectedClientId { get; private set; }
         public string SelectedMachineName { get; private set; }
+
+        private CancellationTokenSource? _streamCts;
 
         public MainViewModel()
         {
@@ -290,5 +295,6 @@ namespace AdminPanel.ViewModel
                     break;
             }
         }
+
     }
 }

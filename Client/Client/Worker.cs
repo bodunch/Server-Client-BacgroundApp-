@@ -1,11 +1,12 @@
-using System.Runtime.Versioning;
-using System.Net.Http.Json;
+using Client.Modules.Monitoring;
 using Client.Modules.PCInfo;
-using System.Net.Http;
-using Client.Modules.ServerSend.StaticData;
-using Client.Modules.ServerSend.DynamicData;
 using Client.Modules.PowerShell;
 using Client.Modules.PowerShell.Service;
+using Client.Modules.ServerSend.DynamicData;
+using Client.Modules.ServerSend.StaticData;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Runtime.Versioning;
 
 namespace Client
 {
@@ -36,6 +37,10 @@ namespace Client
 
             SendRAMInfoToServer sendRAMInfo = new SendRAMInfoToServer();
             await sendRAMInfo.SendStaticDataToServerAsync(client, stoppingToken);
+
+
+            ScreenStreamServer screenServer = new ScreenStreamServer();
+            await screenServer.SendingScreensToAdmin(stoppingToken);
 
 
             SendCurrentCPUInfoToServer sendCurrCPUInfo = new SendCurrentCPUInfoToServer();

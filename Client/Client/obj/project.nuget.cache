@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1bex3ZXYb4Q=",
+  "dgSpecHash": "UkkIgV+b6As=",
   "success": true,
   "projectFilePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.10\\microsoft.extensions.primitives.10.0.10.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.23\\microsoft.win32.systemevents.9.0.23.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\msgpack.cli\\1.0.0\\msgpack.cli.1.0.0.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\nito.asyncex\\4.0.1\\nito.asyncex.4.0.1.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\plato\\2.0.132\\plato.2.0.132.nupkg.sha512",
@@ -67,6 +68,7 @@
     "C:\\Users\\Bodun\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.18\\system.diagnostics.eventlog.9.0.18.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\system.diagnostics.tracing\\4.1.0\\system.diagnostics.tracing.4.1.0.nupkg.sha512",
+    "C:\\Users\\Bodun\\.nuget\\packages\\system.drawing.common\\9.0.23\\system.drawing.common.9.0.23.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\system.globalization\\4.0.11\\system.globalization.4.0.11.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\system.globalization.extensions\\4.0.1\\system.globalization.extensions.4.0.1.nupkg.sha512",
     "C:\\Users\\Bodun\\.nuget\\packages\\system.interactive.async\\3.2.0\\system.interactive.async.3.2.0.nupkg.sha512",
@@ -103,133 +105,133 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Microsoft.Bcl 1.1.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.Bcl 1.1.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Microsoft.Bcl",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Microsoft.Bcl.Async 1.0.168' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.Bcl.Async 1.0.168' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Microsoft.Bcl.Async",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Nito.AsyncEx 4.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Nito.AsyncEx 4.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Nito.AsyncEx",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Plato 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Plato 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Plato",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Plato.Cache 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Plato.Cache 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Plato.Cache",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Plato.Configuration 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Plato.Configuration 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Plato.Configuration",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Plato.Core 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Plato.Core 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Plato.Core",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Plato.Security 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Plato.Security 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Plato.Security",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Plato.Serializers 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Plato.Serializers 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Plato.Serializers",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Plato.WinAPI 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Plato.WinAPI 2.0.132' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "Plato.WinAPI",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'WindowsServiceFramework.Extensions 2018.10.15.14' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'WindowsServiceFramework.Extensions 2018.10.15.14' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
       "projectPath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "warningLevel": 1,
       "filePath": "D:\\C#\\dotnet\\ExserverAndClient\\Client\\Client\\Client.csproj",
       "libraryId": "WindowsServiceFramework.Extensions",
       "targetGraphs": [
-        "net9.0"
+        "net9.0-windows7.0"
       ]
     }
   ]

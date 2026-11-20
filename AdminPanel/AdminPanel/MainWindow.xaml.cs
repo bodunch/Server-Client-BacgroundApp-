@@ -5,6 +5,7 @@ using AdminPanel.Services.Procceses.ThreatManager;
 using AdminPanel.Services.RAM;
 using AdminPanel.ViewModel;
 using AdminPanel.ViewModel.SendCommand;
+using AdminPanel.Services.Monitoring;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 using System.Text;
@@ -26,6 +27,9 @@ namespace AdminPanel
         private readonly HttpClient _httpClient;
         private string targetClientMachineName;
 
+        private readonly ScreenReceiverService _screenReceiver;
+        public string SelectedMachineName { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +38,16 @@ namespace AdminPanel
             _ = BackgroundCheckerHash.HashCheckers(cts);
 
             _httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5000/") };
+
+            _screenReceiver = new ScreenReceiverService(5003, frame =>
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    ClientScreenImage.Source = frame;
+                });
+            });
+
+            _screenReceiver.StartListener();
         }
 
         private async void OpenClientInfo(object sender, RoutedEventArgs e)
@@ -47,6 +61,7 @@ namespace AdminPanel
 
                 string tag = button.Tag.ToString()!;
                 targetClientMachineName = button.Content.ToString()!;
+                SelectedMachineName = targetClientMachineName;
 
                 if (DataContext is MainViewModel mvm)
                 {
@@ -99,6 +114,25 @@ namespace AdminPanel
                     TxtCustomCommand.Clear();
                 }
             }
+        }
+
+        private async void BtnStartStream_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SelectedMachineName)) 
+                return;
+            _screenReceiver.StartShowing(SelectedMachineName);
+        }
+
+        private void BtnPauseStream_Click(object sender, RoutedEventArgs e)
+        {
+            _screenReceiver.StopShowing();
+            ClientScreenImage.Source = null;
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            _screenReceiver.Dispose();
+            base.OnClosed(e);
         }
     }
 }
