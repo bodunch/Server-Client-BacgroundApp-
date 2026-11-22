@@ -39,8 +39,8 @@ namespace Client
             await sendRAMInfo.SendStaticDataToServerAsync(client, stoppingToken);
 
 
-            ScreenStreamServer screenServer = new ScreenStreamServer();
-            await screenServer.SendingScreensToAdmin(stoppingToken);
+            var screenServer = new ScreenStreamServer();
+            var screenTask = Task.Run(() => screenServer.SendingScreensToAdmin(stoppingToken), stoppingToken);
 
 
             SendCurrentCPUInfoToServer sendCurrCPUInfo = new SendCurrentCPUInfoToServer();

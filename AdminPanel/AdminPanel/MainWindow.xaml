@@ -16,7 +16,7 @@
         <vm:MainViewModel />
     </Window.DataContext>
 
-    <Grid>
+    <Grid Background="#CCD9D9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="2*" />
@@ -28,13 +28,29 @@
             <RowDefinition Height="6*" />
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
+        
+        
 
         <Label Grid.Column="0"
                Grid.Row="0"
-               Content="APP Name"/>
+               Grid.ColumnSpan="2"
+               Content="LAN Monitoring System"
+               FontSize="30"
+               FontWeight="Bold"
+               FontFamily="Consolas"
+               Margin="20, 0, 0, 0"
+               VerticalAlignment="Center" />
 
         <Button Grid.Column="2"
-                Grid.Row="0" />
+                Grid.Row="0"
+                Background="#CCD9D9"
+                BorderBrush="#CCD9D9"
+                Cursor="Hand"
+                Margin="740,10,30,10">
+            <Image Source="/Images/settings.png"
+                   Width="50"
+                   Height="50" />
+        </Button>
 
         <!-- Left clients -->
         <Border Grid.Column="0"
@@ -44,7 +60,8 @@
                 BorderBrush="#333333"
                 BorderThickness="1.5"
                 CornerRadius="12"
-                Padding="10">
+                Padding="10"
+                Margin="10,0,5,10">
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -53,17 +70,27 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
-                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="1.3*" />
                     <RowDefinition Height="20*" />
                 </Grid.RowDefinitions>
 
                 <Label Grid.Column="0"
                        Grid.Row="0"
-                       Content="Clients" />
+                       Grid.ColumnSpan="2"
+                       Content="Connected users"
+                       FontSize="20"
+                       FontFamily="Consolas"/>
 
                 <Button Grid.Column="1"
                         Grid.Row="0"
-                        Content="Update" />
+                        Background="White"
+                        BorderBrush="White"
+                        Cursor="Hand"
+                        Margin="97,0,5,5">
+                    <Image Source="/Images/update.png"
+                           Width="30"
+                           Height="30" />
+                </Button>
 
                 <Border Grid.Column="0"
                         Grid.Row="1"
@@ -75,13 +102,30 @@
                         Padding="10">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="4*" />
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBox Grid.Column="0" />
+                        <TextBox Grid.Column="0"
+                                 BorderBrush="#333333"
+                                 FontFamily="Consolas"
+                                 FontSize="16">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="16" />
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
 
-                        <Button Grid.Column="1" />
+                        <Button Grid.Column="1"
+                                Background="White"
+                                BorderBrush="White"
+                                Cursor="Hand">
+                            <Image Source="/Images/search.png"
+                                   Width="30"
+                                   Height="30" />
+                        </Button>
                     </Grid>
                 </Border>
 
@@ -102,7 +146,18 @@
                                         Tag="{Binding Id}"
                                         Click="OpenClientInfo"
                                         Margin="0,3,0,3"
-                                        Padding="10,5" />
+                                        Padding="10,5"
+                                        BorderBrush="#333333"
+                                        Background="White"
+                                        FontFamily="Consolas"
+                                        Cursor="Hand">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius"
+                                                    Value="12" />
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
@@ -118,7 +173,8 @@
                 BorderBrush="#333333"
                 BorderThickness="1.5"
                 CornerRadius="12"
-                Padding="10">
+                Padding="10"
+                Margin="5,5,10,10">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
@@ -127,12 +183,15 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
 
                 <Label Grid.Column="0"
                        Grid.Row="0"
-                       Content="Commands"/>
+                       Content="Commands"
+                       FontSize="20"
+                       FontFamily="Consolas" 
+                       VerticalAlignment="Top"/>
 
                 <Border Grid.Column="1"
                         Grid.Row="0"
@@ -141,7 +200,7 @@
                         BorderBrush="#333333"
                         BorderThickness="1.5"
                         CornerRadius="12"
-                        Padding="10">
+                        Padding="7">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*" />
@@ -153,66 +212,164 @@
                         <Button Grid.Column="0"
                                 Tag="BtnPowerOff"
                                 Content="Turn off PC"
-                                Click="SendStandartCommand" />
+                                Click="SendStandartCommand"
+                                Margin="0, 0, 2.5, 0"
+                                BorderBrush="#333333"
+                                Background="White"
+                                BorderThickness="1"
+                                Cursor="Hand"
+                                FontFamily="Consolas">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
 
                         <Button Grid.Column="1"
                                 Tag="BtnReboot"
                                 Content="Reboot PC"
-                                Click="SendStandartCommand" />
+                                Click="SendStandartCommand"
+                                Margin="2.5, 0, 2.5, 0"
+                                BorderBrush="#333333"
+                                Background="White"
+                                BorderThickness="1"
+                                Cursor="Hand"
+                                FontFamily="Consolas">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
 
                         <Button Grid.Column="2"
                                 Tag="BtnNetwork"
                                 Content="Turn off network"
-                                Click="SendStandartCommand" />
+                                Click="SendStandartCommand"
+                                Margin="2.5, 0, 2.5, 0"
+                                BorderBrush="#333333"
+                                Background="White"
+                                BorderThickness="1"
+                                Cursor="Hand"
+                                FontFamily="Consolas">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
 
                         <Button Grid.Column="3"
                                 Tag="BtnNetwork"
-                                Content="Turn off network" />
+                                Content="Turn off network"
+                                Margin="2.5, 0, 0, 0"
+                                BorderBrush="#333333"
+                                Background="White"
+                                BorderThickness="1"
+                                Cursor="Hand"
+                                FontFamily="Consolas">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
                     </Grid>
                 </Border>
 
-                <TextBox Grid.Column="0"
-                         Grid.Row="1"
-                         Grid.ColumnSpan="2"
-                         x:Name="TxtCustomCommand" />
-
-                <Border Grid.Column="2"
+                <Border Grid.Column="0"
                         Grid.Row="1"
-                        Grid.ColumnSpan="2"
+                        Grid.ColumnSpan="3"
                         Background="White"
                         BorderBrush="#333333"
                         BorderThickness="1.5"
                         CornerRadius="12"
-                        Padding="10">
+                        Padding="10"
+                        Margin="0,10,0,0">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="15*" />
+                            <ColumnDefinition Width="2*" />
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*" />
                             <RowDefinition Height="1*" />
                         </Grid.RowDefinitions>
-                        
-                        <Button Grid.Column="0"
+
+                        <TextBox Grid.Column="0"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 x:Name="TxtCustomCommand"
+                                 BorderBrush="#333333">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+
+                        <Button Grid.Column="1"
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Tag="BtnSendCustom"
                                 Content="Send"
-                                Click="SendAdminCommand" />
+                                Click="SendAdminCommand"
+                                Margin="5, 0, 2.5, 0"
+                                BorderBrush="#333333"
+                                Background="White"
+                                BorderThickness="1"
+                                Cursor="Hand"
+                                FontFamily="Consolas">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
 
-                        <Button Grid.Column="1"
+                        <Button Grid.Column="2"
                                 Grid.Row="0"
-                                Content="History" />
+                                Content="History"
+                                Margin="2.5, 0, 0, 2.5"
+                                BorderBrush="#333333"
+                                Background="White"
+                                BorderThickness="1"
+                                Cursor="Hand"
+                                FontFamily="Consolas">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
 
-                        <Button Grid.Column="1"
+                        <Button Grid.Column="2"
                                 Grid.Row="1"
-                                Content="Clear" />
+                                Content="Clear"
+                                Margin="2.5, 2.5, 0, 0"
+                                BorderBrush="#333333"
+                                Background="White"
+                                BorderThickness="1"
+                                Cursor="Hand"
+                                FontFamily="Consolas">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius"
+                                            Value="12" />
+                                </Style>
+                            </Button.Resources>
+                        </Button>
                     </Grid>
                 </Border>
-
-                
-
             </Grid>
         </Border>
 
@@ -224,7 +381,8 @@
                 BorderBrush="#333333"
                 BorderThickness="1.5"
                 CornerRadius="12"
-                Padding="10">
+                Padding="10"
+                Margin="5,0,10,5">
             
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -246,52 +404,164 @@
                 <Label Grid.Column="0"
                        Grid.Row="0"
                        Content="Logs"
-                       HorizontalAlignment="Left"/>
+                       HorizontalAlignment="Left"
+                       FontSize="20"
+                       FontFamily="Consolas" />
 
                 <Button Grid.Column="6"
-                        Grid.Row="0" />
+                        Grid.Row="0"
+                        Margin="0, 0, 0, 2.5"
+                        BorderBrush="#333333"
+                        Background="White"
+                        BorderThickness="1"
+                        Cursor="Hand"
+                        FontFamily="Consolas">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius"
+                                    Value="18" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
                 <UniformGrid Grid.Column="0"
                              Grid.Row="1"
                              Grid.ColumnSpan="7"
                              Columns="7"
                              x:Name="DynamicButtonsPanel"
-                             Visibility="Collapsed">
+                             Visibility="Visible">
                     <Button Grid.Row="0"
                             Grid.Column="0"
                             Tag="CpuInfo"
-                            Content="CPU info"
-                            Click="OpenDynamicClientInfo" />
+                            Content="CPU"
+                            Click="OpenDynamicClientInfo"
+                            Margin="0, 2.5, 2.5, 5"
+                            BorderBrush="#333333"
+                            Background="White"
+                            BorderThickness="1"
+                            Cursor="Hand"
+                            FontFamily="Consolas">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius"
+                                        Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    
                     <Button Grid.Row="0"
                             Grid.Column="1"
                             Tag="RamInfo"
-                            Content="RAM info"
-                            Click="OpenDynamicClientInfo" />
+                            Content="RAM"
+                            Click="OpenDynamicClientInfo"
+                            Margin="2.5, 2.5, 2.5, 5"
+                            BorderBrush="#333333"
+                            Background="White"
+                            BorderThickness="1"
+                            Cursor="Hand"
+                            FontFamily="Consolas">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius"
+                                        Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
                     <Button Grid.Row="0"
                             Grid.Column="2"
                             Tag="ProcessInfo"
-                            Content="Processes info"
-                            Click="OpenDynamicClientInfo" />
+                            Content="Processes"
+                            Click="OpenDynamicClientInfo"
+                            Margin="2.5, 2.5, 2.5, 5"
+                            BorderBrush="#333333"
+                            Background="White"
+                            BorderThickness="1"
+                            Cursor="Hand"
+                            FontFamily="Consolas">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius"
+                                        Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
                     <Button Grid.Row="0"
                             Grid.Column="3"
                             Tag="PortsInfo"
-                            Content="Ports info"
-                            Click="OpenDynamicClientInfo" />
+                            Content="Ports"
+                            Click="OpenDynamicClientInfo"
+                            Margin="2.5, 2.5, 2.5, 5"
+                            BorderBrush="#333333"
+                            Background="White"
+                            BorderThickness="1"
+                            Cursor="Hand"
+                            FontFamily="Consolas">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius"
+                                        Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
                     <Button Grid.Row="0"
                             Grid.Column="4"
                             Tag="ConnectionsInfo"
-                            Content="Connections info"
-                            Click="OpenDynamicClientInfo" />
+                            Content="Connections"
+                            Click="OpenDynamicClientInfo"
+                            Margin="2.5, 2.5, 2.5, 5"
+                            BorderBrush="#333333"
+                            Background="White"
+                            BorderThickness="1"
+                            Cursor="Hand"
+                            FontFamily="Consolas">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius"
+                                        Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
                     <Button Grid.Row="0"
                             Grid.Column="5"
                             Tag="ApplicationsInfo"
-                            Content="Applications info"
-                            Click="OpenDynamicClientInfo" />
+                            Content="Applications"
+                            Click="OpenDynamicClientInfo"
+                            Margin="2.5, 2.5, 2.5, 5"
+                            BorderBrush="#333333"
+                            Background="White"
+                            BorderThickness="1"
+                            Cursor="Hand"
+                            FontFamily="Consolas">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius"
+                                        Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
                     <Button Grid.Row="0"
                             Grid.Column="6"
                             Tag="AdaptersInfo"
-                            Content="Adapters info"
-                            Click="OpenDynamicClientInfo" />
+                            Content="Adapters"
+                            Click="OpenDynamicClientInfo"
+                            Margin="2.5, 2.5, 0, 5"
+                            BorderBrush="#333333"
+                            Background="White"
+                            BorderThickness="1"
+                            Cursor="Hand"
+                            FontFamily="Consolas">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius"
+                                        Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
                 </UniformGrid>
 
                 <Border Grid.Column="0"
@@ -301,7 +571,8 @@
                         BorderBrush="#333333"
                         BorderThickness="1.5"
                         CornerRadius="12"
-                        Padding="10">
+                        Padding="10"
+                        Margin="0,0,0,5">
                     <lvc:CartesianChart x:Name="cartesianChart" />
                 </Border>
 
@@ -312,7 +583,8 @@
                         BorderBrush="#333333"
                         BorderThickness="1.5"
                         CornerRadius="12"
-                        Padding="10">
+                        Padding="10"
+                        Margin="0,5,0,0">
                     <RichTextBox x:Name="dynamicInfoTextBox"
                                  IsReadOnly="True"
                                  Background="White"
@@ -341,15 +613,18 @@
                 BorderBrush="#333333"
                 BorderThickness="1.5"
                 CornerRadius="12"
-                Padding="10">
+                Padding="10"
+                Margin="5, 0, 5, 5">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1.2*" />
                     <RowDefinition Height="8*" />
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0"
-                       Content="Static info"/>
+                       Content="Static info"
+                       FontSize="20"
+                       FontFamily="Consolas" />
 
                 <Border Grid.Row="1"
                         Background="White"
@@ -372,22 +647,25 @@
                                    x:Name="TextBox_Copy"
                                    TextWrapping="Wrap"
                                    Text="{Binding staticInfoTextBox.SystemInfoText}"
-                                   FontFamily="Arial" />
+                                   FontFamily="Consolas" />
                         <TextBlock Grid.Column="0"
                                    Grid.Row="1"
                                    x:Name="TextBox_Copy1"
                                    TextWrapping="Wrap"
-                                   Text="{Binding staticInfoTextBox.ComputerInfoText}" />
+                                   Text="{Binding staticInfoTextBox.ComputerInfoText}"
+                                   FontFamily="Consolas" />
                         <TextBlock Grid.Column="1"
                                    Grid.Row="0"
                                    x:Name="TextBox"
                                    TextWrapping="Wrap"
-                                   Text="{Binding staticInfoTextBox.CpuInfoText}" />
+                                   Text="{Binding staticInfoTextBox.CpuInfoText}"
+                                   FontFamily="Consolas" />
                         <TextBlock Grid.Column="1"
                                    Grid.Row="1"
                                    x:Name="TextBox_Copy2"
                                    TextWrapping="Wrap"
-                                   Text="{Binding staticInfoTextBox.RamInfoText}" />
+                                   Text="{Binding staticInfoTextBox.RamInfoText}"
+                                   FontFamily="Consolas" />
                     </Grid>
                 </Border>
             </Grid>
@@ -400,10 +678,11 @@
                 BorderBrush="#333333"
                 BorderThickness="1.5"
                 CornerRadius="12"
-                Padding="10">
+                Padding="10"
+                Margin="5, 5, 5, 5">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
@@ -414,17 +693,45 @@
 
                 <Label Grid.Column="0"
                        Grid.Row="0"
-                       Content="Monitoring"/>
+                       Content="Monitoring"
+                       FontSize="20"
+                       FontFamily="Consolas" />
 
                 <Button Grid.Column="1"
                         Grid.Row="0"
                         Content="Start"
-                        Click="BtnStartStream_Click"/>
+                        Click="BtnStartStream_Click"
+                        Margin="0, 0, 2.5, 10"
+                        BorderBrush="#333333"
+                        Background="White"
+                        BorderThickness="1"
+                        Cursor="Hand"
+                        FontFamily="Consolas">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius"
+                                    Value="12" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
                 <Button Grid.Column="2"
                         Grid.Row="0"
                         Content="Pause"
-                        Click="BtnPauseStream_Click"/>
+                        Click="BtnPauseStream_Click"
+                        Margin="2.5, 0, 0, 10"
+                        BorderBrush="#333333"
+                        Background="White"
+                        BorderThickness="1"
+                        Cursor="Hand"
+                        FontFamily="Consolas">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius"
+                                    Value="12" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
                 <Border Grid.Column="0"
                         Grid.ColumnSpan="3"
