@@ -11,6 +11,67 @@
         Width="1920"
         Height="1080"
         WindowState="Maximized">
+    
+    <Window.Resources>
+        <Style x:Key="CustomHoverButton"
+               TargetType="Button">
+
+            <Setter Property="Background"
+                    Value="White" />
+            <Setter Property="BorderThickness"
+                    Value="1.2" />
+            <Setter Property="BorderBrush"
+                    Value="#333333" />
+            <Setter Property="Cursor"
+                    Value="Hand" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="True">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              Margin="{TemplateBinding Padding}" />
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter TargetName="border"
+                                        Property="Background"
+                                        Value="#333333" />
+                                <Setter Property="Foreground"
+                                        Value="White" />
+                            </Trigger>
+
+                            <Trigger Property="IsPressed"
+                                     Value="True">
+                                <Setter TargetName="border"
+                                        Property="Background"
+                                        Value="#333333" />
+                                <Setter Property="Foreground"
+                                        Value="White" />
+                            </Trigger>
+
+                            <Trigger Property="IsEnabled"
+                                     Value="False">
+                                <Setter TargetName="border"
+                                        Property="Background"
+                                        Value="White" />
+                                <Setter Property="Foreground"
+                                        Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
 
     <Window.DataContext>
         <vm:MainViewModel />
@@ -50,6 +111,16 @@
             <Image Source="/Images/settings.png"
                    Width="50"
                    Height="50" />
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
         <!-- Left clients -->
@@ -90,6 +161,16 @@
                     <Image Source="/Images/update.png"
                            Width="30"
                            Height="30" />
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
                 </Button>
 
                 <Border Grid.Column="0"
@@ -125,6 +206,16 @@
                             <Image Source="/Images/search.png"
                                    Width="30"
                                    Height="30" />
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
                     </Grid>
                 </Border>
@@ -147,10 +238,8 @@
                                         Click="OpenClientInfo"
                                         Margin="0,3,0,3"
                                         Padding="10,5"
-                                        BorderBrush="#333333"
-                                        Background="White"
-                                        FontFamily="Consolas"
-                                        Cursor="Hand">
+                                        Style="{StaticResource CustomHoverButton}"
+                                        FontFamily="Consolas">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius"
@@ -208,16 +297,13 @@
                             <ColumnDefinition Width="1*" />
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
-
+ 
                         <Button Grid.Column="0"
+                                Style="{StaticResource CustomHoverButton}"
                                 Tag="BtnPowerOff"
                                 Content="Turn off PC"
                                 Click="SendStandartCommand"
                                 Margin="0, 0, 2.5, 0"
-                                BorderBrush="#333333"
-                                Background="White"
-                                BorderThickness="1"
-                                Cursor="Hand"
                                 FontFamily="Consolas">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -232,10 +318,7 @@
                                 Content="Reboot PC"
                                 Click="SendStandartCommand"
                                 Margin="2.5, 0, 2.5, 0"
-                                BorderBrush="#333333"
-                                Background="White"
-                                BorderThickness="1"
-                                Cursor="Hand"
+                                Style="{StaticResource CustomHoverButton}"
                                 FontFamily="Consolas">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -250,10 +333,7 @@
                                 Content="Turn off network"
                                 Click="SendStandartCommand"
                                 Margin="2.5, 0, 2.5, 0"
-                                BorderBrush="#333333"
-                                Background="White"
-                                BorderThickness="1"
-                                Cursor="Hand"
+                                Style="{StaticResource CustomHoverButton}"
                                 FontFamily="Consolas">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -267,10 +347,7 @@
                                 Tag="BtnNetwork"
                                 Content="Turn off network"
                                 Margin="2.5, 0, 0, 0"
-                                BorderBrush="#333333"
-                                Background="White"
-                                BorderThickness="1"
-                                Cursor="Hand"
+                                Style="{StaticResource CustomHoverButton}"
                                 FontFamily="Consolas">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -306,7 +383,11 @@
                                  Grid.Row="0"
                                  Grid.RowSpan="2"
                                  x:Name="TxtCustomCommand"
-                                 BorderBrush="#333333">
+                                 BorderBrush="#333333"
+                                 FontFamily="Consolas"
+                                 FontSize="20"
+                                 TextAlignment="Center"
+                                 VerticalContentAlignment="Center">
                             <TextBox.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius"
@@ -322,10 +403,7 @@
                                 Content="Send"
                                 Click="SendAdminCommand"
                                 Margin="5, 0, 2.5, 0"
-                                BorderBrush="#333333"
-                                Background="White"
-                                BorderThickness="1"
-                                Cursor="Hand"
+                                Style="{StaticResource CustomHoverButton}"
                                 FontFamily="Consolas">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -339,10 +417,7 @@
                                 Grid.Row="0"
                                 Content="History"
                                 Margin="2.5, 0, 0, 2.5"
-                                BorderBrush="#333333"
-                                Background="White"
-                                BorderThickness="1"
-                                Cursor="Hand"
+                                Style="{StaticResource CustomHoverButton}"
                                 FontFamily="Consolas">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -356,10 +431,7 @@
                                 Grid.Row="1"
                                 Content="Clear"
                                 Margin="2.5, 2.5, 0, 0"
-                                BorderBrush="#333333"
-                                Background="White"
-                                BorderThickness="1"
-                                Cursor="Hand"
+                                Style="{StaticResource CustomHoverButton}"
                                 FontFamily="Consolas">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -411,10 +483,7 @@
                 <Button Grid.Column="6"
                         Grid.Row="0"
                         Margin="0, 0, 0, 2.5"
-                        BorderBrush="#333333"
-                        Background="White"
-                        BorderThickness="1"
-                        Cursor="Hand"
+                        Style="{StaticResource CustomHoverButton}"
                         FontFamily="Consolas">
                     <Button.Resources>
                         <Style TargetType="Border">
@@ -430,16 +499,14 @@
                              Columns="7"
                              x:Name="DynamicButtonsPanel"
                              Visibility="Visible">
+                    
                     <Button Grid.Row="0"
                             Grid.Column="0"
                             Tag="CpuInfo"
                             Content="CPU"
                             Click="OpenDynamicClientInfo"
                             Margin="0, 2.5, 2.5, 5"
-                            BorderBrush="#333333"
-                            Background="White"
-                            BorderThickness="1"
-                            Cursor="Hand"
+                            Style="{StaticResource CustomHoverButton}"
                             FontFamily="Consolas">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -455,10 +522,7 @@
                             Content="RAM"
                             Click="OpenDynamicClientInfo"
                             Margin="2.5, 2.5, 2.5, 5"
-                            BorderBrush="#333333"
-                            Background="White"
-                            BorderThickness="1"
-                            Cursor="Hand"
+                            Style="{StaticResource CustomHoverButton}"
                             FontFamily="Consolas">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -474,10 +538,7 @@
                             Content="Processes"
                             Click="OpenDynamicClientInfo"
                             Margin="2.5, 2.5, 2.5, 5"
-                            BorderBrush="#333333"
-                            Background="White"
-                            BorderThickness="1"
-                            Cursor="Hand"
+                            Style="{StaticResource CustomHoverButton}"
                             FontFamily="Consolas">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -493,10 +554,7 @@
                             Content="Ports"
                             Click="OpenDynamicClientInfo"
                             Margin="2.5, 2.5, 2.5, 5"
-                            BorderBrush="#333333"
-                            Background="White"
-                            BorderThickness="1"
-                            Cursor="Hand"
+                            Style="{StaticResource CustomHoverButton}"
                             FontFamily="Consolas">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -512,10 +570,7 @@
                             Content="Connections"
                             Click="OpenDynamicClientInfo"
                             Margin="2.5, 2.5, 2.5, 5"
-                            BorderBrush="#333333"
-                            Background="White"
-                            BorderThickness="1"
-                            Cursor="Hand"
+                            Style="{StaticResource CustomHoverButton}"
                             FontFamily="Consolas">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -531,10 +586,7 @@
                             Content="Applications"
                             Click="OpenDynamicClientInfo"
                             Margin="2.5, 2.5, 2.5, 5"
-                            BorderBrush="#333333"
-                            Background="White"
-                            BorderThickness="1"
-                            Cursor="Hand"
+                            Style="{StaticResource CustomHoverButton}"
                             FontFamily="Consolas">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -550,10 +602,7 @@
                             Content="Adapters"
                             Click="OpenDynamicClientInfo"
                             Margin="2.5, 2.5, 0, 5"
-                            BorderBrush="#333333"
-                            Background="White"
-                            BorderThickness="1"
-                            Cursor="Hand"
+                            Style="{StaticResource CustomHoverButton}"
                             FontFamily="Consolas">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -587,6 +636,7 @@
                         Margin="0,5,0,0">
                     <RichTextBox x:Name="dynamicInfoTextBox"
                                  IsReadOnly="True"
+                                 FontFamily="Consolas"
                                  Background="White"
                                  BorderBrush="White"
                                  HorizontalAlignment="Stretch"
@@ -702,10 +752,7 @@
                         Content="Start"
                         Click="BtnStartStream_Click"
                         Margin="0, 0, 2.5, 10"
-                        BorderBrush="#333333"
-                        Background="White"
-                        BorderThickness="1"
-                        Cursor="Hand"
+                        Style="{StaticResource CustomHoverButton}"
                         FontFamily="Consolas">
                     <Button.Resources>
                         <Style TargetType="Border">
@@ -720,10 +767,7 @@
                         Content="Pause"
                         Click="BtnPauseStream_Click"
                         Margin="2.5, 0, 0, 10"
-                        BorderBrush="#333333"
-                        Background="White"
-                        BorderThickness="1"
-                        Cursor="Hand"
+                        Style="{StaticResource CustomHoverButton}"
                         FontFamily="Consolas">
                     <Button.Resources>
                         <Style TargetType="Border">
